@@ -1,0 +1,32 @@
+grammar uk.ac.kcl.inf.chessgame.ChessGame with org.eclipse.xtext.common.Terminals
+
+generate chessGame "http://www.ac.uk/kcl/inf/chessgame/ChessGame"
+
+ChessProgram:
+	size = FieldSpecification |
+	options += OptionSpecification*
+//	statements += Statements*
+;
+
+FieldSpecification:
+	'field' '{'
+		"width" "=" width=INT  
+		"height" "=" height=INT 
+		"FirstPlayer" "=" name=ID
+	'}'
+;
+
+OptionSpecification:
+	CellSpecification
+;
+
+CellSpecification:
+	"cell" name=ID "{"
+		members += CellStates
+	"}"
+;
+
+CellStates:
+	"state" "cellState" "(" ("text" text=STRING)| ("color" color=("black" | "white")) ")"
+;
+
