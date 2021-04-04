@@ -7,14 +7,49 @@
   <genPackages prefix="ChessGame" basePackage="uk.ac.kcl.inf.chessgame" disposableProviderFactory="true"
       fileExtensions="cgame" ecorePackage="ChessGame.ecore#/">
     <genClasses ecoreClass="ChessGame.ecore#//ChessProgram">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ChessGame.ecore#//ChessProgram/statements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ChessGame.ecore#//ChessProgram/size"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ChessGame.ecore#//ChessProgram/options"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ChessGame.ecore#//ChessProgram/endGame"/>
     </genClasses>
-    <genClasses ecoreClass="ChessGame.ecore#//Statements"/>
-    <genClasses ecoreClass="ChessGame.ecore#//width">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ChessGame.ecore#//width/WIDTH"/>
+    <genClasses ecoreClass="ChessGame.ecore#//FieldSpecification">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ChessGame.ecore#//FieldSpecification/width"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ChessGame.ecore#//FieldSpecification/height"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ChessGame.ecore#//FieldSpecification/name"/>
     </genClasses>
-    <genClasses ecoreClass="ChessGame.ecore#//height">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ChessGame.ecore#//height/HEIGHT"/>
+    <genClasses ecoreClass="ChessGame.ecore#//OptionSpecification">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ChessGame.ecore#//OptionSpecification/states"/>
+    </genClasses>
+    <genClasses ecoreClass="ChessGame.ecore#//CellState">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ChessGame.ecore#//CellState/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ChessGame.ecore#//CellState/display"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ChessGame.ecore#//CellState/transitions"/>
+    </genClasses>
+    <genClasses ecoreClass="ChessGame.ecore#//CellDisplaySpec">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ChessGame.ecore#//CellDisplaySpec/text"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ChessGame.ecore#//CellDisplaySpec/color"/>
+    </genClasses>
+    <genClasses ecoreClass="ChessGame.ecore#//TransitionSpec">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ChessGame.ecore#//TransitionSpec/trigger"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ChessGame.ecore#//TransitionSpec/target"/>
+    </genClasses>
+    <genClasses ecoreClass="ChessGame.ecore#//MouseTrigger">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ChessGame.ecore#//MouseTrigger/mouse"/>
+    </genClasses>
+    <genClasses ecoreClass="ChessGame.ecore#//GameEnd">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ChessGame.ecore#//GameEnd/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ChessGame.ecore#//GameEnd/action"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ChessGame.ecore#//GameEnd/behaviour"/>
+    </genClasses>
+    <genClasses ecoreClass="ChessGame.ecore#//ContextExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ChessGame.ecore#//ContextExpression/sub_exp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ChessGame.ecore#//ContextExpression/cellState"/>
+    </genClasses>
+    <genClasses ecoreClass="ChessGame.ecore#//StateFilterExpression">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ChessGame.ecore#//StateFilterExpression/cell_state"/>
+    </genClasses>
+    <genClasses ecoreClass="ChessGame.ecore#//EmptyExpression"/>
+    <genClasses ecoreClass="ChessGame.ecore#//EndBehaviour">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ChessGame.ecore#//EndBehaviour/message"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

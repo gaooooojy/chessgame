@@ -16,7 +16,9 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link uk.ac.kcl.inf.chessgame.chessGame.ChessProgram#getStatements <em>Statements</em>}</li>
+ *   <li>{@link uk.ac.kcl.inf.chessgame.chessGame.ChessProgram#getSize <em>Size</em>}</li>
+ *   <li>{@link uk.ac.kcl.inf.chessgame.chessGame.ChessProgram#getOptions <em>Options</em>}</li>
+ *   <li>{@link uk.ac.kcl.inf.chessgame.chessGame.ChessProgram#getEndGame <em>End Game</em>}</li>
  * </ul>
  *
  * @see uk.ac.kcl.inf.chessgame.chessGame.ChessGamePackage#getChessProgram()
@@ -26,15 +28,59 @@ import org.eclipse.emf.ecore.EObject;
 public interface ChessProgram extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Statements</b></em>' containment reference list.
-   * The list contents are of type {@link uk.ac.kcl.inf.chessgame.chessGame.Statements}.
+   * Returns the value of the '<em><b>Size</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Statements</em>' containment reference list.
-   * @see uk.ac.kcl.inf.chessgame.chessGame.ChessGamePackage#getChessProgram_Statements()
+   * @return the value of the '<em>Size</em>' containment reference.
+   * @see #setSize(FieldSpecification)
+   * @see uk.ac.kcl.inf.chessgame.chessGame.ChessGamePackage#getChessProgram_Size()
    * @model containment="true"
    * @generated
    */
-  EList<Statements> getStatements();
+  FieldSpecification getSize();
+
+  /**
+   * Sets the value of the '{@link uk.ac.kcl.inf.chessgame.chessGame.ChessProgram#getSize <em>Size</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Size</em>' containment reference.
+   * @see #getSize()
+   * @generated
+   */
+  void setSize(FieldSpecification value);
+
+  /**
+   * Returns the value of the '<em><b>Options</b></em>' containment reference list.
+   * The list contents are of type {@link uk.ac.kcl.inf.chessgame.chessGame.OptionSpecification}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Options</em>' containment reference list.
+   * @see uk.ac.kcl.inf.chessgame.chessGame.ChessGamePackage#getChessProgram_Options()
+   * @model containment="true"
+   * @generated
+   */
+  EList<OptionSpecification> getOptions();
+
+  /**
+   * Returns the value of the '<em><b>End Game</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>End Game</em>' containment reference.
+   * @see #setEndGame(GameEnd)
+   * @see uk.ac.kcl.inf.chessgame.chessGame.ChessGamePackage#getChessProgram_EndGame()
+   * @model containment="true"
+   * @generated
+   */
+  GameEnd getEndGame();
+
+  /**
+   * Sets the value of the '{@link uk.ac.kcl.inf.chessgame.chessGame.ChessProgram#getEndGame <em>End Game</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>End Game</em>' containment reference.
+   * @see #getEndGame()
+   * @generated
+   */
+  void setEndGame(GameEnd value);
 
 } // ChessProgram

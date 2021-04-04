@@ -8,51 +8,52 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import uk.ac.kcl.inf.chessgame.chessGame.ChessGamePackage;
-import uk.ac.kcl.inf.chessgame.chessGame.height;
+import uk.ac.kcl.inf.chessgame.chessGame.MouseTrigger;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>height</b></em>'.
+ * An implementation of the model object '<em><b>Mouse Trigger</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link uk.ac.kcl.inf.chessgame.chessGame.impl.heightImpl#getHEIGHT <em>HEIGHT</em>}</li>
+ *   <li>{@link uk.ac.kcl.inf.chessgame.chessGame.impl.MouseTriggerImpl#isMouse <em>Mouse</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class heightImpl extends StatementsImpl implements height
+public class MouseTriggerImpl extends MinimalEObjectImpl.Container implements MouseTrigger
 {
   /**
-   * The default value of the '{@link #getHEIGHT() <em>HEIGHT</em>}' attribute.
+   * The default value of the '{@link #isMouse() <em>Mouse</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getHEIGHT()
+   * @see #isMouse()
    * @generated
    * @ordered
    */
-  protected static final int HEIGHT_EDEFAULT = 0;
+  protected static final boolean MOUSE_EDEFAULT = false;
 
   /**
-   * The cached value of the '{@link #getHEIGHT() <em>HEIGHT</em>}' attribute.
+   * The cached value of the '{@link #isMouse() <em>Mouse</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getHEIGHT()
+   * @see #isMouse()
    * @generated
    * @ordered
    */
-  protected int height = HEIGHT_EDEFAULT;
+  protected boolean mouse = MOUSE_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected heightImpl()
+  protected MouseTriggerImpl()
   {
     super();
   }
@@ -65,7 +66,7 @@ public class heightImpl extends StatementsImpl implements height
   @Override
   protected EClass eStaticClass()
   {
-    return ChessGamePackage.Literals.HEIGHT;
+    return ChessGamePackage.Literals.MOUSE_TRIGGER;
   }
 
   /**
@@ -74,9 +75,9 @@ public class heightImpl extends StatementsImpl implements height
    * @generated
    */
   @Override
-  public int getHEIGHT()
+  public boolean isMouse()
   {
-    return height;
+    return mouse;
   }
 
   /**
@@ -85,12 +86,12 @@ public class heightImpl extends StatementsImpl implements height
    * @generated
    */
   @Override
-  public void setHEIGHT(int newHEIGHT)
+  public void setMouse(boolean newMouse)
   {
-    int oldHEIGHT = height;
-    height = newHEIGHT;
+    boolean oldMouse = mouse;
+    mouse = newMouse;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ChessGamePackage.HEIGHT__HEIGHT, oldHEIGHT, height));
+      eNotify(new ENotificationImpl(this, Notification.SET, ChessGamePackage.MOUSE_TRIGGER__MOUSE, oldMouse, mouse));
   }
 
   /**
@@ -103,8 +104,8 @@ public class heightImpl extends StatementsImpl implements height
   {
     switch (featureID)
     {
-      case ChessGamePackage.HEIGHT__HEIGHT:
-        return getHEIGHT();
+      case ChessGamePackage.MOUSE_TRIGGER__MOUSE:
+        return isMouse();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -119,8 +120,8 @@ public class heightImpl extends StatementsImpl implements height
   {
     switch (featureID)
     {
-      case ChessGamePackage.HEIGHT__HEIGHT:
-        setHEIGHT((Integer)newValue);
+      case ChessGamePackage.MOUSE_TRIGGER__MOUSE:
+        setMouse((Boolean)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -136,8 +137,8 @@ public class heightImpl extends StatementsImpl implements height
   {
     switch (featureID)
     {
-      case ChessGamePackage.HEIGHT__HEIGHT:
-        setHEIGHT(HEIGHT_EDEFAULT);
+      case ChessGamePackage.MOUSE_TRIGGER__MOUSE:
+        setMouse(MOUSE_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -153,8 +154,8 @@ public class heightImpl extends StatementsImpl implements height
   {
     switch (featureID)
     {
-      case ChessGamePackage.HEIGHT__HEIGHT:
-        return height != HEIGHT_EDEFAULT;
+      case ChessGamePackage.MOUSE_TRIGGER__MOUSE:
+        return mouse != MOUSE_EDEFAULT;
     }
     return super.eIsSet(featureID);
   }
@@ -170,10 +171,10 @@ public class heightImpl extends StatementsImpl implements height
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (HEIGHT: ");
-    result.append(height);
+    result.append(" (mouse: ");
+    result.append(mouse);
     result.append(')');
     return result.toString();
   }
 
-} //heightImpl
+} //MouseTriggerImpl

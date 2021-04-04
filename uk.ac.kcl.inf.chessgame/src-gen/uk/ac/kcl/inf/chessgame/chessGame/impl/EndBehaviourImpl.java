@@ -8,51 +8,52 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import uk.ac.kcl.inf.chessgame.chessGame.ChessGamePackage;
-import uk.ac.kcl.inf.chessgame.chessGame.width;
+import uk.ac.kcl.inf.chessgame.chessGame.EndBehaviour;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>width</b></em>'.
+ * An implementation of the model object '<em><b>End Behaviour</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link uk.ac.kcl.inf.chessgame.chessGame.impl.widthImpl#getWIDTH <em>WIDTH</em>}</li>
+ *   <li>{@link uk.ac.kcl.inf.chessgame.chessGame.impl.EndBehaviourImpl#getMessage <em>Message</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class widthImpl extends StatementsImpl implements width
+public class EndBehaviourImpl extends MinimalEObjectImpl.Container implements EndBehaviour
 {
   /**
-   * The default value of the '{@link #getWIDTH() <em>WIDTH</em>}' attribute.
+   * The default value of the '{@link #getMessage() <em>Message</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getWIDTH()
+   * @see #getMessage()
    * @generated
    * @ordered
    */
-  protected static final int WIDTH_EDEFAULT = 0;
+  protected static final String MESSAGE_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getWIDTH() <em>WIDTH</em>}' attribute.
+   * The cached value of the '{@link #getMessage() <em>Message</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getWIDTH()
+   * @see #getMessage()
    * @generated
    * @ordered
    */
-  protected int width = WIDTH_EDEFAULT;
+  protected String message = MESSAGE_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected widthImpl()
+  protected EndBehaviourImpl()
   {
     super();
   }
@@ -65,7 +66,7 @@ public class widthImpl extends StatementsImpl implements width
   @Override
   protected EClass eStaticClass()
   {
-    return ChessGamePackage.Literals.WIDTH;
+    return ChessGamePackage.Literals.END_BEHAVIOUR;
   }
 
   /**
@@ -74,9 +75,9 @@ public class widthImpl extends StatementsImpl implements width
    * @generated
    */
   @Override
-  public int getWIDTH()
+  public String getMessage()
   {
-    return width;
+    return message;
   }
 
   /**
@@ -85,12 +86,12 @@ public class widthImpl extends StatementsImpl implements width
    * @generated
    */
   @Override
-  public void setWIDTH(int newWIDTH)
+  public void setMessage(String newMessage)
   {
-    int oldWIDTH = width;
-    width = newWIDTH;
+    String oldMessage = message;
+    message = newMessage;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ChessGamePackage.WIDTH__WIDTH, oldWIDTH, width));
+      eNotify(new ENotificationImpl(this, Notification.SET, ChessGamePackage.END_BEHAVIOUR__MESSAGE, oldMessage, message));
   }
 
   /**
@@ -103,8 +104,8 @@ public class widthImpl extends StatementsImpl implements width
   {
     switch (featureID)
     {
-      case ChessGamePackage.WIDTH__WIDTH:
-        return getWIDTH();
+      case ChessGamePackage.END_BEHAVIOUR__MESSAGE:
+        return getMessage();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -119,8 +120,8 @@ public class widthImpl extends StatementsImpl implements width
   {
     switch (featureID)
     {
-      case ChessGamePackage.WIDTH__WIDTH:
-        setWIDTH((Integer)newValue);
+      case ChessGamePackage.END_BEHAVIOUR__MESSAGE:
+        setMessage((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -136,8 +137,8 @@ public class widthImpl extends StatementsImpl implements width
   {
     switch (featureID)
     {
-      case ChessGamePackage.WIDTH__WIDTH:
-        setWIDTH(WIDTH_EDEFAULT);
+      case ChessGamePackage.END_BEHAVIOUR__MESSAGE:
+        setMessage(MESSAGE_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -153,8 +154,8 @@ public class widthImpl extends StatementsImpl implements width
   {
     switch (featureID)
     {
-      case ChessGamePackage.WIDTH__WIDTH:
-        return width != WIDTH_EDEFAULT;
+      case ChessGamePackage.END_BEHAVIOUR__MESSAGE:
+        return MESSAGE_EDEFAULT == null ? message != null : !MESSAGE_EDEFAULT.equals(message);
     }
     return super.eIsSet(featureID);
   }
@@ -170,10 +171,10 @@ public class widthImpl extends StatementsImpl implements width
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (WIDTH: ");
-    result.append(width);
+    result.append(" (message: ");
+    result.append(message);
     result.append(')');
     return result.toString();
   }
 
-} //widthImpl
+} //EndBehaviourImpl

@@ -66,9 +66,17 @@ public class ChessGameFactoryImpl extends EFactoryImpl implements ChessGameFacto
     switch (eClass.getClassifierID())
     {
       case ChessGamePackage.CHESS_PROGRAM: return createChessProgram();
-      case ChessGamePackage.STATEMENTS: return createStatements();
-      case ChessGamePackage.WIDTH: return createwidth();
-      case ChessGamePackage.HEIGHT: return createheight();
+      case ChessGamePackage.FIELD_SPECIFICATION: return createFieldSpecification();
+      case ChessGamePackage.OPTION_SPECIFICATION: return createOptionSpecification();
+      case ChessGamePackage.CELL_STATE: return createCellState();
+      case ChessGamePackage.CELL_DISPLAY_SPEC: return createCellDisplaySpec();
+      case ChessGamePackage.TRANSITION_SPEC: return createTransitionSpec();
+      case ChessGamePackage.MOUSE_TRIGGER: return createMouseTrigger();
+      case ChessGamePackage.GAME_END: return createGameEnd();
+      case ChessGamePackage.CONTEXT_EXPRESSION: return createContextExpression();
+      case ChessGamePackage.STATE_FILTER_EXPRESSION: return createStateFilterExpression();
+      case ChessGamePackage.EMPTY_EXPRESSION: return createEmptyExpression();
+      case ChessGamePackage.END_BEHAVIOUR: return createEndBehaviour();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -92,10 +100,10 @@ public class ChessGameFactoryImpl extends EFactoryImpl implements ChessGameFacto
    * @generated
    */
   @Override
-  public Statements createStatements()
+  public FieldSpecification createFieldSpecification()
   {
-    StatementsImpl statements = new StatementsImpl();
-    return statements;
+    FieldSpecificationImpl fieldSpecification = new FieldSpecificationImpl();
+    return fieldSpecification;
   }
 
   /**
@@ -104,10 +112,10 @@ public class ChessGameFactoryImpl extends EFactoryImpl implements ChessGameFacto
    * @generated
    */
   @Override
-  public width createwidth()
+  public OptionSpecification createOptionSpecification()
   {
-    widthImpl width = new widthImpl();
-    return width;
+    OptionSpecificationImpl optionSpecification = new OptionSpecificationImpl();
+    return optionSpecification;
   }
 
   /**
@@ -116,10 +124,106 @@ public class ChessGameFactoryImpl extends EFactoryImpl implements ChessGameFacto
    * @generated
    */
   @Override
-  public height createheight()
+  public CellState createCellState()
   {
-    heightImpl height = new heightImpl();
-    return height;
+    CellStateImpl cellState = new CellStateImpl();
+    return cellState;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public CellDisplaySpec createCellDisplaySpec()
+  {
+    CellDisplaySpecImpl cellDisplaySpec = new CellDisplaySpecImpl();
+    return cellDisplaySpec;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public TransitionSpec createTransitionSpec()
+  {
+    TransitionSpecImpl transitionSpec = new TransitionSpecImpl();
+    return transitionSpec;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public MouseTrigger createMouseTrigger()
+  {
+    MouseTriggerImpl mouseTrigger = new MouseTriggerImpl();
+    return mouseTrigger;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public GameEnd createGameEnd()
+  {
+    GameEndImpl gameEnd = new GameEndImpl();
+    return gameEnd;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public ContextExpression createContextExpression()
+  {
+    ContextExpressionImpl contextExpression = new ContextExpressionImpl();
+    return contextExpression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public StateFilterExpression createStateFilterExpression()
+  {
+    StateFilterExpressionImpl stateFilterExpression = new StateFilterExpressionImpl();
+    return stateFilterExpression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EmptyExpression createEmptyExpression()
+  {
+    EmptyExpressionImpl emptyExpression = new EmptyExpressionImpl();
+    return emptyExpression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EndBehaviour createEndBehaviour()
+  {
+    EndBehaviourImpl endBehaviour = new EndBehaviourImpl();
+    return endBehaviour;
   }
 
   /**

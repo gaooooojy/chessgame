@@ -3,30 +3,67 @@ grammar uk.ac.kcl.inf.chessgame.ChessGame with org.eclipse.xtext.common.Terminal
 generate chessGame "http://www.ac.uk/kcl/inf/chessgame/ChessGame"
 
 ChessProgram:
-	size = FieldSpecification |
-	options += OptionSpecification*
-//	statements += Statements*
+	size = FieldSpecification
+	options += OptionSpecification
+	endGame = GameEnd
 ;
 
 FieldSpecification:
 	'field' '{'
 		"width" "=" width=INT  
 		"height" "=" height=INT 
-		"FirstPlayer" "=" name=ID
+		"FirstPlayer" "=" name=("BlackFirst" | "WhiteFirst")
+//		"Counter" "=" counter=INT
 	'}'
 ;
 
 OptionSpecification:
-	CellSpecification
+	states += CellState+
 ;
 
-CellSpecification:
-	"cell" name=ID "{"
-		members += CellStates
+CellState :
+	name=ID "{"
+		display = CellDisplay
+		("transitions" "{"
+			transitions += Transition+
+		 "}")?
 	"}"
 ;
 
-CellStates:
-	"state" "cellState" "(" ("text" text=STRING)| ("color" color=("black" | "white")) ")"
+CellDisplay :
+	"display" "{"
+		(("text" "=" text=STRING) |  ("color" "=" color=("black" | "white")))
+	"}"
+;
+
+Transition :
+	"click" trigger=MouseTrigger "and" "goto" target=[CellState]
+;
+
+MouseTrigger:
+	mouse ?= "mouse-left" | "mouse-right" {MouseTrigger}
+;
+
+GameEnd :
+	"action" name=ID "{" 
+		"when" action=CellExpression
+		"do" behaviour=EndBehaviour 
+	"}"
+;
+
+CellExpression :
+	state=StateCheck "." cellState=EmptyExpression 
+;
+
+StateCheck :
+	"allCellState" "(" cell_state = [CellState] ")"
+;
+
+EmptyExpression :
+	"empty" "(" ")" {EmptyExpression}
+;
+
+EndBehaviour :
+	"end-game" "(" message=STRING ")"
 ;
 

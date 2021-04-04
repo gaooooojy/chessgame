@@ -81,19 +81,59 @@ public class ChessGameAdapterFactory extends AdapterFactoryImpl
         return createChessProgramAdapter();
       }
       @Override
-      public Adapter caseStatements(Statements object)
+      public Adapter caseFieldSpecification(FieldSpecification object)
       {
-        return createStatementsAdapter();
+        return createFieldSpecificationAdapter();
       }
       @Override
-      public Adapter casewidth(width object)
+      public Adapter caseOptionSpecification(OptionSpecification object)
       {
-        return createwidthAdapter();
+        return createOptionSpecificationAdapter();
       }
       @Override
-      public Adapter caseheight(height object)
+      public Adapter caseCellState(CellState object)
       {
-        return createheightAdapter();
+        return createCellStateAdapter();
+      }
+      @Override
+      public Adapter caseCellDisplaySpec(CellDisplaySpec object)
+      {
+        return createCellDisplaySpecAdapter();
+      }
+      @Override
+      public Adapter caseTransitionSpec(TransitionSpec object)
+      {
+        return createTransitionSpecAdapter();
+      }
+      @Override
+      public Adapter caseMouseTrigger(MouseTrigger object)
+      {
+        return createMouseTriggerAdapter();
+      }
+      @Override
+      public Adapter caseGameEnd(GameEnd object)
+      {
+        return createGameEndAdapter();
+      }
+      @Override
+      public Adapter caseContextExpression(ContextExpression object)
+      {
+        return createContextExpressionAdapter();
+      }
+      @Override
+      public Adapter caseStateFilterExpression(StateFilterExpression object)
+      {
+        return createStateFilterExpressionAdapter();
+      }
+      @Override
+      public Adapter caseEmptyExpression(EmptyExpression object)
+      {
+        return createEmptyExpressionAdapter();
+      }
+      @Override
+      public Adapter caseEndBehaviour(EndBehaviour object)
+      {
+        return createEndBehaviourAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -133,46 +173,166 @@ public class ChessGameAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link uk.ac.kcl.inf.chessgame.chessGame.Statements <em>Statements</em>}'.
+   * Creates a new adapter for an object of class '{@link uk.ac.kcl.inf.chessgame.chessGame.FieldSpecification <em>Field Specification</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see uk.ac.kcl.inf.chessgame.chessGame.Statements
+   * @see uk.ac.kcl.inf.chessgame.chessGame.FieldSpecification
    * @generated
    */
-  public Adapter createStatementsAdapter()
+  public Adapter createFieldSpecificationAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link uk.ac.kcl.inf.chessgame.chessGame.width <em>width</em>}'.
+   * Creates a new adapter for an object of class '{@link uk.ac.kcl.inf.chessgame.chessGame.OptionSpecification <em>Option Specification</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see uk.ac.kcl.inf.chessgame.chessGame.width
+   * @see uk.ac.kcl.inf.chessgame.chessGame.OptionSpecification
    * @generated
    */
-  public Adapter createwidthAdapter()
+  public Adapter createOptionSpecificationAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link uk.ac.kcl.inf.chessgame.chessGame.height <em>height</em>}'.
+   * Creates a new adapter for an object of class '{@link uk.ac.kcl.inf.chessgame.chessGame.CellState <em>Cell State</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see uk.ac.kcl.inf.chessgame.chessGame.height
+   * @see uk.ac.kcl.inf.chessgame.chessGame.CellState
    * @generated
    */
-  public Adapter createheightAdapter()
+  public Adapter createCellStateAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link uk.ac.kcl.inf.chessgame.chessGame.CellDisplaySpec <em>Cell Display Spec</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see uk.ac.kcl.inf.chessgame.chessGame.CellDisplaySpec
+   * @generated
+   */
+  public Adapter createCellDisplaySpecAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link uk.ac.kcl.inf.chessgame.chessGame.TransitionSpec <em>Transition Spec</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see uk.ac.kcl.inf.chessgame.chessGame.TransitionSpec
+   * @generated
+   */
+  public Adapter createTransitionSpecAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link uk.ac.kcl.inf.chessgame.chessGame.MouseTrigger <em>Mouse Trigger</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see uk.ac.kcl.inf.chessgame.chessGame.MouseTrigger
+   * @generated
+   */
+  public Adapter createMouseTriggerAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link uk.ac.kcl.inf.chessgame.chessGame.GameEnd <em>Game End</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see uk.ac.kcl.inf.chessgame.chessGame.GameEnd
+   * @generated
+   */
+  public Adapter createGameEndAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link uk.ac.kcl.inf.chessgame.chessGame.ContextExpression <em>Context Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see uk.ac.kcl.inf.chessgame.chessGame.ContextExpression
+   * @generated
+   */
+  public Adapter createContextExpressionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link uk.ac.kcl.inf.chessgame.chessGame.StateFilterExpression <em>State Filter Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see uk.ac.kcl.inf.chessgame.chessGame.StateFilterExpression
+   * @generated
+   */
+  public Adapter createStateFilterExpressionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link uk.ac.kcl.inf.chessgame.chessGame.EmptyExpression <em>Empty Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see uk.ac.kcl.inf.chessgame.chessGame.EmptyExpression
+   * @generated
+   */
+  public Adapter createEmptyExpressionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link uk.ac.kcl.inf.chessgame.chessGame.EndBehaviour <em>End Behaviour</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see uk.ac.kcl.inf.chessgame.chessGame.EndBehaviour
+   * @generated
+   */
+  public Adapter createEndBehaviourAdapter()
   {
     return null;
   }

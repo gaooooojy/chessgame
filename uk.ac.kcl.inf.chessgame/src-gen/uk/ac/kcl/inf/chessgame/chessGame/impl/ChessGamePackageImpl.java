@@ -10,12 +10,20 @@ import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import uk.ac.kcl.inf.chessgame.chessGame.CellDisplaySpec;
+import uk.ac.kcl.inf.chessgame.chessGame.CellState;
 import uk.ac.kcl.inf.chessgame.chessGame.ChessGameFactory;
 import uk.ac.kcl.inf.chessgame.chessGame.ChessGamePackage;
 import uk.ac.kcl.inf.chessgame.chessGame.ChessProgram;
-import uk.ac.kcl.inf.chessgame.chessGame.Statements;
-import uk.ac.kcl.inf.chessgame.chessGame.height;
-import uk.ac.kcl.inf.chessgame.chessGame.width;
+import uk.ac.kcl.inf.chessgame.chessGame.ContextExpression;
+import uk.ac.kcl.inf.chessgame.chessGame.EmptyExpression;
+import uk.ac.kcl.inf.chessgame.chessGame.EndBehaviour;
+import uk.ac.kcl.inf.chessgame.chessGame.FieldSpecification;
+import uk.ac.kcl.inf.chessgame.chessGame.GameEnd;
+import uk.ac.kcl.inf.chessgame.chessGame.MouseTrigger;
+import uk.ac.kcl.inf.chessgame.chessGame.OptionSpecification;
+import uk.ac.kcl.inf.chessgame.chessGame.StateFilterExpression;
+import uk.ac.kcl.inf.chessgame.chessGame.TransitionSpec;
 
 /**
  * <!-- begin-user-doc -->
@@ -37,21 +45,77 @@ public class ChessGamePackageImpl extends EPackageImpl implements ChessGamePacka
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass statementsEClass = null;
+  private EClass fieldSpecificationEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass widthEClass = null;
+  private EClass optionSpecificationEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass heightEClass = null;
+  private EClass cellStateEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass cellDisplaySpecEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass transitionSpecEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass mouseTriggerEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass gameEndEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass contextExpressionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass stateFilterExpressionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass emptyExpressionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass endBehaviourEClass = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -133,7 +197,7 @@ public class ChessGamePackageImpl extends EPackageImpl implements ChessGamePacka
    * @generated
    */
   @Override
-  public EReference getChessProgram_Statements()
+  public EReference getChessProgram_Size()
   {
     return (EReference)chessProgramEClass.getEStructuralFeatures().get(0);
   }
@@ -144,9 +208,9 @@ public class ChessGamePackageImpl extends EPackageImpl implements ChessGamePacka
    * @generated
    */
   @Override
-  public EClass getStatements()
+  public EReference getChessProgram_Options()
   {
-    return statementsEClass;
+    return (EReference)chessProgramEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -155,9 +219,9 @@ public class ChessGamePackageImpl extends EPackageImpl implements ChessGamePacka
    * @generated
    */
   @Override
-  public EClass getwidth()
+  public EReference getChessProgram_EndGame()
   {
-    return widthEClass;
+    return (EReference)chessProgramEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -166,9 +230,9 @@ public class ChessGamePackageImpl extends EPackageImpl implements ChessGamePacka
    * @generated
    */
   @Override
-  public EAttribute getwidth_WIDTH()
+  public EClass getFieldSpecification()
   {
-    return (EAttribute)widthEClass.getEStructuralFeatures().get(0);
+    return fieldSpecificationEClass;
   }
 
   /**
@@ -177,9 +241,9 @@ public class ChessGamePackageImpl extends EPackageImpl implements ChessGamePacka
    * @generated
    */
   @Override
-  public EClass getheight()
+  public EAttribute getFieldSpecification_Width()
   {
-    return heightEClass;
+    return (EAttribute)fieldSpecificationEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -188,9 +252,306 @@ public class ChessGamePackageImpl extends EPackageImpl implements ChessGamePacka
    * @generated
    */
   @Override
-  public EAttribute getheight_HEIGHT()
+  public EAttribute getFieldSpecification_Height()
   {
-    return (EAttribute)heightEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)fieldSpecificationEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getFieldSpecification_Name()
+  {
+    return (EAttribute)fieldSpecificationEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getOptionSpecification()
+  {
+    return optionSpecificationEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getOptionSpecification_States()
+  {
+    return (EReference)optionSpecificationEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getCellState()
+  {
+    return cellStateEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCellState_Name()
+  {
+    return (EAttribute)cellStateEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getCellState_Display()
+  {
+    return (EReference)cellStateEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getCellState_Transitions()
+  {
+    return (EReference)cellStateEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getCellDisplaySpec()
+  {
+    return cellDisplaySpecEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCellDisplaySpec_Text()
+  {
+    return (EAttribute)cellDisplaySpecEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCellDisplaySpec_Color()
+  {
+    return (EAttribute)cellDisplaySpecEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getTransitionSpec()
+  {
+    return transitionSpecEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getTransitionSpec_Trigger()
+  {
+    return (EReference)transitionSpecEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getTransitionSpec_Target()
+  {
+    return (EReference)transitionSpecEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getMouseTrigger()
+  {
+    return mouseTriggerEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getMouseTrigger_Mouse()
+  {
+    return (EAttribute)mouseTriggerEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getGameEnd()
+  {
+    return gameEndEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getGameEnd_Name()
+  {
+    return (EAttribute)gameEndEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getGameEnd_Action()
+  {
+    return (EReference)gameEndEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getGameEnd_Behaviour()
+  {
+    return (EReference)gameEndEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getContextExpression()
+  {
+    return contextExpressionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getContextExpression_Sub_exp()
+  {
+    return (EReference)contextExpressionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getContextExpression_CellState()
+  {
+    return (EReference)contextExpressionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getStateFilterExpression()
+  {
+    return stateFilterExpressionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getStateFilterExpression_Cell_state()
+  {
+    return (EReference)stateFilterExpressionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getEmptyExpression()
+  {
+    return emptyExpressionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getEndBehaviour()
+  {
+    return endBehaviourEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getEndBehaviour_Message()
+  {
+    return (EAttribute)endBehaviourEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -225,15 +586,50 @@ public class ChessGamePackageImpl extends EPackageImpl implements ChessGamePacka
 
     // Create classes and their features
     chessProgramEClass = createEClass(CHESS_PROGRAM);
-    createEReference(chessProgramEClass, CHESS_PROGRAM__STATEMENTS);
+    createEReference(chessProgramEClass, CHESS_PROGRAM__SIZE);
+    createEReference(chessProgramEClass, CHESS_PROGRAM__OPTIONS);
+    createEReference(chessProgramEClass, CHESS_PROGRAM__END_GAME);
 
-    statementsEClass = createEClass(STATEMENTS);
+    fieldSpecificationEClass = createEClass(FIELD_SPECIFICATION);
+    createEAttribute(fieldSpecificationEClass, FIELD_SPECIFICATION__WIDTH);
+    createEAttribute(fieldSpecificationEClass, FIELD_SPECIFICATION__HEIGHT);
+    createEAttribute(fieldSpecificationEClass, FIELD_SPECIFICATION__NAME);
 
-    widthEClass = createEClass(WIDTH);
-    createEAttribute(widthEClass, WIDTH__WIDTH);
+    optionSpecificationEClass = createEClass(OPTION_SPECIFICATION);
+    createEReference(optionSpecificationEClass, OPTION_SPECIFICATION__STATES);
 
-    heightEClass = createEClass(HEIGHT);
-    createEAttribute(heightEClass, HEIGHT__HEIGHT);
+    cellStateEClass = createEClass(CELL_STATE);
+    createEAttribute(cellStateEClass, CELL_STATE__NAME);
+    createEReference(cellStateEClass, CELL_STATE__DISPLAY);
+    createEReference(cellStateEClass, CELL_STATE__TRANSITIONS);
+
+    cellDisplaySpecEClass = createEClass(CELL_DISPLAY_SPEC);
+    createEAttribute(cellDisplaySpecEClass, CELL_DISPLAY_SPEC__TEXT);
+    createEAttribute(cellDisplaySpecEClass, CELL_DISPLAY_SPEC__COLOR);
+
+    transitionSpecEClass = createEClass(TRANSITION_SPEC);
+    createEReference(transitionSpecEClass, TRANSITION_SPEC__TRIGGER);
+    createEReference(transitionSpecEClass, TRANSITION_SPEC__TARGET);
+
+    mouseTriggerEClass = createEClass(MOUSE_TRIGGER);
+    createEAttribute(mouseTriggerEClass, MOUSE_TRIGGER__MOUSE);
+
+    gameEndEClass = createEClass(GAME_END);
+    createEAttribute(gameEndEClass, GAME_END__NAME);
+    createEReference(gameEndEClass, GAME_END__ACTION);
+    createEReference(gameEndEClass, GAME_END__BEHAVIOUR);
+
+    contextExpressionEClass = createEClass(CONTEXT_EXPRESSION);
+    createEReference(contextExpressionEClass, CONTEXT_EXPRESSION__SUB_EXP);
+    createEReference(contextExpressionEClass, CONTEXT_EXPRESSION__CELL_STATE);
+
+    stateFilterExpressionEClass = createEClass(STATE_FILTER_EXPRESSION);
+    createEReference(stateFilterExpressionEClass, STATE_FILTER_EXPRESSION__CELL_STATE);
+
+    emptyExpressionEClass = createEClass(EMPTY_EXPRESSION);
+
+    endBehaviourEClass = createEClass(END_BEHAVIOUR);
+    createEAttribute(endBehaviourEClass, END_BEHAVIOUR__MESSAGE);
   }
 
   /**
@@ -265,20 +661,53 @@ public class ChessGamePackageImpl extends EPackageImpl implements ChessGamePacka
     // Set bounds for type parameters
 
     // Add supertypes to classes
-    widthEClass.getESuperTypes().add(this.getStatements());
-    heightEClass.getESuperTypes().add(this.getStatements());
 
     // Initialize classes and features; add operations and parameters
     initEClass(chessProgramEClass, ChessProgram.class, "ChessProgram", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getChessProgram_Statements(), this.getStatements(), null, "statements", null, 0, -1, ChessProgram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getChessProgram_Size(), this.getFieldSpecification(), null, "size", null, 0, 1, ChessProgram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getChessProgram_Options(), this.getOptionSpecification(), null, "options", null, 0, -1, ChessProgram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getChessProgram_EndGame(), this.getGameEnd(), null, "endGame", null, 0, 1, ChessProgram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(statementsEClass, Statements.class, "Statements", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEClass(fieldSpecificationEClass, FieldSpecification.class, "FieldSpecification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getFieldSpecification_Width(), ecorePackage.getEInt(), "width", null, 0, 1, FieldSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getFieldSpecification_Height(), ecorePackage.getEInt(), "height", null, 0, 1, FieldSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getFieldSpecification_Name(), ecorePackage.getEString(), "name", null, 0, 1, FieldSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(widthEClass, width.class, "width", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getwidth_WIDTH(), ecorePackage.getEInt(), "WIDTH", null, 0, 1, width.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(optionSpecificationEClass, OptionSpecification.class, "OptionSpecification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getOptionSpecification_States(), this.getCellState(), null, "states", null, 0, -1, OptionSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(heightEClass, height.class, "height", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getheight_HEIGHT(), ecorePackage.getEInt(), "HEIGHT", null, 0, 1, height.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(cellStateEClass, CellState.class, "CellState", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getCellState_Name(), ecorePackage.getEString(), "name", null, 0, 1, CellState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getCellState_Display(), this.getCellDisplaySpec(), null, "display", null, 0, 1, CellState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getCellState_Transitions(), this.getTransitionSpec(), null, "transitions", null, 0, -1, CellState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(cellDisplaySpecEClass, CellDisplaySpec.class, "CellDisplaySpec", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getCellDisplaySpec_Text(), ecorePackage.getEString(), "text", null, 0, 1, CellDisplaySpec.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getCellDisplaySpec_Color(), ecorePackage.getEString(), "color", null, 0, 1, CellDisplaySpec.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(transitionSpecEClass, TransitionSpec.class, "TransitionSpec", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getTransitionSpec_Trigger(), this.getMouseTrigger(), null, "trigger", null, 0, 1, TransitionSpec.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTransitionSpec_Target(), this.getCellState(), null, "target", null, 0, 1, TransitionSpec.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(mouseTriggerEClass, MouseTrigger.class, "MouseTrigger", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getMouseTrigger_Mouse(), ecorePackage.getEBoolean(), "mouse", null, 0, 1, MouseTrigger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(gameEndEClass, GameEnd.class, "GameEnd", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getGameEnd_Name(), ecorePackage.getEString(), "name", null, 0, 1, GameEnd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getGameEnd_Action(), this.getContextExpression(), null, "action", null, 0, 1, GameEnd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getGameEnd_Behaviour(), this.getEndBehaviour(), null, "behaviour", null, 0, 1, GameEnd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(contextExpressionEClass, ContextExpression.class, "ContextExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getContextExpression_Sub_exp(), this.getStateFilterExpression(), null, "sub_exp", null, 0, 1, ContextExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getContextExpression_CellState(), this.getEmptyExpression(), null, "cellState", null, 0, 1, ContextExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(stateFilterExpressionEClass, StateFilterExpression.class, "StateFilterExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getStateFilterExpression_Cell_state(), this.getCellState(), null, "cell_state", null, 0, 1, StateFilterExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(emptyExpressionEClass, EmptyExpression.class, "EmptyExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(endBehaviourEClass, EndBehaviour.class, "EndBehaviour", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getEndBehaviour_Message(), ecorePackage.getEString(), "message", null, 0, 1, EndBehaviour.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

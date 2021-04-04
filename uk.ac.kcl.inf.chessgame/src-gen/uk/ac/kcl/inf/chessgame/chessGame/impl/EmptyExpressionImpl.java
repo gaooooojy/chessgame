@@ -8,23 +8,23 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import uk.ac.kcl.inf.chessgame.chessGame.ChessGamePackage;
-import uk.ac.kcl.inf.chessgame.chessGame.Statements;
+import uk.ac.kcl.inf.chessgame.chessGame.EmptyExpression;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Statements</b></em>'.
+ * An implementation of the model object '<em><b>Empty Expression</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class StatementsImpl extends MinimalEObjectImpl.Container implements Statements
+public class EmptyExpressionImpl extends MinimalEObjectImpl.Container implements EmptyExpression
 {
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected StatementsImpl()
+  protected EmptyExpressionImpl()
   {
     super();
   }
@@ -37,7 +37,7 @@ public class StatementsImpl extends MinimalEObjectImpl.Container implements Stat
   @Override
   protected EClass eStaticClass()
   {
-    return ChessGamePackage.Literals.STATEMENTS;
+    return ChessGamePackage.Literals.EMPTY_EXPRESSION;
   }
 
-} //StatementsImpl
+} //EmptyExpressionImpl

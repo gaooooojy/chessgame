@@ -80,26 +80,80 @@ public class ChessGameSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case ChessGamePackage.STATEMENTS:
+      case ChessGamePackage.FIELD_SPECIFICATION:
       {
-        Statements statements = (Statements)theEObject;
-        T result = caseStatements(statements);
+        FieldSpecification fieldSpecification = (FieldSpecification)theEObject;
+        T result = caseFieldSpecification(fieldSpecification);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case ChessGamePackage.WIDTH:
+      case ChessGamePackage.OPTION_SPECIFICATION:
       {
-        width width = (width)theEObject;
-        T result = casewidth(width);
-        if (result == null) result = caseStatements(width);
+        OptionSpecification optionSpecification = (OptionSpecification)theEObject;
+        T result = caseOptionSpecification(optionSpecification);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case ChessGamePackage.HEIGHT:
+      case ChessGamePackage.CELL_STATE:
       {
-        height height = (height)theEObject;
-        T result = caseheight(height);
-        if (result == null) result = caseStatements(height);
+        CellState cellState = (CellState)theEObject;
+        T result = caseCellState(cellState);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ChessGamePackage.CELL_DISPLAY_SPEC:
+      {
+        CellDisplaySpec cellDisplaySpec = (CellDisplaySpec)theEObject;
+        T result = caseCellDisplaySpec(cellDisplaySpec);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ChessGamePackage.TRANSITION_SPEC:
+      {
+        TransitionSpec transitionSpec = (TransitionSpec)theEObject;
+        T result = caseTransitionSpec(transitionSpec);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ChessGamePackage.MOUSE_TRIGGER:
+      {
+        MouseTrigger mouseTrigger = (MouseTrigger)theEObject;
+        T result = caseMouseTrigger(mouseTrigger);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ChessGamePackage.GAME_END:
+      {
+        GameEnd gameEnd = (GameEnd)theEObject;
+        T result = caseGameEnd(gameEnd);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ChessGamePackage.CONTEXT_EXPRESSION:
+      {
+        ContextExpression contextExpression = (ContextExpression)theEObject;
+        T result = caseContextExpression(contextExpression);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ChessGamePackage.STATE_FILTER_EXPRESSION:
+      {
+        StateFilterExpression stateFilterExpression = (StateFilterExpression)theEObject;
+        T result = caseStateFilterExpression(stateFilterExpression);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ChessGamePackage.EMPTY_EXPRESSION:
+      {
+        EmptyExpression emptyExpression = (EmptyExpression)theEObject;
+        T result = caseEmptyExpression(emptyExpression);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ChessGamePackage.END_BEHAVIOUR:
+      {
+        EndBehaviour endBehaviour = (EndBehaviour)theEObject;
+        T result = caseEndBehaviour(endBehaviour);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -124,49 +178,177 @@ public class ChessGameSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Statements</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Field Specification</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Statements</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Field Specification</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseStatements(Statements object)
+  public T caseFieldSpecification(FieldSpecification object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>width</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Option Specification</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>width</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Option Specification</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casewidth(width object)
+  public T caseOptionSpecification(OptionSpecification object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>height</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Cell State</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>height</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Cell State</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseheight(height object)
+  public T caseCellState(CellState object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Cell Display Spec</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Cell Display Spec</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseCellDisplaySpec(CellDisplaySpec object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Transition Spec</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Transition Spec</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTransitionSpec(TransitionSpec object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Mouse Trigger</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Mouse Trigger</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseMouseTrigger(MouseTrigger object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Game End</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Game End</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseGameEnd(GameEnd object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Context Expression</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Context Expression</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseContextExpression(ContextExpression object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>State Filter Expression</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>State Filter Expression</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseStateFilterExpression(StateFilterExpression object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Empty Expression</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Empty Expression</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseEmptyExpression(EmptyExpression object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>End Behaviour</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>End Behaviour</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseEndBehaviour(EndBehaviour object)
   {
     return null;
   }

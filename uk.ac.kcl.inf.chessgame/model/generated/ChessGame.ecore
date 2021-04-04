@@ -3,14 +3,59 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="chessGame" nsURI="http://www.ac.uk/kcl/inf/chessgame/ChessGame"
     nsPrefix="chessGame">
   <eClassifiers xsi:type="ecore:EClass" name="ChessProgram">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="statements" upperBound="-1"
-        eType="#//Statements" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="size" eType="#//FieldSpecification"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="options" upperBound="-1"
+        eType="#//OptionSpecification" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="endGame" eType="#//GameEnd"
+        containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Statements"/>
-  <eClassifiers xsi:type="ecore:EClass" name="width" eSuperTypes="#//Statements">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="WIDTH" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FieldSpecification">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="width" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="height" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="height" eSuperTypes="#//Statements">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="HEIGHT" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OptionSpecification">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="states" upperBound="-1"
+        eType="#//CellState" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CellState">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="display" eType="#//CellDisplaySpec"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="transitions" upperBound="-1"
+        eType="#//TransitionSpec" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CellDisplaySpec">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="color" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TransitionSpec">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="trigger" eType="#//MouseTrigger"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//CellState"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MouseTrigger">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mouse" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GameEnd">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="action" eType="#//ContextExpression"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="behaviour" eType="#//EndBehaviour"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ContextExpression">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sub_exp" eType="#//StateFilterExpression"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cellState" eType="#//EmptyExpression"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StateFilterExpression">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cell_state" eType="#//CellState"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EmptyExpression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EndBehaviour">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="message" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
 </ecore:EPackage>

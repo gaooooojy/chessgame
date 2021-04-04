@@ -33,31 +33,103 @@ public interface ChessGameFactory extends EFactory
   ChessProgram createChessProgram();
 
   /**
-   * Returns a new object of class '<em>Statements</em>'.
+   * Returns a new object of class '<em>Field Specification</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Statements</em>'.
+   * @return a new object of class '<em>Field Specification</em>'.
    * @generated
    */
-  Statements createStatements();
+  FieldSpecification createFieldSpecification();
 
   /**
-   * Returns a new object of class '<em>width</em>'.
+   * Returns a new object of class '<em>Option Specification</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>width</em>'.
+   * @return a new object of class '<em>Option Specification</em>'.
    * @generated
    */
-  width createwidth();
+  OptionSpecification createOptionSpecification();
 
   /**
-   * Returns a new object of class '<em>height</em>'.
+   * Returns a new object of class '<em>Cell State</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>height</em>'.
+   * @return a new object of class '<em>Cell State</em>'.
    * @generated
    */
-  height createheight();
+  CellState createCellState();
+
+  /**
+   * Returns a new object of class '<em>Cell Display Spec</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Cell Display Spec</em>'.
+   * @generated
+   */
+  CellDisplaySpec createCellDisplaySpec();
+
+  /**
+   * Returns a new object of class '<em>Transition Spec</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Transition Spec</em>'.
+   * @generated
+   */
+  TransitionSpec createTransitionSpec();
+
+  /**
+   * Returns a new object of class '<em>Mouse Trigger</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Mouse Trigger</em>'.
+   * @generated
+   */
+  MouseTrigger createMouseTrigger();
+
+  /**
+   * Returns a new object of class '<em>Game End</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Game End</em>'.
+   * @generated
+   */
+  GameEnd createGameEnd();
+
+  /**
+   * Returns a new object of class '<em>Context Expression</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Context Expression</em>'.
+   * @generated
+   */
+  ContextExpression createContextExpression();
+
+  /**
+   * Returns a new object of class '<em>State Filter Expression</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>State Filter Expression</em>'.
+   * @generated
+   */
+  StateFilterExpression createStateFilterExpression();
+
+  /**
+   * Returns a new object of class '<em>Empty Expression</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Empty Expression</em>'.
+   * @generated
+   */
+  EmptyExpression createEmptyExpression();
+
+  /**
+   * Returns a new object of class '<em>End Behaviour</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>End Behaviour</em>'.
+   * @generated
+   */
+  EndBehaviour createEndBehaviour();
 
   /**
    * Returns the package supported by this factory.
