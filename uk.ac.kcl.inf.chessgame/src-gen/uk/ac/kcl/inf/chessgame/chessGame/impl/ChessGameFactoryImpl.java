@@ -69,12 +69,12 @@ public class ChessGameFactoryImpl extends EFactoryImpl implements ChessGameFacto
       case ChessGamePackage.FIELD_SPECIFICATION: return createFieldSpecification();
       case ChessGamePackage.OPTION_SPECIFICATION: return createOptionSpecification();
       case ChessGamePackage.CELL_STATE: return createCellState();
-      case ChessGamePackage.CELL_DISPLAY_SPEC: return createCellDisplaySpec();
-      case ChessGamePackage.TRANSITION_SPEC: return createTransitionSpec();
+      case ChessGamePackage.CELL_DISPLAY: return createCellDisplay();
+      case ChessGamePackage.TRANSITION: return createTransition();
       case ChessGamePackage.MOUSE_TRIGGER: return createMouseTrigger();
       case ChessGamePackage.GAME_END: return createGameEnd();
-      case ChessGamePackage.CONTEXT_EXPRESSION: return createContextExpression();
-      case ChessGamePackage.STATE_FILTER_EXPRESSION: return createStateFilterExpression();
+      case ChessGamePackage.CELL_EXPRESSION: return createCellExpression();
+      case ChessGamePackage.STATE_CHECK: return createStateCheck();
       case ChessGamePackage.EMPTY_EXPRESSION: return createEmptyExpression();
       case ChessGamePackage.END_BEHAVIOUR: return createEndBehaviour();
       default:
@@ -136,10 +136,10 @@ public class ChessGameFactoryImpl extends EFactoryImpl implements ChessGameFacto
    * @generated
    */
   @Override
-  public CellDisplaySpec createCellDisplaySpec()
+  public CellDisplay createCellDisplay()
   {
-    CellDisplaySpecImpl cellDisplaySpec = new CellDisplaySpecImpl();
-    return cellDisplaySpec;
+    CellDisplayImpl cellDisplay = new CellDisplayImpl();
+    return cellDisplay;
   }
 
   /**
@@ -148,10 +148,10 @@ public class ChessGameFactoryImpl extends EFactoryImpl implements ChessGameFacto
    * @generated
    */
   @Override
-  public TransitionSpec createTransitionSpec()
+  public Transition createTransition()
   {
-    TransitionSpecImpl transitionSpec = new TransitionSpecImpl();
-    return transitionSpec;
+    TransitionImpl transition = new TransitionImpl();
+    return transition;
   }
 
   /**
@@ -184,10 +184,10 @@ public class ChessGameFactoryImpl extends EFactoryImpl implements ChessGameFacto
    * @generated
    */
   @Override
-  public ContextExpression createContextExpression()
+  public CellExpression createCellExpression()
   {
-    ContextExpressionImpl contextExpression = new ContextExpressionImpl();
-    return contextExpression;
+    CellExpressionImpl cellExpression = new CellExpressionImpl();
+    return cellExpression;
   }
 
   /**
@@ -196,10 +196,10 @@ public class ChessGameFactoryImpl extends EFactoryImpl implements ChessGameFacto
    * @generated
    */
   @Override
-  public StateFilterExpression createStateFilterExpression()
+  public StateCheck createStateCheck()
   {
-    StateFilterExpressionImpl stateFilterExpression = new StateFilterExpressionImpl();
-    return stateFilterExpression;
+    StateCheckImpl stateCheck = new StateCheckImpl();
+    return stateCheck;
   }
 
   /**

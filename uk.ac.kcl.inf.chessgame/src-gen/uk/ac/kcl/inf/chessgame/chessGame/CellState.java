@@ -54,12 +54,12 @@ public interface CellState extends EObject
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the value of the '<em>Display</em>' containment reference.
-   * @see #setDisplay(CellDisplaySpec)
+   * @see #setDisplay(CellDisplay)
    * @see uk.ac.kcl.inf.chessgame.chessGame.ChessGamePackage#getCellState_Display()
    * @model containment="true"
    * @generated
    */
-  CellDisplaySpec getDisplay();
+  CellDisplay getDisplay();
 
   /**
    * Sets the value of the '{@link uk.ac.kcl.inf.chessgame.chessGame.CellState#getDisplay <em>Display</em>}' containment reference.
@@ -69,11 +69,11 @@ public interface CellState extends EObject
    * @see #getDisplay()
    * @generated
    */
-  void setDisplay(CellDisplaySpec value);
+  void setDisplay(CellDisplay value);
 
   /**
    * Returns the value of the '<em><b>Transitions</b></em>' containment reference list.
-   * The list contents are of type {@link uk.ac.kcl.inf.chessgame.chessGame.TransitionSpec}.
+   * The list contents are of type {@link uk.ac.kcl.inf.chessgame.chessGame.Transition}.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the value of the '<em>Transitions</em>' containment reference list.
@@ -81,6 +81,6 @@ public interface CellState extends EObject
    * @model containment="true"
    * @generated
    */
-  EList<TransitionSpec> getTransitions();
+  EList<Transition> getTransitions();
 
 } // CellState

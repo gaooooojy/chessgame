@@ -448,20 +448,20 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
     // $ANTLR end "ruleCellState"
 
 
-    // $ANTLR start "entryRuleCellDisplaySpec"
-    // InternalChessGame.g:160:1: entryRuleCellDisplaySpec : ruleCellDisplaySpec EOF ;
-    public final void entryRuleCellDisplaySpec() throws RecognitionException {
+    // $ANTLR start "entryRuleCellDisplay"
+    // InternalChessGame.g:160:1: entryRuleCellDisplay : ruleCellDisplay EOF ;
+    public final void entryRuleCellDisplay() throws RecognitionException {
         try {
-            // InternalChessGame.g:161:1: ( ruleCellDisplaySpec EOF )
-            // InternalChessGame.g:162:1: ruleCellDisplaySpec EOF
+            // InternalChessGame.g:161:1: ( ruleCellDisplay EOF )
+            // InternalChessGame.g:162:1: ruleCellDisplay EOF
             {
-             before(grammarAccess.getCellDisplaySpecRule()); 
+             before(grammarAccess.getCellDisplayRule()); 
             pushFollow(FOLLOW_1);
-            ruleCellDisplaySpec();
+            ruleCellDisplay();
 
             state._fsp--;
 
-             after(grammarAccess.getCellDisplaySpecRule()); 
+             after(grammarAccess.getCellDisplayRule()); 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -475,35 +475,35 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "entryRuleCellDisplaySpec"
+    // $ANTLR end "entryRuleCellDisplay"
 
 
-    // $ANTLR start "ruleCellDisplaySpec"
-    // InternalChessGame.g:169:1: ruleCellDisplaySpec : ( ( rule__CellDisplaySpec__Group__0 ) ) ;
-    public final void ruleCellDisplaySpec() throws RecognitionException {
+    // $ANTLR start "ruleCellDisplay"
+    // InternalChessGame.g:169:1: ruleCellDisplay : ( ( rule__CellDisplay__Group__0 ) ) ;
+    public final void ruleCellDisplay() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalChessGame.g:173:2: ( ( ( rule__CellDisplaySpec__Group__0 ) ) )
-            // InternalChessGame.g:174:2: ( ( rule__CellDisplaySpec__Group__0 ) )
+            // InternalChessGame.g:173:2: ( ( ( rule__CellDisplay__Group__0 ) ) )
+            // InternalChessGame.g:174:2: ( ( rule__CellDisplay__Group__0 ) )
             {
-            // InternalChessGame.g:174:2: ( ( rule__CellDisplaySpec__Group__0 ) )
-            // InternalChessGame.g:175:3: ( rule__CellDisplaySpec__Group__0 )
+            // InternalChessGame.g:174:2: ( ( rule__CellDisplay__Group__0 ) )
+            // InternalChessGame.g:175:3: ( rule__CellDisplay__Group__0 )
             {
-             before(grammarAccess.getCellDisplaySpecAccess().getGroup()); 
-            // InternalChessGame.g:176:3: ( rule__CellDisplaySpec__Group__0 )
-            // InternalChessGame.g:176:4: rule__CellDisplaySpec__Group__0
+             before(grammarAccess.getCellDisplayAccess().getGroup()); 
+            // InternalChessGame.g:176:3: ( rule__CellDisplay__Group__0 )
+            // InternalChessGame.g:176:4: rule__CellDisplay__Group__0
             {
             pushFollow(FOLLOW_2);
-            rule__CellDisplaySpec__Group__0();
+            rule__CellDisplay__Group__0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getCellDisplaySpecAccess().getGroup()); 
+             after(grammarAccess.getCellDisplayAccess().getGroup()); 
 
             }
 
@@ -522,23 +522,23 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "ruleCellDisplaySpec"
+    // $ANTLR end "ruleCellDisplay"
 
 
-    // $ANTLR start "entryRuleTransitionSpec"
-    // InternalChessGame.g:185:1: entryRuleTransitionSpec : ruleTransitionSpec EOF ;
-    public final void entryRuleTransitionSpec() throws RecognitionException {
+    // $ANTLR start "entryRuleTransition"
+    // InternalChessGame.g:185:1: entryRuleTransition : ruleTransition EOF ;
+    public final void entryRuleTransition() throws RecognitionException {
         try {
-            // InternalChessGame.g:186:1: ( ruleTransitionSpec EOF )
-            // InternalChessGame.g:187:1: ruleTransitionSpec EOF
+            // InternalChessGame.g:186:1: ( ruleTransition EOF )
+            // InternalChessGame.g:187:1: ruleTransition EOF
             {
-             before(grammarAccess.getTransitionSpecRule()); 
+             before(grammarAccess.getTransitionRule()); 
             pushFollow(FOLLOW_1);
-            ruleTransitionSpec();
+            ruleTransition();
 
             state._fsp--;
 
-             after(grammarAccess.getTransitionSpecRule()); 
+             after(grammarAccess.getTransitionRule()); 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -552,35 +552,35 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "entryRuleTransitionSpec"
+    // $ANTLR end "entryRuleTransition"
 
 
-    // $ANTLR start "ruleTransitionSpec"
-    // InternalChessGame.g:194:1: ruleTransitionSpec : ( ( rule__TransitionSpec__Group__0 ) ) ;
-    public final void ruleTransitionSpec() throws RecognitionException {
+    // $ANTLR start "ruleTransition"
+    // InternalChessGame.g:194:1: ruleTransition : ( ( rule__Transition__Group__0 ) ) ;
+    public final void ruleTransition() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalChessGame.g:198:2: ( ( ( rule__TransitionSpec__Group__0 ) ) )
-            // InternalChessGame.g:199:2: ( ( rule__TransitionSpec__Group__0 ) )
+            // InternalChessGame.g:198:2: ( ( ( rule__Transition__Group__0 ) ) )
+            // InternalChessGame.g:199:2: ( ( rule__Transition__Group__0 ) )
             {
-            // InternalChessGame.g:199:2: ( ( rule__TransitionSpec__Group__0 ) )
-            // InternalChessGame.g:200:3: ( rule__TransitionSpec__Group__0 )
+            // InternalChessGame.g:199:2: ( ( rule__Transition__Group__0 ) )
+            // InternalChessGame.g:200:3: ( rule__Transition__Group__0 )
             {
-             before(grammarAccess.getTransitionSpecAccess().getGroup()); 
-            // InternalChessGame.g:201:3: ( rule__TransitionSpec__Group__0 )
-            // InternalChessGame.g:201:4: rule__TransitionSpec__Group__0
+             before(grammarAccess.getTransitionAccess().getGroup()); 
+            // InternalChessGame.g:201:3: ( rule__Transition__Group__0 )
+            // InternalChessGame.g:201:4: rule__Transition__Group__0
             {
             pushFollow(FOLLOW_2);
-            rule__TransitionSpec__Group__0();
+            rule__Transition__Group__0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getTransitionSpecAccess().getGroup()); 
+             after(grammarAccess.getTransitionAccess().getGroup()); 
 
             }
 
@@ -599,7 +599,7 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "ruleTransitionSpec"
+    // $ANTLR end "ruleTransition"
 
 
     // $ANTLR start "entryRuleMouseTrigger"
@@ -756,20 +756,20 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
     // $ANTLR end "ruleGameEnd"
 
 
-    // $ANTLR start "entryRuleContextExpression"
-    // InternalChessGame.g:260:1: entryRuleContextExpression : ruleContextExpression EOF ;
-    public final void entryRuleContextExpression() throws RecognitionException {
+    // $ANTLR start "entryRuleCellExpression"
+    // InternalChessGame.g:260:1: entryRuleCellExpression : ruleCellExpression EOF ;
+    public final void entryRuleCellExpression() throws RecognitionException {
         try {
-            // InternalChessGame.g:261:1: ( ruleContextExpression EOF )
-            // InternalChessGame.g:262:1: ruleContextExpression EOF
+            // InternalChessGame.g:261:1: ( ruleCellExpression EOF )
+            // InternalChessGame.g:262:1: ruleCellExpression EOF
             {
-             before(grammarAccess.getContextExpressionRule()); 
+             before(grammarAccess.getCellExpressionRule()); 
             pushFollow(FOLLOW_1);
-            ruleContextExpression();
+            ruleCellExpression();
 
             state._fsp--;
 
-             after(grammarAccess.getContextExpressionRule()); 
+             after(grammarAccess.getCellExpressionRule()); 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -783,35 +783,35 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "entryRuleContextExpression"
+    // $ANTLR end "entryRuleCellExpression"
 
 
-    // $ANTLR start "ruleContextExpression"
-    // InternalChessGame.g:269:1: ruleContextExpression : ( ( rule__ContextExpression__Group__0 ) ) ;
-    public final void ruleContextExpression() throws RecognitionException {
+    // $ANTLR start "ruleCellExpression"
+    // InternalChessGame.g:269:1: ruleCellExpression : ( ( rule__CellExpression__Group__0 ) ) ;
+    public final void ruleCellExpression() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalChessGame.g:273:2: ( ( ( rule__ContextExpression__Group__0 ) ) )
-            // InternalChessGame.g:274:2: ( ( rule__ContextExpression__Group__0 ) )
+            // InternalChessGame.g:273:2: ( ( ( rule__CellExpression__Group__0 ) ) )
+            // InternalChessGame.g:274:2: ( ( rule__CellExpression__Group__0 ) )
             {
-            // InternalChessGame.g:274:2: ( ( rule__ContextExpression__Group__0 ) )
-            // InternalChessGame.g:275:3: ( rule__ContextExpression__Group__0 )
+            // InternalChessGame.g:274:2: ( ( rule__CellExpression__Group__0 ) )
+            // InternalChessGame.g:275:3: ( rule__CellExpression__Group__0 )
             {
-             before(grammarAccess.getContextExpressionAccess().getGroup()); 
-            // InternalChessGame.g:276:3: ( rule__ContextExpression__Group__0 )
-            // InternalChessGame.g:276:4: rule__ContextExpression__Group__0
+             before(grammarAccess.getCellExpressionAccess().getGroup()); 
+            // InternalChessGame.g:276:3: ( rule__CellExpression__Group__0 )
+            // InternalChessGame.g:276:4: rule__CellExpression__Group__0
             {
             pushFollow(FOLLOW_2);
-            rule__ContextExpression__Group__0();
+            rule__CellExpression__Group__0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getContextExpressionAccess().getGroup()); 
+             after(grammarAccess.getCellExpressionAccess().getGroup()); 
 
             }
 
@@ -830,23 +830,23 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "ruleContextExpression"
+    // $ANTLR end "ruleCellExpression"
 
 
-    // $ANTLR start "entryRuleStateFilterExpression"
-    // InternalChessGame.g:285:1: entryRuleStateFilterExpression : ruleStateFilterExpression EOF ;
-    public final void entryRuleStateFilterExpression() throws RecognitionException {
+    // $ANTLR start "entryRuleStateCheck"
+    // InternalChessGame.g:285:1: entryRuleStateCheck : ruleStateCheck EOF ;
+    public final void entryRuleStateCheck() throws RecognitionException {
         try {
-            // InternalChessGame.g:286:1: ( ruleStateFilterExpression EOF )
-            // InternalChessGame.g:287:1: ruleStateFilterExpression EOF
+            // InternalChessGame.g:286:1: ( ruleStateCheck EOF )
+            // InternalChessGame.g:287:1: ruleStateCheck EOF
             {
-             before(grammarAccess.getStateFilterExpressionRule()); 
+             before(grammarAccess.getStateCheckRule()); 
             pushFollow(FOLLOW_1);
-            ruleStateFilterExpression();
+            ruleStateCheck();
 
             state._fsp--;
 
-             after(grammarAccess.getStateFilterExpressionRule()); 
+             after(grammarAccess.getStateCheckRule()); 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -860,35 +860,35 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "entryRuleStateFilterExpression"
+    // $ANTLR end "entryRuleStateCheck"
 
 
-    // $ANTLR start "ruleStateFilterExpression"
-    // InternalChessGame.g:294:1: ruleStateFilterExpression : ( ( rule__StateFilterExpression__Group__0 ) ) ;
-    public final void ruleStateFilterExpression() throws RecognitionException {
+    // $ANTLR start "ruleStateCheck"
+    // InternalChessGame.g:294:1: ruleStateCheck : ( ( rule__StateCheck__Group__0 ) ) ;
+    public final void ruleStateCheck() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalChessGame.g:298:2: ( ( ( rule__StateFilterExpression__Group__0 ) ) )
-            // InternalChessGame.g:299:2: ( ( rule__StateFilterExpression__Group__0 ) )
+            // InternalChessGame.g:298:2: ( ( ( rule__StateCheck__Group__0 ) ) )
+            // InternalChessGame.g:299:2: ( ( rule__StateCheck__Group__0 ) )
             {
-            // InternalChessGame.g:299:2: ( ( rule__StateFilterExpression__Group__0 ) )
-            // InternalChessGame.g:300:3: ( rule__StateFilterExpression__Group__0 )
+            // InternalChessGame.g:299:2: ( ( rule__StateCheck__Group__0 ) )
+            // InternalChessGame.g:300:3: ( rule__StateCheck__Group__0 )
             {
-             before(grammarAccess.getStateFilterExpressionAccess().getGroup()); 
-            // InternalChessGame.g:301:3: ( rule__StateFilterExpression__Group__0 )
-            // InternalChessGame.g:301:4: rule__StateFilterExpression__Group__0
+             before(grammarAccess.getStateCheckAccess().getGroup()); 
+            // InternalChessGame.g:301:3: ( rule__StateCheck__Group__0 )
+            // InternalChessGame.g:301:4: rule__StateCheck__Group__0
             {
             pushFollow(FOLLOW_2);
-            rule__StateFilterExpression__Group__0();
+            rule__StateCheck__Group__0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getStateFilterExpressionAccess().getGroup()); 
+             after(grammarAccess.getStateCheckAccess().getGroup()); 
 
             }
 
@@ -907,7 +907,7 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "ruleStateFilterExpression"
+    // $ANTLR end "ruleStateCheck"
 
 
     // $ANTLR start "entryRuleEmptyExpression"
@@ -1135,14 +1135,14 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
     // $ANTLR end "rule__FieldSpecification__NameAlternatives_10_0"
 
 
-    // $ANTLR start "rule__CellDisplaySpec__Alternatives_2"
-    // InternalChessGame.g:380:1: rule__CellDisplaySpec__Alternatives_2 : ( ( ( rule__CellDisplaySpec__Group_2_0__0 ) ) | ( ( rule__CellDisplaySpec__Group_2_1__0 ) ) );
-    public final void rule__CellDisplaySpec__Alternatives_2() throws RecognitionException {
+    // $ANTLR start "rule__CellDisplay__Alternatives_2"
+    // InternalChessGame.g:380:1: rule__CellDisplay__Alternatives_2 : ( ( ( rule__CellDisplay__Group_2_0__0 ) ) | ( ( rule__CellDisplay__Group_2_1__0 ) ) );
+    public final void rule__CellDisplay__Alternatives_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalChessGame.g:384:1: ( ( ( rule__CellDisplaySpec__Group_2_0__0 ) ) | ( ( rule__CellDisplaySpec__Group_2_1__0 ) ) )
+            // InternalChessGame.g:384:1: ( ( ( rule__CellDisplay__Group_2_0__0 ) ) | ( ( rule__CellDisplay__Group_2_1__0 ) ) )
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -1160,24 +1160,24 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
             }
             switch (alt3) {
                 case 1 :
-                    // InternalChessGame.g:385:2: ( ( rule__CellDisplaySpec__Group_2_0__0 ) )
+                    // InternalChessGame.g:385:2: ( ( rule__CellDisplay__Group_2_0__0 ) )
                     {
-                    // InternalChessGame.g:385:2: ( ( rule__CellDisplaySpec__Group_2_0__0 ) )
-                    // InternalChessGame.g:386:3: ( rule__CellDisplaySpec__Group_2_0__0 )
+                    // InternalChessGame.g:385:2: ( ( rule__CellDisplay__Group_2_0__0 ) )
+                    // InternalChessGame.g:386:3: ( rule__CellDisplay__Group_2_0__0 )
                     {
-                     before(grammarAccess.getCellDisplaySpecAccess().getGroup_2_0()); 
-                    // InternalChessGame.g:387:3: ( rule__CellDisplaySpec__Group_2_0__0 )
-                    // InternalChessGame.g:387:4: rule__CellDisplaySpec__Group_2_0__0
+                     before(grammarAccess.getCellDisplayAccess().getGroup_2_0()); 
+                    // InternalChessGame.g:387:3: ( rule__CellDisplay__Group_2_0__0 )
+                    // InternalChessGame.g:387:4: rule__CellDisplay__Group_2_0__0
                     {
                     pushFollow(FOLLOW_2);
-                    rule__CellDisplaySpec__Group_2_0__0();
+                    rule__CellDisplay__Group_2_0__0();
 
                     state._fsp--;
 
 
                     }
 
-                     after(grammarAccess.getCellDisplaySpecAccess().getGroup_2_0()); 
+                     after(grammarAccess.getCellDisplayAccess().getGroup_2_0()); 
 
                     }
 
@@ -1185,24 +1185,24 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
                     }
                     break;
                 case 2 :
-                    // InternalChessGame.g:391:2: ( ( rule__CellDisplaySpec__Group_2_1__0 ) )
+                    // InternalChessGame.g:391:2: ( ( rule__CellDisplay__Group_2_1__0 ) )
                     {
-                    // InternalChessGame.g:391:2: ( ( rule__CellDisplaySpec__Group_2_1__0 ) )
-                    // InternalChessGame.g:392:3: ( rule__CellDisplaySpec__Group_2_1__0 )
+                    // InternalChessGame.g:391:2: ( ( rule__CellDisplay__Group_2_1__0 ) )
+                    // InternalChessGame.g:392:3: ( rule__CellDisplay__Group_2_1__0 )
                     {
-                     before(grammarAccess.getCellDisplaySpecAccess().getGroup_2_1()); 
-                    // InternalChessGame.g:393:3: ( rule__CellDisplaySpec__Group_2_1__0 )
-                    // InternalChessGame.g:393:4: rule__CellDisplaySpec__Group_2_1__0
+                     before(grammarAccess.getCellDisplayAccess().getGroup_2_1()); 
+                    // InternalChessGame.g:393:3: ( rule__CellDisplay__Group_2_1__0 )
+                    // InternalChessGame.g:393:4: rule__CellDisplay__Group_2_1__0
                     {
                     pushFollow(FOLLOW_2);
-                    rule__CellDisplaySpec__Group_2_1__0();
+                    rule__CellDisplay__Group_2_1__0();
 
                     state._fsp--;
 
 
                     }
 
-                     after(grammarAccess.getCellDisplaySpecAccess().getGroup_2_1()); 
+                     after(grammarAccess.getCellDisplayAccess().getGroup_2_1()); 
 
                     }
 
@@ -1223,12 +1223,12 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__CellDisplaySpec__Alternatives_2"
+    // $ANTLR end "rule__CellDisplay__Alternatives_2"
 
 
-    // $ANTLR start "rule__CellDisplaySpec__ColorAlternatives_2_1_2_0"
-    // InternalChessGame.g:401:1: rule__CellDisplaySpec__ColorAlternatives_2_1_2_0 : ( ( 'black' ) | ( 'white' ) );
-    public final void rule__CellDisplaySpec__ColorAlternatives_2_1_2_0() throws RecognitionException {
+    // $ANTLR start "rule__CellDisplay__ColorAlternatives_2_1_2_0"
+    // InternalChessGame.g:401:1: rule__CellDisplay__ColorAlternatives_2_1_2_0 : ( ( 'black' ) | ( 'white' ) );
+    public final void rule__CellDisplay__ColorAlternatives_2_1_2_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -1256,9 +1256,9 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
                     // InternalChessGame.g:406:2: ( 'black' )
                     // InternalChessGame.g:407:3: 'black'
                     {
-                     before(grammarAccess.getCellDisplaySpecAccess().getColorBlackKeyword_2_1_2_0_0()); 
+                     before(grammarAccess.getCellDisplayAccess().getColorBlackKeyword_2_1_2_0_0()); 
                     match(input,13,FOLLOW_2); 
-                     after(grammarAccess.getCellDisplaySpecAccess().getColorBlackKeyword_2_1_2_0_0()); 
+                     after(grammarAccess.getCellDisplayAccess().getColorBlackKeyword_2_1_2_0_0()); 
 
                     }
 
@@ -1271,9 +1271,9 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
                     // InternalChessGame.g:412:2: ( 'white' )
                     // InternalChessGame.g:413:3: 'white'
                     {
-                     before(grammarAccess.getCellDisplaySpecAccess().getColorWhiteKeyword_2_1_2_0_1()); 
+                     before(grammarAccess.getCellDisplayAccess().getColorWhiteKeyword_2_1_2_0_1()); 
                     match(input,14,FOLLOW_2); 
-                     after(grammarAccess.getCellDisplaySpecAccess().getColorWhiteKeyword_2_1_2_0_1()); 
+                     after(grammarAccess.getCellDisplayAccess().getColorWhiteKeyword_2_1_2_0_1()); 
 
                     }
 
@@ -1294,7 +1294,7 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__CellDisplaySpec__ColorAlternatives_2_1_2_0"
+    // $ANTLR end "rule__CellDisplay__ColorAlternatives_2_1_2_0"
 
 
     // $ANTLR start "rule__MouseTrigger__Alternatives"
@@ -3322,23 +3322,23 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
     // $ANTLR end "rule__CellState__Group_3__3__Impl"
 
 
-    // $ANTLR start "rule__CellDisplaySpec__Group__0"
-    // InternalChessGame.g:1098:1: rule__CellDisplaySpec__Group__0 : rule__CellDisplaySpec__Group__0__Impl rule__CellDisplaySpec__Group__1 ;
-    public final void rule__CellDisplaySpec__Group__0() throws RecognitionException {
+    // $ANTLR start "rule__CellDisplay__Group__0"
+    // InternalChessGame.g:1098:1: rule__CellDisplay__Group__0 : rule__CellDisplay__Group__0__Impl rule__CellDisplay__Group__1 ;
+    public final void rule__CellDisplay__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalChessGame.g:1102:1: ( rule__CellDisplaySpec__Group__0__Impl rule__CellDisplaySpec__Group__1 )
-            // InternalChessGame.g:1103:2: rule__CellDisplaySpec__Group__0__Impl rule__CellDisplaySpec__Group__1
+            // InternalChessGame.g:1102:1: ( rule__CellDisplay__Group__0__Impl rule__CellDisplay__Group__1 )
+            // InternalChessGame.g:1103:2: rule__CellDisplay__Group__0__Impl rule__CellDisplay__Group__1
             {
             pushFollow(FOLLOW_6);
-            rule__CellDisplaySpec__Group__0__Impl();
+            rule__CellDisplay__Group__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__CellDisplaySpec__Group__1();
+            rule__CellDisplay__Group__1();
 
             state._fsp--;
 
@@ -3357,12 +3357,12 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__CellDisplaySpec__Group__0"
+    // $ANTLR end "rule__CellDisplay__Group__0"
 
 
-    // $ANTLR start "rule__CellDisplaySpec__Group__0__Impl"
-    // InternalChessGame.g:1110:1: rule__CellDisplaySpec__Group__0__Impl : ( 'display' ) ;
-    public final void rule__CellDisplaySpec__Group__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__CellDisplay__Group__0__Impl"
+    // InternalChessGame.g:1110:1: rule__CellDisplay__Group__0__Impl : ( 'display' ) ;
+    public final void rule__CellDisplay__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -3373,9 +3373,9 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
             // InternalChessGame.g:1115:1: ( 'display' )
             // InternalChessGame.g:1116:2: 'display'
             {
-             before(grammarAccess.getCellDisplaySpecAccess().getDisplayKeyword_0()); 
+             before(grammarAccess.getCellDisplayAccess().getDisplayKeyword_0()); 
             match(input,23,FOLLOW_2); 
-             after(grammarAccess.getCellDisplaySpecAccess().getDisplayKeyword_0()); 
+             after(grammarAccess.getCellDisplayAccess().getDisplayKeyword_0()); 
 
             }
 
@@ -3394,26 +3394,26 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__CellDisplaySpec__Group__0__Impl"
+    // $ANTLR end "rule__CellDisplay__Group__0__Impl"
 
 
-    // $ANTLR start "rule__CellDisplaySpec__Group__1"
-    // InternalChessGame.g:1125:1: rule__CellDisplaySpec__Group__1 : rule__CellDisplaySpec__Group__1__Impl rule__CellDisplaySpec__Group__2 ;
-    public final void rule__CellDisplaySpec__Group__1() throws RecognitionException {
+    // $ANTLR start "rule__CellDisplay__Group__1"
+    // InternalChessGame.g:1125:1: rule__CellDisplay__Group__1 : rule__CellDisplay__Group__1__Impl rule__CellDisplay__Group__2 ;
+    public final void rule__CellDisplay__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalChessGame.g:1129:1: ( rule__CellDisplaySpec__Group__1__Impl rule__CellDisplaySpec__Group__2 )
-            // InternalChessGame.g:1130:2: rule__CellDisplaySpec__Group__1__Impl rule__CellDisplaySpec__Group__2
+            // InternalChessGame.g:1129:1: ( rule__CellDisplay__Group__1__Impl rule__CellDisplay__Group__2 )
+            // InternalChessGame.g:1130:2: rule__CellDisplay__Group__1__Impl rule__CellDisplay__Group__2
             {
             pushFollow(FOLLOW_18);
-            rule__CellDisplaySpec__Group__1__Impl();
+            rule__CellDisplay__Group__1__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__CellDisplaySpec__Group__2();
+            rule__CellDisplay__Group__2();
 
             state._fsp--;
 
@@ -3432,12 +3432,12 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__CellDisplaySpec__Group__1"
+    // $ANTLR end "rule__CellDisplay__Group__1"
 
 
-    // $ANTLR start "rule__CellDisplaySpec__Group__1__Impl"
-    // InternalChessGame.g:1137:1: rule__CellDisplaySpec__Group__1__Impl : ( '{' ) ;
-    public final void rule__CellDisplaySpec__Group__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__CellDisplay__Group__1__Impl"
+    // InternalChessGame.g:1137:1: rule__CellDisplay__Group__1__Impl : ( '{' ) ;
+    public final void rule__CellDisplay__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -3448,9 +3448,9 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
             // InternalChessGame.g:1142:1: ( '{' )
             // InternalChessGame.g:1143:2: '{'
             {
-             before(grammarAccess.getCellDisplaySpecAccess().getLeftCurlyBracketKeyword_1()); 
+             before(grammarAccess.getCellDisplayAccess().getLeftCurlyBracketKeyword_1()); 
             match(input,16,FOLLOW_2); 
-             after(grammarAccess.getCellDisplaySpecAccess().getLeftCurlyBracketKeyword_1()); 
+             after(grammarAccess.getCellDisplayAccess().getLeftCurlyBracketKeyword_1()); 
 
             }
 
@@ -3469,26 +3469,26 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__CellDisplaySpec__Group__1__Impl"
+    // $ANTLR end "rule__CellDisplay__Group__1__Impl"
 
 
-    // $ANTLR start "rule__CellDisplaySpec__Group__2"
-    // InternalChessGame.g:1152:1: rule__CellDisplaySpec__Group__2 : rule__CellDisplaySpec__Group__2__Impl rule__CellDisplaySpec__Group__3 ;
-    public final void rule__CellDisplaySpec__Group__2() throws RecognitionException {
+    // $ANTLR start "rule__CellDisplay__Group__2"
+    // InternalChessGame.g:1152:1: rule__CellDisplay__Group__2 : rule__CellDisplay__Group__2__Impl rule__CellDisplay__Group__3 ;
+    public final void rule__CellDisplay__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalChessGame.g:1156:1: ( rule__CellDisplaySpec__Group__2__Impl rule__CellDisplaySpec__Group__3 )
-            // InternalChessGame.g:1157:2: rule__CellDisplaySpec__Group__2__Impl rule__CellDisplaySpec__Group__3
+            // InternalChessGame.g:1156:1: ( rule__CellDisplay__Group__2__Impl rule__CellDisplay__Group__3 )
+            // InternalChessGame.g:1157:2: rule__CellDisplay__Group__2__Impl rule__CellDisplay__Group__3
             {
             pushFollow(FOLLOW_13);
-            rule__CellDisplaySpec__Group__2__Impl();
+            rule__CellDisplay__Group__2__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__CellDisplaySpec__Group__3();
+            rule__CellDisplay__Group__3();
 
             state._fsp--;
 
@@ -3507,35 +3507,35 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__CellDisplaySpec__Group__2"
+    // $ANTLR end "rule__CellDisplay__Group__2"
 
 
-    // $ANTLR start "rule__CellDisplaySpec__Group__2__Impl"
-    // InternalChessGame.g:1164:1: rule__CellDisplaySpec__Group__2__Impl : ( ( rule__CellDisplaySpec__Alternatives_2 ) ) ;
-    public final void rule__CellDisplaySpec__Group__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__CellDisplay__Group__2__Impl"
+    // InternalChessGame.g:1164:1: rule__CellDisplay__Group__2__Impl : ( ( rule__CellDisplay__Alternatives_2 ) ) ;
+    public final void rule__CellDisplay__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalChessGame.g:1168:1: ( ( ( rule__CellDisplaySpec__Alternatives_2 ) ) )
-            // InternalChessGame.g:1169:1: ( ( rule__CellDisplaySpec__Alternatives_2 ) )
+            // InternalChessGame.g:1168:1: ( ( ( rule__CellDisplay__Alternatives_2 ) ) )
+            // InternalChessGame.g:1169:1: ( ( rule__CellDisplay__Alternatives_2 ) )
             {
-            // InternalChessGame.g:1169:1: ( ( rule__CellDisplaySpec__Alternatives_2 ) )
-            // InternalChessGame.g:1170:2: ( rule__CellDisplaySpec__Alternatives_2 )
+            // InternalChessGame.g:1169:1: ( ( rule__CellDisplay__Alternatives_2 ) )
+            // InternalChessGame.g:1170:2: ( rule__CellDisplay__Alternatives_2 )
             {
-             before(grammarAccess.getCellDisplaySpecAccess().getAlternatives_2()); 
-            // InternalChessGame.g:1171:2: ( rule__CellDisplaySpec__Alternatives_2 )
-            // InternalChessGame.g:1171:3: rule__CellDisplaySpec__Alternatives_2
+             before(grammarAccess.getCellDisplayAccess().getAlternatives_2()); 
+            // InternalChessGame.g:1171:2: ( rule__CellDisplay__Alternatives_2 )
+            // InternalChessGame.g:1171:3: rule__CellDisplay__Alternatives_2
             {
             pushFollow(FOLLOW_2);
-            rule__CellDisplaySpec__Alternatives_2();
+            rule__CellDisplay__Alternatives_2();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getCellDisplaySpecAccess().getAlternatives_2()); 
+             after(grammarAccess.getCellDisplayAccess().getAlternatives_2()); 
 
             }
 
@@ -3554,21 +3554,21 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__CellDisplaySpec__Group__2__Impl"
+    // $ANTLR end "rule__CellDisplay__Group__2__Impl"
 
 
-    // $ANTLR start "rule__CellDisplaySpec__Group__3"
-    // InternalChessGame.g:1179:1: rule__CellDisplaySpec__Group__3 : rule__CellDisplaySpec__Group__3__Impl ;
-    public final void rule__CellDisplaySpec__Group__3() throws RecognitionException {
+    // $ANTLR start "rule__CellDisplay__Group__3"
+    // InternalChessGame.g:1179:1: rule__CellDisplay__Group__3 : rule__CellDisplay__Group__3__Impl ;
+    public final void rule__CellDisplay__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalChessGame.g:1183:1: ( rule__CellDisplaySpec__Group__3__Impl )
-            // InternalChessGame.g:1184:2: rule__CellDisplaySpec__Group__3__Impl
+            // InternalChessGame.g:1183:1: ( rule__CellDisplay__Group__3__Impl )
+            // InternalChessGame.g:1184:2: rule__CellDisplay__Group__3__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__CellDisplaySpec__Group__3__Impl();
+            rule__CellDisplay__Group__3__Impl();
 
             state._fsp--;
 
@@ -3587,12 +3587,12 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__CellDisplaySpec__Group__3"
+    // $ANTLR end "rule__CellDisplay__Group__3"
 
 
-    // $ANTLR start "rule__CellDisplaySpec__Group__3__Impl"
-    // InternalChessGame.g:1190:1: rule__CellDisplaySpec__Group__3__Impl : ( '}' ) ;
-    public final void rule__CellDisplaySpec__Group__3__Impl() throws RecognitionException {
+    // $ANTLR start "rule__CellDisplay__Group__3__Impl"
+    // InternalChessGame.g:1190:1: rule__CellDisplay__Group__3__Impl : ( '}' ) ;
+    public final void rule__CellDisplay__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -3603,9 +3603,9 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
             // InternalChessGame.g:1195:1: ( '}' )
             // InternalChessGame.g:1196:2: '}'
             {
-             before(grammarAccess.getCellDisplaySpecAccess().getRightCurlyBracketKeyword_3()); 
+             before(grammarAccess.getCellDisplayAccess().getRightCurlyBracketKeyword_3()); 
             match(input,21,FOLLOW_2); 
-             after(grammarAccess.getCellDisplaySpecAccess().getRightCurlyBracketKeyword_3()); 
+             after(grammarAccess.getCellDisplayAccess().getRightCurlyBracketKeyword_3()); 
 
             }
 
@@ -3624,26 +3624,26 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__CellDisplaySpec__Group__3__Impl"
+    // $ANTLR end "rule__CellDisplay__Group__3__Impl"
 
 
-    // $ANTLR start "rule__CellDisplaySpec__Group_2_0__0"
-    // InternalChessGame.g:1206:1: rule__CellDisplaySpec__Group_2_0__0 : rule__CellDisplaySpec__Group_2_0__0__Impl rule__CellDisplaySpec__Group_2_0__1 ;
-    public final void rule__CellDisplaySpec__Group_2_0__0() throws RecognitionException {
+    // $ANTLR start "rule__CellDisplay__Group_2_0__0"
+    // InternalChessGame.g:1206:1: rule__CellDisplay__Group_2_0__0 : rule__CellDisplay__Group_2_0__0__Impl rule__CellDisplay__Group_2_0__1 ;
+    public final void rule__CellDisplay__Group_2_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalChessGame.g:1210:1: ( rule__CellDisplaySpec__Group_2_0__0__Impl rule__CellDisplaySpec__Group_2_0__1 )
-            // InternalChessGame.g:1211:2: rule__CellDisplaySpec__Group_2_0__0__Impl rule__CellDisplaySpec__Group_2_0__1
+            // InternalChessGame.g:1210:1: ( rule__CellDisplay__Group_2_0__0__Impl rule__CellDisplay__Group_2_0__1 )
+            // InternalChessGame.g:1211:2: rule__CellDisplay__Group_2_0__0__Impl rule__CellDisplay__Group_2_0__1
             {
             pushFollow(FOLLOW_8);
-            rule__CellDisplaySpec__Group_2_0__0__Impl();
+            rule__CellDisplay__Group_2_0__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__CellDisplaySpec__Group_2_0__1();
+            rule__CellDisplay__Group_2_0__1();
 
             state._fsp--;
 
@@ -3662,12 +3662,12 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__CellDisplaySpec__Group_2_0__0"
+    // $ANTLR end "rule__CellDisplay__Group_2_0__0"
 
 
-    // $ANTLR start "rule__CellDisplaySpec__Group_2_0__0__Impl"
-    // InternalChessGame.g:1218:1: rule__CellDisplaySpec__Group_2_0__0__Impl : ( 'text' ) ;
-    public final void rule__CellDisplaySpec__Group_2_0__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__CellDisplay__Group_2_0__0__Impl"
+    // InternalChessGame.g:1218:1: rule__CellDisplay__Group_2_0__0__Impl : ( 'text' ) ;
+    public final void rule__CellDisplay__Group_2_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -3678,9 +3678,9 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
             // InternalChessGame.g:1223:1: ( 'text' )
             // InternalChessGame.g:1224:2: 'text'
             {
-             before(grammarAccess.getCellDisplaySpecAccess().getTextKeyword_2_0_0()); 
+             before(grammarAccess.getCellDisplayAccess().getTextKeyword_2_0_0()); 
             match(input,24,FOLLOW_2); 
-             after(grammarAccess.getCellDisplaySpecAccess().getTextKeyword_2_0_0()); 
+             after(grammarAccess.getCellDisplayAccess().getTextKeyword_2_0_0()); 
 
             }
 
@@ -3699,26 +3699,26 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__CellDisplaySpec__Group_2_0__0__Impl"
+    // $ANTLR end "rule__CellDisplay__Group_2_0__0__Impl"
 
 
-    // $ANTLR start "rule__CellDisplaySpec__Group_2_0__1"
-    // InternalChessGame.g:1233:1: rule__CellDisplaySpec__Group_2_0__1 : rule__CellDisplaySpec__Group_2_0__1__Impl rule__CellDisplaySpec__Group_2_0__2 ;
-    public final void rule__CellDisplaySpec__Group_2_0__1() throws RecognitionException {
+    // $ANTLR start "rule__CellDisplay__Group_2_0__1"
+    // InternalChessGame.g:1233:1: rule__CellDisplay__Group_2_0__1 : rule__CellDisplay__Group_2_0__1__Impl rule__CellDisplay__Group_2_0__2 ;
+    public final void rule__CellDisplay__Group_2_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalChessGame.g:1237:1: ( rule__CellDisplaySpec__Group_2_0__1__Impl rule__CellDisplaySpec__Group_2_0__2 )
-            // InternalChessGame.g:1238:2: rule__CellDisplaySpec__Group_2_0__1__Impl rule__CellDisplaySpec__Group_2_0__2
+            // InternalChessGame.g:1237:1: ( rule__CellDisplay__Group_2_0__1__Impl rule__CellDisplay__Group_2_0__2 )
+            // InternalChessGame.g:1238:2: rule__CellDisplay__Group_2_0__1__Impl rule__CellDisplay__Group_2_0__2
             {
             pushFollow(FOLLOW_19);
-            rule__CellDisplaySpec__Group_2_0__1__Impl();
+            rule__CellDisplay__Group_2_0__1__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__CellDisplaySpec__Group_2_0__2();
+            rule__CellDisplay__Group_2_0__2();
 
             state._fsp--;
 
@@ -3737,12 +3737,12 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__CellDisplaySpec__Group_2_0__1"
+    // $ANTLR end "rule__CellDisplay__Group_2_0__1"
 
 
-    // $ANTLR start "rule__CellDisplaySpec__Group_2_0__1__Impl"
-    // InternalChessGame.g:1245:1: rule__CellDisplaySpec__Group_2_0__1__Impl : ( '=' ) ;
-    public final void rule__CellDisplaySpec__Group_2_0__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__CellDisplay__Group_2_0__1__Impl"
+    // InternalChessGame.g:1245:1: rule__CellDisplay__Group_2_0__1__Impl : ( '=' ) ;
+    public final void rule__CellDisplay__Group_2_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -3753,9 +3753,9 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
             // InternalChessGame.g:1250:1: ( '=' )
             // InternalChessGame.g:1251:2: '='
             {
-             before(grammarAccess.getCellDisplaySpecAccess().getEqualsSignKeyword_2_0_1()); 
+             before(grammarAccess.getCellDisplayAccess().getEqualsSignKeyword_2_0_1()); 
             match(input,18,FOLLOW_2); 
-             after(grammarAccess.getCellDisplaySpecAccess().getEqualsSignKeyword_2_0_1()); 
+             after(grammarAccess.getCellDisplayAccess().getEqualsSignKeyword_2_0_1()); 
 
             }
 
@@ -3774,21 +3774,21 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__CellDisplaySpec__Group_2_0__1__Impl"
+    // $ANTLR end "rule__CellDisplay__Group_2_0__1__Impl"
 
 
-    // $ANTLR start "rule__CellDisplaySpec__Group_2_0__2"
-    // InternalChessGame.g:1260:1: rule__CellDisplaySpec__Group_2_0__2 : rule__CellDisplaySpec__Group_2_0__2__Impl ;
-    public final void rule__CellDisplaySpec__Group_2_0__2() throws RecognitionException {
+    // $ANTLR start "rule__CellDisplay__Group_2_0__2"
+    // InternalChessGame.g:1260:1: rule__CellDisplay__Group_2_0__2 : rule__CellDisplay__Group_2_0__2__Impl ;
+    public final void rule__CellDisplay__Group_2_0__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalChessGame.g:1264:1: ( rule__CellDisplaySpec__Group_2_0__2__Impl )
-            // InternalChessGame.g:1265:2: rule__CellDisplaySpec__Group_2_0__2__Impl
+            // InternalChessGame.g:1264:1: ( rule__CellDisplay__Group_2_0__2__Impl )
+            // InternalChessGame.g:1265:2: rule__CellDisplay__Group_2_0__2__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__CellDisplaySpec__Group_2_0__2__Impl();
+            rule__CellDisplay__Group_2_0__2__Impl();
 
             state._fsp--;
 
@@ -3807,35 +3807,35 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__CellDisplaySpec__Group_2_0__2"
+    // $ANTLR end "rule__CellDisplay__Group_2_0__2"
 
 
-    // $ANTLR start "rule__CellDisplaySpec__Group_2_0__2__Impl"
-    // InternalChessGame.g:1271:1: rule__CellDisplaySpec__Group_2_0__2__Impl : ( ( rule__CellDisplaySpec__TextAssignment_2_0_2 ) ) ;
-    public final void rule__CellDisplaySpec__Group_2_0__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__CellDisplay__Group_2_0__2__Impl"
+    // InternalChessGame.g:1271:1: rule__CellDisplay__Group_2_0__2__Impl : ( ( rule__CellDisplay__TextAssignment_2_0_2 ) ) ;
+    public final void rule__CellDisplay__Group_2_0__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalChessGame.g:1275:1: ( ( ( rule__CellDisplaySpec__TextAssignment_2_0_2 ) ) )
-            // InternalChessGame.g:1276:1: ( ( rule__CellDisplaySpec__TextAssignment_2_0_2 ) )
+            // InternalChessGame.g:1275:1: ( ( ( rule__CellDisplay__TextAssignment_2_0_2 ) ) )
+            // InternalChessGame.g:1276:1: ( ( rule__CellDisplay__TextAssignment_2_0_2 ) )
             {
-            // InternalChessGame.g:1276:1: ( ( rule__CellDisplaySpec__TextAssignment_2_0_2 ) )
-            // InternalChessGame.g:1277:2: ( rule__CellDisplaySpec__TextAssignment_2_0_2 )
+            // InternalChessGame.g:1276:1: ( ( rule__CellDisplay__TextAssignment_2_0_2 ) )
+            // InternalChessGame.g:1277:2: ( rule__CellDisplay__TextAssignment_2_0_2 )
             {
-             before(grammarAccess.getCellDisplaySpecAccess().getTextAssignment_2_0_2()); 
-            // InternalChessGame.g:1278:2: ( rule__CellDisplaySpec__TextAssignment_2_0_2 )
-            // InternalChessGame.g:1278:3: rule__CellDisplaySpec__TextAssignment_2_0_2
+             before(grammarAccess.getCellDisplayAccess().getTextAssignment_2_0_2()); 
+            // InternalChessGame.g:1278:2: ( rule__CellDisplay__TextAssignment_2_0_2 )
+            // InternalChessGame.g:1278:3: rule__CellDisplay__TextAssignment_2_0_2
             {
             pushFollow(FOLLOW_2);
-            rule__CellDisplaySpec__TextAssignment_2_0_2();
+            rule__CellDisplay__TextAssignment_2_0_2();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getCellDisplaySpecAccess().getTextAssignment_2_0_2()); 
+             after(grammarAccess.getCellDisplayAccess().getTextAssignment_2_0_2()); 
 
             }
 
@@ -3854,26 +3854,26 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__CellDisplaySpec__Group_2_0__2__Impl"
+    // $ANTLR end "rule__CellDisplay__Group_2_0__2__Impl"
 
 
-    // $ANTLR start "rule__CellDisplaySpec__Group_2_1__0"
-    // InternalChessGame.g:1287:1: rule__CellDisplaySpec__Group_2_1__0 : rule__CellDisplaySpec__Group_2_1__0__Impl rule__CellDisplaySpec__Group_2_1__1 ;
-    public final void rule__CellDisplaySpec__Group_2_1__0() throws RecognitionException {
+    // $ANTLR start "rule__CellDisplay__Group_2_1__0"
+    // InternalChessGame.g:1287:1: rule__CellDisplay__Group_2_1__0 : rule__CellDisplay__Group_2_1__0__Impl rule__CellDisplay__Group_2_1__1 ;
+    public final void rule__CellDisplay__Group_2_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalChessGame.g:1291:1: ( rule__CellDisplaySpec__Group_2_1__0__Impl rule__CellDisplaySpec__Group_2_1__1 )
-            // InternalChessGame.g:1292:2: rule__CellDisplaySpec__Group_2_1__0__Impl rule__CellDisplaySpec__Group_2_1__1
+            // InternalChessGame.g:1291:1: ( rule__CellDisplay__Group_2_1__0__Impl rule__CellDisplay__Group_2_1__1 )
+            // InternalChessGame.g:1292:2: rule__CellDisplay__Group_2_1__0__Impl rule__CellDisplay__Group_2_1__1
             {
             pushFollow(FOLLOW_8);
-            rule__CellDisplaySpec__Group_2_1__0__Impl();
+            rule__CellDisplay__Group_2_1__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__CellDisplaySpec__Group_2_1__1();
+            rule__CellDisplay__Group_2_1__1();
 
             state._fsp--;
 
@@ -3892,12 +3892,12 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__CellDisplaySpec__Group_2_1__0"
+    // $ANTLR end "rule__CellDisplay__Group_2_1__0"
 
 
-    // $ANTLR start "rule__CellDisplaySpec__Group_2_1__0__Impl"
-    // InternalChessGame.g:1299:1: rule__CellDisplaySpec__Group_2_1__0__Impl : ( 'color' ) ;
-    public final void rule__CellDisplaySpec__Group_2_1__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__CellDisplay__Group_2_1__0__Impl"
+    // InternalChessGame.g:1299:1: rule__CellDisplay__Group_2_1__0__Impl : ( 'color' ) ;
+    public final void rule__CellDisplay__Group_2_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -3908,9 +3908,9 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
             // InternalChessGame.g:1304:1: ( 'color' )
             // InternalChessGame.g:1305:2: 'color'
             {
-             before(grammarAccess.getCellDisplaySpecAccess().getColorKeyword_2_1_0()); 
+             before(grammarAccess.getCellDisplayAccess().getColorKeyword_2_1_0()); 
             match(input,25,FOLLOW_2); 
-             after(grammarAccess.getCellDisplaySpecAccess().getColorKeyword_2_1_0()); 
+             after(grammarAccess.getCellDisplayAccess().getColorKeyword_2_1_0()); 
 
             }
 
@@ -3929,26 +3929,26 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__CellDisplaySpec__Group_2_1__0__Impl"
+    // $ANTLR end "rule__CellDisplay__Group_2_1__0__Impl"
 
 
-    // $ANTLR start "rule__CellDisplaySpec__Group_2_1__1"
-    // InternalChessGame.g:1314:1: rule__CellDisplaySpec__Group_2_1__1 : rule__CellDisplaySpec__Group_2_1__1__Impl rule__CellDisplaySpec__Group_2_1__2 ;
-    public final void rule__CellDisplaySpec__Group_2_1__1() throws RecognitionException {
+    // $ANTLR start "rule__CellDisplay__Group_2_1__1"
+    // InternalChessGame.g:1314:1: rule__CellDisplay__Group_2_1__1 : rule__CellDisplay__Group_2_1__1__Impl rule__CellDisplay__Group_2_1__2 ;
+    public final void rule__CellDisplay__Group_2_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalChessGame.g:1318:1: ( rule__CellDisplaySpec__Group_2_1__1__Impl rule__CellDisplaySpec__Group_2_1__2 )
-            // InternalChessGame.g:1319:2: rule__CellDisplaySpec__Group_2_1__1__Impl rule__CellDisplaySpec__Group_2_1__2
+            // InternalChessGame.g:1318:1: ( rule__CellDisplay__Group_2_1__1__Impl rule__CellDisplay__Group_2_1__2 )
+            // InternalChessGame.g:1319:2: rule__CellDisplay__Group_2_1__1__Impl rule__CellDisplay__Group_2_1__2
             {
             pushFollow(FOLLOW_20);
-            rule__CellDisplaySpec__Group_2_1__1__Impl();
+            rule__CellDisplay__Group_2_1__1__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__CellDisplaySpec__Group_2_1__2();
+            rule__CellDisplay__Group_2_1__2();
 
             state._fsp--;
 
@@ -3967,12 +3967,12 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__CellDisplaySpec__Group_2_1__1"
+    // $ANTLR end "rule__CellDisplay__Group_2_1__1"
 
 
-    // $ANTLR start "rule__CellDisplaySpec__Group_2_1__1__Impl"
-    // InternalChessGame.g:1326:1: rule__CellDisplaySpec__Group_2_1__1__Impl : ( '=' ) ;
-    public final void rule__CellDisplaySpec__Group_2_1__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__CellDisplay__Group_2_1__1__Impl"
+    // InternalChessGame.g:1326:1: rule__CellDisplay__Group_2_1__1__Impl : ( '=' ) ;
+    public final void rule__CellDisplay__Group_2_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -3983,9 +3983,9 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
             // InternalChessGame.g:1331:1: ( '=' )
             // InternalChessGame.g:1332:2: '='
             {
-             before(grammarAccess.getCellDisplaySpecAccess().getEqualsSignKeyword_2_1_1()); 
+             before(grammarAccess.getCellDisplayAccess().getEqualsSignKeyword_2_1_1()); 
             match(input,18,FOLLOW_2); 
-             after(grammarAccess.getCellDisplaySpecAccess().getEqualsSignKeyword_2_1_1()); 
+             after(grammarAccess.getCellDisplayAccess().getEqualsSignKeyword_2_1_1()); 
 
             }
 
@@ -4004,21 +4004,21 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__CellDisplaySpec__Group_2_1__1__Impl"
+    // $ANTLR end "rule__CellDisplay__Group_2_1__1__Impl"
 
 
-    // $ANTLR start "rule__CellDisplaySpec__Group_2_1__2"
-    // InternalChessGame.g:1341:1: rule__CellDisplaySpec__Group_2_1__2 : rule__CellDisplaySpec__Group_2_1__2__Impl ;
-    public final void rule__CellDisplaySpec__Group_2_1__2() throws RecognitionException {
+    // $ANTLR start "rule__CellDisplay__Group_2_1__2"
+    // InternalChessGame.g:1341:1: rule__CellDisplay__Group_2_1__2 : rule__CellDisplay__Group_2_1__2__Impl ;
+    public final void rule__CellDisplay__Group_2_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalChessGame.g:1345:1: ( rule__CellDisplaySpec__Group_2_1__2__Impl )
-            // InternalChessGame.g:1346:2: rule__CellDisplaySpec__Group_2_1__2__Impl
+            // InternalChessGame.g:1345:1: ( rule__CellDisplay__Group_2_1__2__Impl )
+            // InternalChessGame.g:1346:2: rule__CellDisplay__Group_2_1__2__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__CellDisplaySpec__Group_2_1__2__Impl();
+            rule__CellDisplay__Group_2_1__2__Impl();
 
             state._fsp--;
 
@@ -4037,35 +4037,35 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__CellDisplaySpec__Group_2_1__2"
+    // $ANTLR end "rule__CellDisplay__Group_2_1__2"
 
 
-    // $ANTLR start "rule__CellDisplaySpec__Group_2_1__2__Impl"
-    // InternalChessGame.g:1352:1: rule__CellDisplaySpec__Group_2_1__2__Impl : ( ( rule__CellDisplaySpec__ColorAssignment_2_1_2 ) ) ;
-    public final void rule__CellDisplaySpec__Group_2_1__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__CellDisplay__Group_2_1__2__Impl"
+    // InternalChessGame.g:1352:1: rule__CellDisplay__Group_2_1__2__Impl : ( ( rule__CellDisplay__ColorAssignment_2_1_2 ) ) ;
+    public final void rule__CellDisplay__Group_2_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalChessGame.g:1356:1: ( ( ( rule__CellDisplaySpec__ColorAssignment_2_1_2 ) ) )
-            // InternalChessGame.g:1357:1: ( ( rule__CellDisplaySpec__ColorAssignment_2_1_2 ) )
+            // InternalChessGame.g:1356:1: ( ( ( rule__CellDisplay__ColorAssignment_2_1_2 ) ) )
+            // InternalChessGame.g:1357:1: ( ( rule__CellDisplay__ColorAssignment_2_1_2 ) )
             {
-            // InternalChessGame.g:1357:1: ( ( rule__CellDisplaySpec__ColorAssignment_2_1_2 ) )
-            // InternalChessGame.g:1358:2: ( rule__CellDisplaySpec__ColorAssignment_2_1_2 )
+            // InternalChessGame.g:1357:1: ( ( rule__CellDisplay__ColorAssignment_2_1_2 ) )
+            // InternalChessGame.g:1358:2: ( rule__CellDisplay__ColorAssignment_2_1_2 )
             {
-             before(grammarAccess.getCellDisplaySpecAccess().getColorAssignment_2_1_2()); 
-            // InternalChessGame.g:1359:2: ( rule__CellDisplaySpec__ColorAssignment_2_1_2 )
-            // InternalChessGame.g:1359:3: rule__CellDisplaySpec__ColorAssignment_2_1_2
+             before(grammarAccess.getCellDisplayAccess().getColorAssignment_2_1_2()); 
+            // InternalChessGame.g:1359:2: ( rule__CellDisplay__ColorAssignment_2_1_2 )
+            // InternalChessGame.g:1359:3: rule__CellDisplay__ColorAssignment_2_1_2
             {
             pushFollow(FOLLOW_2);
-            rule__CellDisplaySpec__ColorAssignment_2_1_2();
+            rule__CellDisplay__ColorAssignment_2_1_2();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getCellDisplaySpecAccess().getColorAssignment_2_1_2()); 
+             after(grammarAccess.getCellDisplayAccess().getColorAssignment_2_1_2()); 
 
             }
 
@@ -4084,26 +4084,26 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__CellDisplaySpec__Group_2_1__2__Impl"
+    // $ANTLR end "rule__CellDisplay__Group_2_1__2__Impl"
 
 
-    // $ANTLR start "rule__TransitionSpec__Group__0"
-    // InternalChessGame.g:1368:1: rule__TransitionSpec__Group__0 : rule__TransitionSpec__Group__0__Impl rule__TransitionSpec__Group__1 ;
-    public final void rule__TransitionSpec__Group__0() throws RecognitionException {
+    // $ANTLR start "rule__Transition__Group__0"
+    // InternalChessGame.g:1368:1: rule__Transition__Group__0 : rule__Transition__Group__0__Impl rule__Transition__Group__1 ;
+    public final void rule__Transition__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalChessGame.g:1372:1: ( rule__TransitionSpec__Group__0__Impl rule__TransitionSpec__Group__1 )
-            // InternalChessGame.g:1373:2: rule__TransitionSpec__Group__0__Impl rule__TransitionSpec__Group__1
+            // InternalChessGame.g:1372:1: ( rule__Transition__Group__0__Impl rule__Transition__Group__1 )
+            // InternalChessGame.g:1373:2: rule__Transition__Group__0__Impl rule__Transition__Group__1
             {
             pushFollow(FOLLOW_21);
-            rule__TransitionSpec__Group__0__Impl();
+            rule__Transition__Group__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__TransitionSpec__Group__1();
+            rule__Transition__Group__1();
 
             state._fsp--;
 
@@ -4122,12 +4122,12 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__TransitionSpec__Group__0"
+    // $ANTLR end "rule__Transition__Group__0"
 
 
-    // $ANTLR start "rule__TransitionSpec__Group__0__Impl"
-    // InternalChessGame.g:1380:1: rule__TransitionSpec__Group__0__Impl : ( 'click' ) ;
-    public final void rule__TransitionSpec__Group__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Transition__Group__0__Impl"
+    // InternalChessGame.g:1380:1: rule__Transition__Group__0__Impl : ( 'click' ) ;
+    public final void rule__Transition__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -4138,9 +4138,9 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
             // InternalChessGame.g:1385:1: ( 'click' )
             // InternalChessGame.g:1386:2: 'click'
             {
-             before(grammarAccess.getTransitionSpecAccess().getClickKeyword_0()); 
+             before(grammarAccess.getTransitionAccess().getClickKeyword_0()); 
             match(input,26,FOLLOW_2); 
-             after(grammarAccess.getTransitionSpecAccess().getClickKeyword_0()); 
+             after(grammarAccess.getTransitionAccess().getClickKeyword_0()); 
 
             }
 
@@ -4159,26 +4159,26 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__TransitionSpec__Group__0__Impl"
+    // $ANTLR end "rule__Transition__Group__0__Impl"
 
 
-    // $ANTLR start "rule__TransitionSpec__Group__1"
-    // InternalChessGame.g:1395:1: rule__TransitionSpec__Group__1 : rule__TransitionSpec__Group__1__Impl rule__TransitionSpec__Group__2 ;
-    public final void rule__TransitionSpec__Group__1() throws RecognitionException {
+    // $ANTLR start "rule__Transition__Group__1"
+    // InternalChessGame.g:1395:1: rule__Transition__Group__1 : rule__Transition__Group__1__Impl rule__Transition__Group__2 ;
+    public final void rule__Transition__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalChessGame.g:1399:1: ( rule__TransitionSpec__Group__1__Impl rule__TransitionSpec__Group__2 )
-            // InternalChessGame.g:1400:2: rule__TransitionSpec__Group__1__Impl rule__TransitionSpec__Group__2
+            // InternalChessGame.g:1399:1: ( rule__Transition__Group__1__Impl rule__Transition__Group__2 )
+            // InternalChessGame.g:1400:2: rule__Transition__Group__1__Impl rule__Transition__Group__2
             {
             pushFollow(FOLLOW_22);
-            rule__TransitionSpec__Group__1__Impl();
+            rule__Transition__Group__1__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__TransitionSpec__Group__2();
+            rule__Transition__Group__2();
 
             state._fsp--;
 
@@ -4197,35 +4197,35 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__TransitionSpec__Group__1"
+    // $ANTLR end "rule__Transition__Group__1"
 
 
-    // $ANTLR start "rule__TransitionSpec__Group__1__Impl"
-    // InternalChessGame.g:1407:1: rule__TransitionSpec__Group__1__Impl : ( ( rule__TransitionSpec__TriggerAssignment_1 ) ) ;
-    public final void rule__TransitionSpec__Group__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Transition__Group__1__Impl"
+    // InternalChessGame.g:1407:1: rule__Transition__Group__1__Impl : ( ( rule__Transition__TriggerAssignment_1 ) ) ;
+    public final void rule__Transition__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalChessGame.g:1411:1: ( ( ( rule__TransitionSpec__TriggerAssignment_1 ) ) )
-            // InternalChessGame.g:1412:1: ( ( rule__TransitionSpec__TriggerAssignment_1 ) )
+            // InternalChessGame.g:1411:1: ( ( ( rule__Transition__TriggerAssignment_1 ) ) )
+            // InternalChessGame.g:1412:1: ( ( rule__Transition__TriggerAssignment_1 ) )
             {
-            // InternalChessGame.g:1412:1: ( ( rule__TransitionSpec__TriggerAssignment_1 ) )
-            // InternalChessGame.g:1413:2: ( rule__TransitionSpec__TriggerAssignment_1 )
+            // InternalChessGame.g:1412:1: ( ( rule__Transition__TriggerAssignment_1 ) )
+            // InternalChessGame.g:1413:2: ( rule__Transition__TriggerAssignment_1 )
             {
-             before(grammarAccess.getTransitionSpecAccess().getTriggerAssignment_1()); 
-            // InternalChessGame.g:1414:2: ( rule__TransitionSpec__TriggerAssignment_1 )
-            // InternalChessGame.g:1414:3: rule__TransitionSpec__TriggerAssignment_1
+             before(grammarAccess.getTransitionAccess().getTriggerAssignment_1()); 
+            // InternalChessGame.g:1414:2: ( rule__Transition__TriggerAssignment_1 )
+            // InternalChessGame.g:1414:3: rule__Transition__TriggerAssignment_1
             {
             pushFollow(FOLLOW_2);
-            rule__TransitionSpec__TriggerAssignment_1();
+            rule__Transition__TriggerAssignment_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getTransitionSpecAccess().getTriggerAssignment_1()); 
+             after(grammarAccess.getTransitionAccess().getTriggerAssignment_1()); 
 
             }
 
@@ -4244,26 +4244,26 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__TransitionSpec__Group__1__Impl"
+    // $ANTLR end "rule__Transition__Group__1__Impl"
 
 
-    // $ANTLR start "rule__TransitionSpec__Group__2"
-    // InternalChessGame.g:1422:1: rule__TransitionSpec__Group__2 : rule__TransitionSpec__Group__2__Impl rule__TransitionSpec__Group__3 ;
-    public final void rule__TransitionSpec__Group__2() throws RecognitionException {
+    // $ANTLR start "rule__Transition__Group__2"
+    // InternalChessGame.g:1422:1: rule__Transition__Group__2 : rule__Transition__Group__2__Impl rule__Transition__Group__3 ;
+    public final void rule__Transition__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalChessGame.g:1426:1: ( rule__TransitionSpec__Group__2__Impl rule__TransitionSpec__Group__3 )
-            // InternalChessGame.g:1427:2: rule__TransitionSpec__Group__2__Impl rule__TransitionSpec__Group__3
+            // InternalChessGame.g:1426:1: ( rule__Transition__Group__2__Impl rule__Transition__Group__3 )
+            // InternalChessGame.g:1427:2: rule__Transition__Group__2__Impl rule__Transition__Group__3
             {
             pushFollow(FOLLOW_23);
-            rule__TransitionSpec__Group__2__Impl();
+            rule__Transition__Group__2__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__TransitionSpec__Group__3();
+            rule__Transition__Group__3();
 
             state._fsp--;
 
@@ -4282,12 +4282,12 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__TransitionSpec__Group__2"
+    // $ANTLR end "rule__Transition__Group__2"
 
 
-    // $ANTLR start "rule__TransitionSpec__Group__2__Impl"
-    // InternalChessGame.g:1434:1: rule__TransitionSpec__Group__2__Impl : ( 'and' ) ;
-    public final void rule__TransitionSpec__Group__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Transition__Group__2__Impl"
+    // InternalChessGame.g:1434:1: rule__Transition__Group__2__Impl : ( 'and' ) ;
+    public final void rule__Transition__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -4298,9 +4298,9 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
             // InternalChessGame.g:1439:1: ( 'and' )
             // InternalChessGame.g:1440:2: 'and'
             {
-             before(grammarAccess.getTransitionSpecAccess().getAndKeyword_2()); 
+             before(grammarAccess.getTransitionAccess().getAndKeyword_2()); 
             match(input,27,FOLLOW_2); 
-             after(grammarAccess.getTransitionSpecAccess().getAndKeyword_2()); 
+             after(grammarAccess.getTransitionAccess().getAndKeyword_2()); 
 
             }
 
@@ -4319,26 +4319,26 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__TransitionSpec__Group__2__Impl"
+    // $ANTLR end "rule__Transition__Group__2__Impl"
 
 
-    // $ANTLR start "rule__TransitionSpec__Group__3"
-    // InternalChessGame.g:1449:1: rule__TransitionSpec__Group__3 : rule__TransitionSpec__Group__3__Impl rule__TransitionSpec__Group__4 ;
-    public final void rule__TransitionSpec__Group__3() throws RecognitionException {
+    // $ANTLR start "rule__Transition__Group__3"
+    // InternalChessGame.g:1449:1: rule__Transition__Group__3 : rule__Transition__Group__3__Impl rule__Transition__Group__4 ;
+    public final void rule__Transition__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalChessGame.g:1453:1: ( rule__TransitionSpec__Group__3__Impl rule__TransitionSpec__Group__4 )
-            // InternalChessGame.g:1454:2: rule__TransitionSpec__Group__3__Impl rule__TransitionSpec__Group__4
+            // InternalChessGame.g:1453:1: ( rule__Transition__Group__3__Impl rule__Transition__Group__4 )
+            // InternalChessGame.g:1454:2: rule__Transition__Group__3__Impl rule__Transition__Group__4
             {
             pushFollow(FOLLOW_4);
-            rule__TransitionSpec__Group__3__Impl();
+            rule__Transition__Group__3__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__TransitionSpec__Group__4();
+            rule__Transition__Group__4();
 
             state._fsp--;
 
@@ -4357,12 +4357,12 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__TransitionSpec__Group__3"
+    // $ANTLR end "rule__Transition__Group__3"
 
 
-    // $ANTLR start "rule__TransitionSpec__Group__3__Impl"
-    // InternalChessGame.g:1461:1: rule__TransitionSpec__Group__3__Impl : ( 'goto' ) ;
-    public final void rule__TransitionSpec__Group__3__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Transition__Group__3__Impl"
+    // InternalChessGame.g:1461:1: rule__Transition__Group__3__Impl : ( 'goto' ) ;
+    public final void rule__Transition__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -4373,9 +4373,9 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
             // InternalChessGame.g:1466:1: ( 'goto' )
             // InternalChessGame.g:1467:2: 'goto'
             {
-             before(grammarAccess.getTransitionSpecAccess().getGotoKeyword_3()); 
+             before(grammarAccess.getTransitionAccess().getGotoKeyword_3()); 
             match(input,28,FOLLOW_2); 
-             after(grammarAccess.getTransitionSpecAccess().getGotoKeyword_3()); 
+             after(grammarAccess.getTransitionAccess().getGotoKeyword_3()); 
 
             }
 
@@ -4394,21 +4394,21 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__TransitionSpec__Group__3__Impl"
+    // $ANTLR end "rule__Transition__Group__3__Impl"
 
 
-    // $ANTLR start "rule__TransitionSpec__Group__4"
-    // InternalChessGame.g:1476:1: rule__TransitionSpec__Group__4 : rule__TransitionSpec__Group__4__Impl ;
-    public final void rule__TransitionSpec__Group__4() throws RecognitionException {
+    // $ANTLR start "rule__Transition__Group__4"
+    // InternalChessGame.g:1476:1: rule__Transition__Group__4 : rule__Transition__Group__4__Impl ;
+    public final void rule__Transition__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalChessGame.g:1480:1: ( rule__TransitionSpec__Group__4__Impl )
-            // InternalChessGame.g:1481:2: rule__TransitionSpec__Group__4__Impl
+            // InternalChessGame.g:1480:1: ( rule__Transition__Group__4__Impl )
+            // InternalChessGame.g:1481:2: rule__Transition__Group__4__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__TransitionSpec__Group__4__Impl();
+            rule__Transition__Group__4__Impl();
 
             state._fsp--;
 
@@ -4427,35 +4427,35 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__TransitionSpec__Group__4"
+    // $ANTLR end "rule__Transition__Group__4"
 
 
-    // $ANTLR start "rule__TransitionSpec__Group__4__Impl"
-    // InternalChessGame.g:1487:1: rule__TransitionSpec__Group__4__Impl : ( ( rule__TransitionSpec__TargetAssignment_4 ) ) ;
-    public final void rule__TransitionSpec__Group__4__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Transition__Group__4__Impl"
+    // InternalChessGame.g:1487:1: rule__Transition__Group__4__Impl : ( ( rule__Transition__TargetAssignment_4 ) ) ;
+    public final void rule__Transition__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalChessGame.g:1491:1: ( ( ( rule__TransitionSpec__TargetAssignment_4 ) ) )
-            // InternalChessGame.g:1492:1: ( ( rule__TransitionSpec__TargetAssignment_4 ) )
+            // InternalChessGame.g:1491:1: ( ( ( rule__Transition__TargetAssignment_4 ) ) )
+            // InternalChessGame.g:1492:1: ( ( rule__Transition__TargetAssignment_4 ) )
             {
-            // InternalChessGame.g:1492:1: ( ( rule__TransitionSpec__TargetAssignment_4 ) )
-            // InternalChessGame.g:1493:2: ( rule__TransitionSpec__TargetAssignment_4 )
+            // InternalChessGame.g:1492:1: ( ( rule__Transition__TargetAssignment_4 ) )
+            // InternalChessGame.g:1493:2: ( rule__Transition__TargetAssignment_4 )
             {
-             before(grammarAccess.getTransitionSpecAccess().getTargetAssignment_4()); 
-            // InternalChessGame.g:1494:2: ( rule__TransitionSpec__TargetAssignment_4 )
-            // InternalChessGame.g:1494:3: rule__TransitionSpec__TargetAssignment_4
+             before(grammarAccess.getTransitionAccess().getTargetAssignment_4()); 
+            // InternalChessGame.g:1494:2: ( rule__Transition__TargetAssignment_4 )
+            // InternalChessGame.g:1494:3: rule__Transition__TargetAssignment_4
             {
             pushFollow(FOLLOW_2);
-            rule__TransitionSpec__TargetAssignment_4();
+            rule__Transition__TargetAssignment_4();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getTransitionSpecAccess().getTargetAssignment_4()); 
+             after(grammarAccess.getTransitionAccess().getTargetAssignment_4()); 
 
             }
 
@@ -4474,7 +4474,7 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__TransitionSpec__Group__4__Impl"
+    // $ANTLR end "rule__Transition__Group__4__Impl"
 
 
     // $ANTLR start "rule__MouseTrigger__Group_1__0"
@@ -5247,23 +5247,23 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
     // $ANTLR end "rule__GameEnd__Group__7__Impl"
 
 
-    // $ANTLR start "rule__ContextExpression__Group__0"
-    // InternalChessGame.g:1773:1: rule__ContextExpression__Group__0 : rule__ContextExpression__Group__0__Impl rule__ContextExpression__Group__1 ;
-    public final void rule__ContextExpression__Group__0() throws RecognitionException {
+    // $ANTLR start "rule__CellExpression__Group__0"
+    // InternalChessGame.g:1773:1: rule__CellExpression__Group__0 : rule__CellExpression__Group__0__Impl rule__CellExpression__Group__1 ;
+    public final void rule__CellExpression__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalChessGame.g:1777:1: ( rule__ContextExpression__Group__0__Impl rule__ContextExpression__Group__1 )
-            // InternalChessGame.g:1778:2: rule__ContextExpression__Group__0__Impl rule__ContextExpression__Group__1
+            // InternalChessGame.g:1777:1: ( rule__CellExpression__Group__0__Impl rule__CellExpression__Group__1 )
+            // InternalChessGame.g:1778:2: rule__CellExpression__Group__0__Impl rule__CellExpression__Group__1
             {
             pushFollow(FOLLOW_28);
-            rule__ContextExpression__Group__0__Impl();
+            rule__CellExpression__Group__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__ContextExpression__Group__1();
+            rule__CellExpression__Group__1();
 
             state._fsp--;
 
@@ -5282,35 +5282,35 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__ContextExpression__Group__0"
+    // $ANTLR end "rule__CellExpression__Group__0"
 
 
-    // $ANTLR start "rule__ContextExpression__Group__0__Impl"
-    // InternalChessGame.g:1785:1: rule__ContextExpression__Group__0__Impl : ( ( rule__ContextExpression__Sub_expAssignment_0 ) ) ;
-    public final void rule__ContextExpression__Group__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__CellExpression__Group__0__Impl"
+    // InternalChessGame.g:1785:1: rule__CellExpression__Group__0__Impl : ( ( rule__CellExpression__StateAssignment_0 ) ) ;
+    public final void rule__CellExpression__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalChessGame.g:1789:1: ( ( ( rule__ContextExpression__Sub_expAssignment_0 ) ) )
-            // InternalChessGame.g:1790:1: ( ( rule__ContextExpression__Sub_expAssignment_0 ) )
+            // InternalChessGame.g:1789:1: ( ( ( rule__CellExpression__StateAssignment_0 ) ) )
+            // InternalChessGame.g:1790:1: ( ( rule__CellExpression__StateAssignment_0 ) )
             {
-            // InternalChessGame.g:1790:1: ( ( rule__ContextExpression__Sub_expAssignment_0 ) )
-            // InternalChessGame.g:1791:2: ( rule__ContextExpression__Sub_expAssignment_0 )
+            // InternalChessGame.g:1790:1: ( ( rule__CellExpression__StateAssignment_0 ) )
+            // InternalChessGame.g:1791:2: ( rule__CellExpression__StateAssignment_0 )
             {
-             before(grammarAccess.getContextExpressionAccess().getSub_expAssignment_0()); 
-            // InternalChessGame.g:1792:2: ( rule__ContextExpression__Sub_expAssignment_0 )
-            // InternalChessGame.g:1792:3: rule__ContextExpression__Sub_expAssignment_0
+             before(grammarAccess.getCellExpressionAccess().getStateAssignment_0()); 
+            // InternalChessGame.g:1792:2: ( rule__CellExpression__StateAssignment_0 )
+            // InternalChessGame.g:1792:3: rule__CellExpression__StateAssignment_0
             {
             pushFollow(FOLLOW_2);
-            rule__ContextExpression__Sub_expAssignment_0();
+            rule__CellExpression__StateAssignment_0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getContextExpressionAccess().getSub_expAssignment_0()); 
+             after(grammarAccess.getCellExpressionAccess().getStateAssignment_0()); 
 
             }
 
@@ -5329,26 +5329,26 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__ContextExpression__Group__0__Impl"
+    // $ANTLR end "rule__CellExpression__Group__0__Impl"
 
 
-    // $ANTLR start "rule__ContextExpression__Group__1"
-    // InternalChessGame.g:1800:1: rule__ContextExpression__Group__1 : rule__ContextExpression__Group__1__Impl rule__ContextExpression__Group__2 ;
-    public final void rule__ContextExpression__Group__1() throws RecognitionException {
+    // $ANTLR start "rule__CellExpression__Group__1"
+    // InternalChessGame.g:1800:1: rule__CellExpression__Group__1 : rule__CellExpression__Group__1__Impl rule__CellExpression__Group__2 ;
+    public final void rule__CellExpression__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalChessGame.g:1804:1: ( rule__ContextExpression__Group__1__Impl rule__ContextExpression__Group__2 )
-            // InternalChessGame.g:1805:2: rule__ContextExpression__Group__1__Impl rule__ContextExpression__Group__2
+            // InternalChessGame.g:1804:1: ( rule__CellExpression__Group__1__Impl rule__CellExpression__Group__2 )
+            // InternalChessGame.g:1805:2: rule__CellExpression__Group__1__Impl rule__CellExpression__Group__2
             {
             pushFollow(FOLLOW_29);
-            rule__ContextExpression__Group__1__Impl();
+            rule__CellExpression__Group__1__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__ContextExpression__Group__2();
+            rule__CellExpression__Group__2();
 
             state._fsp--;
 
@@ -5367,12 +5367,12 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__ContextExpression__Group__1"
+    // $ANTLR end "rule__CellExpression__Group__1"
 
 
-    // $ANTLR start "rule__ContextExpression__Group__1__Impl"
-    // InternalChessGame.g:1812:1: rule__ContextExpression__Group__1__Impl : ( '.' ) ;
-    public final void rule__ContextExpression__Group__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__CellExpression__Group__1__Impl"
+    // InternalChessGame.g:1812:1: rule__CellExpression__Group__1__Impl : ( '.' ) ;
+    public final void rule__CellExpression__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -5383,9 +5383,9 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
             // InternalChessGame.g:1817:1: ( '.' )
             // InternalChessGame.g:1818:2: '.'
             {
-             before(grammarAccess.getContextExpressionAccess().getFullStopKeyword_1()); 
+             before(grammarAccess.getCellExpressionAccess().getFullStopKeyword_1()); 
             match(input,33,FOLLOW_2); 
-             after(grammarAccess.getContextExpressionAccess().getFullStopKeyword_1()); 
+             after(grammarAccess.getCellExpressionAccess().getFullStopKeyword_1()); 
 
             }
 
@@ -5404,21 +5404,21 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__ContextExpression__Group__1__Impl"
+    // $ANTLR end "rule__CellExpression__Group__1__Impl"
 
 
-    // $ANTLR start "rule__ContextExpression__Group__2"
-    // InternalChessGame.g:1827:1: rule__ContextExpression__Group__2 : rule__ContextExpression__Group__2__Impl ;
-    public final void rule__ContextExpression__Group__2() throws RecognitionException {
+    // $ANTLR start "rule__CellExpression__Group__2"
+    // InternalChessGame.g:1827:1: rule__CellExpression__Group__2 : rule__CellExpression__Group__2__Impl ;
+    public final void rule__CellExpression__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalChessGame.g:1831:1: ( rule__ContextExpression__Group__2__Impl )
-            // InternalChessGame.g:1832:2: rule__ContextExpression__Group__2__Impl
+            // InternalChessGame.g:1831:1: ( rule__CellExpression__Group__2__Impl )
+            // InternalChessGame.g:1832:2: rule__CellExpression__Group__2__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__ContextExpression__Group__2__Impl();
+            rule__CellExpression__Group__2__Impl();
 
             state._fsp--;
 
@@ -5437,35 +5437,35 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__ContextExpression__Group__2"
+    // $ANTLR end "rule__CellExpression__Group__2"
 
 
-    // $ANTLR start "rule__ContextExpression__Group__2__Impl"
-    // InternalChessGame.g:1838:1: rule__ContextExpression__Group__2__Impl : ( ( rule__ContextExpression__CellStateAssignment_2 ) ) ;
-    public final void rule__ContextExpression__Group__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__CellExpression__Group__2__Impl"
+    // InternalChessGame.g:1838:1: rule__CellExpression__Group__2__Impl : ( ( rule__CellExpression__CellStateAssignment_2 ) ) ;
+    public final void rule__CellExpression__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalChessGame.g:1842:1: ( ( ( rule__ContextExpression__CellStateAssignment_2 ) ) )
-            // InternalChessGame.g:1843:1: ( ( rule__ContextExpression__CellStateAssignment_2 ) )
+            // InternalChessGame.g:1842:1: ( ( ( rule__CellExpression__CellStateAssignment_2 ) ) )
+            // InternalChessGame.g:1843:1: ( ( rule__CellExpression__CellStateAssignment_2 ) )
             {
-            // InternalChessGame.g:1843:1: ( ( rule__ContextExpression__CellStateAssignment_2 ) )
-            // InternalChessGame.g:1844:2: ( rule__ContextExpression__CellStateAssignment_2 )
+            // InternalChessGame.g:1843:1: ( ( rule__CellExpression__CellStateAssignment_2 ) )
+            // InternalChessGame.g:1844:2: ( rule__CellExpression__CellStateAssignment_2 )
             {
-             before(grammarAccess.getContextExpressionAccess().getCellStateAssignment_2()); 
-            // InternalChessGame.g:1845:2: ( rule__ContextExpression__CellStateAssignment_2 )
-            // InternalChessGame.g:1845:3: rule__ContextExpression__CellStateAssignment_2
+             before(grammarAccess.getCellExpressionAccess().getCellStateAssignment_2()); 
+            // InternalChessGame.g:1845:2: ( rule__CellExpression__CellStateAssignment_2 )
+            // InternalChessGame.g:1845:3: rule__CellExpression__CellStateAssignment_2
             {
             pushFollow(FOLLOW_2);
-            rule__ContextExpression__CellStateAssignment_2();
+            rule__CellExpression__CellStateAssignment_2();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getContextExpressionAccess().getCellStateAssignment_2()); 
+             after(grammarAccess.getCellExpressionAccess().getCellStateAssignment_2()); 
 
             }
 
@@ -5484,26 +5484,26 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__ContextExpression__Group__2__Impl"
+    // $ANTLR end "rule__CellExpression__Group__2__Impl"
 
 
-    // $ANTLR start "rule__StateFilterExpression__Group__0"
-    // InternalChessGame.g:1854:1: rule__StateFilterExpression__Group__0 : rule__StateFilterExpression__Group__0__Impl rule__StateFilterExpression__Group__1 ;
-    public final void rule__StateFilterExpression__Group__0() throws RecognitionException {
+    // $ANTLR start "rule__StateCheck__Group__0"
+    // InternalChessGame.g:1854:1: rule__StateCheck__Group__0 : rule__StateCheck__Group__0__Impl rule__StateCheck__Group__1 ;
+    public final void rule__StateCheck__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalChessGame.g:1858:1: ( rule__StateFilterExpression__Group__0__Impl rule__StateFilterExpression__Group__1 )
-            // InternalChessGame.g:1859:2: rule__StateFilterExpression__Group__0__Impl rule__StateFilterExpression__Group__1
+            // InternalChessGame.g:1858:1: ( rule__StateCheck__Group__0__Impl rule__StateCheck__Group__1 )
+            // InternalChessGame.g:1859:2: rule__StateCheck__Group__0__Impl rule__StateCheck__Group__1
             {
             pushFollow(FOLLOW_30);
-            rule__StateFilterExpression__Group__0__Impl();
+            rule__StateCheck__Group__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__StateFilterExpression__Group__1();
+            rule__StateCheck__Group__1();
 
             state._fsp--;
 
@@ -5522,12 +5522,12 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__StateFilterExpression__Group__0"
+    // $ANTLR end "rule__StateCheck__Group__0"
 
 
-    // $ANTLR start "rule__StateFilterExpression__Group__0__Impl"
-    // InternalChessGame.g:1866:1: rule__StateFilterExpression__Group__0__Impl : ( 'allCellState' ) ;
-    public final void rule__StateFilterExpression__Group__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__StateCheck__Group__0__Impl"
+    // InternalChessGame.g:1866:1: rule__StateCheck__Group__0__Impl : ( 'allCellState' ) ;
+    public final void rule__StateCheck__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -5538,9 +5538,9 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
             // InternalChessGame.g:1871:1: ( 'allCellState' )
             // InternalChessGame.g:1872:2: 'allCellState'
             {
-             before(grammarAccess.getStateFilterExpressionAccess().getAllCellStateKeyword_0()); 
+             before(grammarAccess.getStateCheckAccess().getAllCellStateKeyword_0()); 
             match(input,34,FOLLOW_2); 
-             after(grammarAccess.getStateFilterExpressionAccess().getAllCellStateKeyword_0()); 
+             after(grammarAccess.getStateCheckAccess().getAllCellStateKeyword_0()); 
 
             }
 
@@ -5559,26 +5559,26 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__StateFilterExpression__Group__0__Impl"
+    // $ANTLR end "rule__StateCheck__Group__0__Impl"
 
 
-    // $ANTLR start "rule__StateFilterExpression__Group__1"
-    // InternalChessGame.g:1881:1: rule__StateFilterExpression__Group__1 : rule__StateFilterExpression__Group__1__Impl rule__StateFilterExpression__Group__2 ;
-    public final void rule__StateFilterExpression__Group__1() throws RecognitionException {
+    // $ANTLR start "rule__StateCheck__Group__1"
+    // InternalChessGame.g:1881:1: rule__StateCheck__Group__1 : rule__StateCheck__Group__1__Impl rule__StateCheck__Group__2 ;
+    public final void rule__StateCheck__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalChessGame.g:1885:1: ( rule__StateFilterExpression__Group__1__Impl rule__StateFilterExpression__Group__2 )
-            // InternalChessGame.g:1886:2: rule__StateFilterExpression__Group__1__Impl rule__StateFilterExpression__Group__2
+            // InternalChessGame.g:1885:1: ( rule__StateCheck__Group__1__Impl rule__StateCheck__Group__2 )
+            // InternalChessGame.g:1886:2: rule__StateCheck__Group__1__Impl rule__StateCheck__Group__2
             {
             pushFollow(FOLLOW_4);
-            rule__StateFilterExpression__Group__1__Impl();
+            rule__StateCheck__Group__1__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__StateFilterExpression__Group__2();
+            rule__StateCheck__Group__2();
 
             state._fsp--;
 
@@ -5597,12 +5597,12 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__StateFilterExpression__Group__1"
+    // $ANTLR end "rule__StateCheck__Group__1"
 
 
-    // $ANTLR start "rule__StateFilterExpression__Group__1__Impl"
-    // InternalChessGame.g:1893:1: rule__StateFilterExpression__Group__1__Impl : ( '(' ) ;
-    public final void rule__StateFilterExpression__Group__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__StateCheck__Group__1__Impl"
+    // InternalChessGame.g:1893:1: rule__StateCheck__Group__1__Impl : ( '(' ) ;
+    public final void rule__StateCheck__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -5613,9 +5613,9 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
             // InternalChessGame.g:1898:1: ( '(' )
             // InternalChessGame.g:1899:2: '('
             {
-             before(grammarAccess.getStateFilterExpressionAccess().getLeftParenthesisKeyword_1()); 
+             before(grammarAccess.getStateCheckAccess().getLeftParenthesisKeyword_1()); 
             match(input,35,FOLLOW_2); 
-             after(grammarAccess.getStateFilterExpressionAccess().getLeftParenthesisKeyword_1()); 
+             after(grammarAccess.getStateCheckAccess().getLeftParenthesisKeyword_1()); 
 
             }
 
@@ -5634,26 +5634,26 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__StateFilterExpression__Group__1__Impl"
+    // $ANTLR end "rule__StateCheck__Group__1__Impl"
 
 
-    // $ANTLR start "rule__StateFilterExpression__Group__2"
-    // InternalChessGame.g:1908:1: rule__StateFilterExpression__Group__2 : rule__StateFilterExpression__Group__2__Impl rule__StateFilterExpression__Group__3 ;
-    public final void rule__StateFilterExpression__Group__2() throws RecognitionException {
+    // $ANTLR start "rule__StateCheck__Group__2"
+    // InternalChessGame.g:1908:1: rule__StateCheck__Group__2 : rule__StateCheck__Group__2__Impl rule__StateCheck__Group__3 ;
+    public final void rule__StateCheck__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalChessGame.g:1912:1: ( rule__StateFilterExpression__Group__2__Impl rule__StateFilterExpression__Group__3 )
-            // InternalChessGame.g:1913:2: rule__StateFilterExpression__Group__2__Impl rule__StateFilterExpression__Group__3
+            // InternalChessGame.g:1912:1: ( rule__StateCheck__Group__2__Impl rule__StateCheck__Group__3 )
+            // InternalChessGame.g:1913:2: rule__StateCheck__Group__2__Impl rule__StateCheck__Group__3
             {
             pushFollow(FOLLOW_31);
-            rule__StateFilterExpression__Group__2__Impl();
+            rule__StateCheck__Group__2__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__StateFilterExpression__Group__3();
+            rule__StateCheck__Group__3();
 
             state._fsp--;
 
@@ -5672,35 +5672,35 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__StateFilterExpression__Group__2"
+    // $ANTLR end "rule__StateCheck__Group__2"
 
 
-    // $ANTLR start "rule__StateFilterExpression__Group__2__Impl"
-    // InternalChessGame.g:1920:1: rule__StateFilterExpression__Group__2__Impl : ( ( rule__StateFilterExpression__Cell_stateAssignment_2 ) ) ;
-    public final void rule__StateFilterExpression__Group__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__StateCheck__Group__2__Impl"
+    // InternalChessGame.g:1920:1: rule__StateCheck__Group__2__Impl : ( ( rule__StateCheck__Cell_stateAssignment_2 ) ) ;
+    public final void rule__StateCheck__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalChessGame.g:1924:1: ( ( ( rule__StateFilterExpression__Cell_stateAssignment_2 ) ) )
-            // InternalChessGame.g:1925:1: ( ( rule__StateFilterExpression__Cell_stateAssignment_2 ) )
+            // InternalChessGame.g:1924:1: ( ( ( rule__StateCheck__Cell_stateAssignment_2 ) ) )
+            // InternalChessGame.g:1925:1: ( ( rule__StateCheck__Cell_stateAssignment_2 ) )
             {
-            // InternalChessGame.g:1925:1: ( ( rule__StateFilterExpression__Cell_stateAssignment_2 ) )
-            // InternalChessGame.g:1926:2: ( rule__StateFilterExpression__Cell_stateAssignment_2 )
+            // InternalChessGame.g:1925:1: ( ( rule__StateCheck__Cell_stateAssignment_2 ) )
+            // InternalChessGame.g:1926:2: ( rule__StateCheck__Cell_stateAssignment_2 )
             {
-             before(grammarAccess.getStateFilterExpressionAccess().getCell_stateAssignment_2()); 
-            // InternalChessGame.g:1927:2: ( rule__StateFilterExpression__Cell_stateAssignment_2 )
-            // InternalChessGame.g:1927:3: rule__StateFilterExpression__Cell_stateAssignment_2
+             before(grammarAccess.getStateCheckAccess().getCell_stateAssignment_2()); 
+            // InternalChessGame.g:1927:2: ( rule__StateCheck__Cell_stateAssignment_2 )
+            // InternalChessGame.g:1927:3: rule__StateCheck__Cell_stateAssignment_2
             {
             pushFollow(FOLLOW_2);
-            rule__StateFilterExpression__Cell_stateAssignment_2();
+            rule__StateCheck__Cell_stateAssignment_2();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getStateFilterExpressionAccess().getCell_stateAssignment_2()); 
+             after(grammarAccess.getStateCheckAccess().getCell_stateAssignment_2()); 
 
             }
 
@@ -5719,21 +5719,21 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__StateFilterExpression__Group__2__Impl"
+    // $ANTLR end "rule__StateCheck__Group__2__Impl"
 
 
-    // $ANTLR start "rule__StateFilterExpression__Group__3"
-    // InternalChessGame.g:1935:1: rule__StateFilterExpression__Group__3 : rule__StateFilterExpression__Group__3__Impl ;
-    public final void rule__StateFilterExpression__Group__3() throws RecognitionException {
+    // $ANTLR start "rule__StateCheck__Group__3"
+    // InternalChessGame.g:1935:1: rule__StateCheck__Group__3 : rule__StateCheck__Group__3__Impl ;
+    public final void rule__StateCheck__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalChessGame.g:1939:1: ( rule__StateFilterExpression__Group__3__Impl )
-            // InternalChessGame.g:1940:2: rule__StateFilterExpression__Group__3__Impl
+            // InternalChessGame.g:1939:1: ( rule__StateCheck__Group__3__Impl )
+            // InternalChessGame.g:1940:2: rule__StateCheck__Group__3__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__StateFilterExpression__Group__3__Impl();
+            rule__StateCheck__Group__3__Impl();
 
             state._fsp--;
 
@@ -5752,12 +5752,12 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__StateFilterExpression__Group__3"
+    // $ANTLR end "rule__StateCheck__Group__3"
 
 
-    // $ANTLR start "rule__StateFilterExpression__Group__3__Impl"
-    // InternalChessGame.g:1946:1: rule__StateFilterExpression__Group__3__Impl : ( ')' ) ;
-    public final void rule__StateFilterExpression__Group__3__Impl() throws RecognitionException {
+    // $ANTLR start "rule__StateCheck__Group__3__Impl"
+    // InternalChessGame.g:1946:1: rule__StateCheck__Group__3__Impl : ( ')' ) ;
+    public final void rule__StateCheck__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -5768,9 +5768,9 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
             // InternalChessGame.g:1951:1: ( ')' )
             // InternalChessGame.g:1952:2: ')'
             {
-             before(grammarAccess.getStateFilterExpressionAccess().getRightParenthesisKeyword_3()); 
+             before(grammarAccess.getStateCheckAccess().getRightParenthesisKeyword_3()); 
             match(input,36,FOLLOW_2); 
-             after(grammarAccess.getStateFilterExpressionAccess().getRightParenthesisKeyword_3()); 
+             after(grammarAccess.getStateCheckAccess().getRightParenthesisKeyword_3()); 
 
             }
 
@@ -5789,7 +5789,7 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__StateFilterExpression__Group__3__Impl"
+    // $ANTLR end "rule__StateCheck__Group__3__Impl"
 
 
     // $ANTLR start "rule__EmptyExpression__Group__0"
@@ -6715,25 +6715,25 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CellState__DisplayAssignment_2"
-    // InternalChessGame.g:2298:1: rule__CellState__DisplayAssignment_2 : ( ruleCellDisplaySpec ) ;
+    // InternalChessGame.g:2298:1: rule__CellState__DisplayAssignment_2 : ( ruleCellDisplay ) ;
     public final void rule__CellState__DisplayAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalChessGame.g:2302:1: ( ( ruleCellDisplaySpec ) )
-            // InternalChessGame.g:2303:2: ( ruleCellDisplaySpec )
+            // InternalChessGame.g:2302:1: ( ( ruleCellDisplay ) )
+            // InternalChessGame.g:2303:2: ( ruleCellDisplay )
             {
-            // InternalChessGame.g:2303:2: ( ruleCellDisplaySpec )
-            // InternalChessGame.g:2304:3: ruleCellDisplaySpec
+            // InternalChessGame.g:2303:2: ( ruleCellDisplay )
+            // InternalChessGame.g:2304:3: ruleCellDisplay
             {
-             before(grammarAccess.getCellStateAccess().getDisplayCellDisplaySpecParserRuleCall_2_0()); 
+             before(grammarAccess.getCellStateAccess().getDisplayCellDisplayParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
-            ruleCellDisplaySpec();
+            ruleCellDisplay();
 
             state._fsp--;
 
-             after(grammarAccess.getCellStateAccess().getDisplayCellDisplaySpecParserRuleCall_2_0()); 
+             after(grammarAccess.getCellStateAccess().getDisplayCellDisplayParserRuleCall_2_0()); 
 
             }
 
@@ -6756,25 +6756,25 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CellState__TransitionsAssignment_3_2"
-    // InternalChessGame.g:2313:1: rule__CellState__TransitionsAssignment_3_2 : ( ruleTransitionSpec ) ;
+    // InternalChessGame.g:2313:1: rule__CellState__TransitionsAssignment_3_2 : ( ruleTransition ) ;
     public final void rule__CellState__TransitionsAssignment_3_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalChessGame.g:2317:1: ( ( ruleTransitionSpec ) )
-            // InternalChessGame.g:2318:2: ( ruleTransitionSpec )
+            // InternalChessGame.g:2317:1: ( ( ruleTransition ) )
+            // InternalChessGame.g:2318:2: ( ruleTransition )
             {
-            // InternalChessGame.g:2318:2: ( ruleTransitionSpec )
-            // InternalChessGame.g:2319:3: ruleTransitionSpec
+            // InternalChessGame.g:2318:2: ( ruleTransition )
+            // InternalChessGame.g:2319:3: ruleTransition
             {
-             before(grammarAccess.getCellStateAccess().getTransitionsTransitionSpecParserRuleCall_3_2_0()); 
+             before(grammarAccess.getCellStateAccess().getTransitionsTransitionParserRuleCall_3_2_0()); 
             pushFollow(FOLLOW_2);
-            ruleTransitionSpec();
+            ruleTransition();
 
             state._fsp--;
 
-             after(grammarAccess.getCellStateAccess().getTransitionsTransitionSpecParserRuleCall_3_2_0()); 
+             after(grammarAccess.getCellStateAccess().getTransitionsTransitionParserRuleCall_3_2_0()); 
 
             }
 
@@ -6796,9 +6796,9 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
     // $ANTLR end "rule__CellState__TransitionsAssignment_3_2"
 
 
-    // $ANTLR start "rule__CellDisplaySpec__TextAssignment_2_0_2"
-    // InternalChessGame.g:2328:1: rule__CellDisplaySpec__TextAssignment_2_0_2 : ( RULE_STRING ) ;
-    public final void rule__CellDisplaySpec__TextAssignment_2_0_2() throws RecognitionException {
+    // $ANTLR start "rule__CellDisplay__TextAssignment_2_0_2"
+    // InternalChessGame.g:2328:1: rule__CellDisplay__TextAssignment_2_0_2 : ( RULE_STRING ) ;
+    public final void rule__CellDisplay__TextAssignment_2_0_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -6809,9 +6809,9 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
             // InternalChessGame.g:2333:2: ( RULE_STRING )
             // InternalChessGame.g:2334:3: RULE_STRING
             {
-             before(grammarAccess.getCellDisplaySpecAccess().getTextSTRINGTerminalRuleCall_2_0_2_0()); 
+             before(grammarAccess.getCellDisplayAccess().getTextSTRINGTerminalRuleCall_2_0_2_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
-             after(grammarAccess.getCellDisplaySpecAccess().getTextSTRINGTerminalRuleCall_2_0_2_0()); 
+             after(grammarAccess.getCellDisplayAccess().getTextSTRINGTerminalRuleCall_2_0_2_0()); 
 
             }
 
@@ -6830,35 +6830,35 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__CellDisplaySpec__TextAssignment_2_0_2"
+    // $ANTLR end "rule__CellDisplay__TextAssignment_2_0_2"
 
 
-    // $ANTLR start "rule__CellDisplaySpec__ColorAssignment_2_1_2"
-    // InternalChessGame.g:2343:1: rule__CellDisplaySpec__ColorAssignment_2_1_2 : ( ( rule__CellDisplaySpec__ColorAlternatives_2_1_2_0 ) ) ;
-    public final void rule__CellDisplaySpec__ColorAssignment_2_1_2() throws RecognitionException {
+    // $ANTLR start "rule__CellDisplay__ColorAssignment_2_1_2"
+    // InternalChessGame.g:2343:1: rule__CellDisplay__ColorAssignment_2_1_2 : ( ( rule__CellDisplay__ColorAlternatives_2_1_2_0 ) ) ;
+    public final void rule__CellDisplay__ColorAssignment_2_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalChessGame.g:2347:1: ( ( ( rule__CellDisplaySpec__ColorAlternatives_2_1_2_0 ) ) )
-            // InternalChessGame.g:2348:2: ( ( rule__CellDisplaySpec__ColorAlternatives_2_1_2_0 ) )
+            // InternalChessGame.g:2347:1: ( ( ( rule__CellDisplay__ColorAlternatives_2_1_2_0 ) ) )
+            // InternalChessGame.g:2348:2: ( ( rule__CellDisplay__ColorAlternatives_2_1_2_0 ) )
             {
-            // InternalChessGame.g:2348:2: ( ( rule__CellDisplaySpec__ColorAlternatives_2_1_2_0 ) )
-            // InternalChessGame.g:2349:3: ( rule__CellDisplaySpec__ColorAlternatives_2_1_2_0 )
+            // InternalChessGame.g:2348:2: ( ( rule__CellDisplay__ColorAlternatives_2_1_2_0 ) )
+            // InternalChessGame.g:2349:3: ( rule__CellDisplay__ColorAlternatives_2_1_2_0 )
             {
-             before(grammarAccess.getCellDisplaySpecAccess().getColorAlternatives_2_1_2_0()); 
-            // InternalChessGame.g:2350:3: ( rule__CellDisplaySpec__ColorAlternatives_2_1_2_0 )
-            // InternalChessGame.g:2350:4: rule__CellDisplaySpec__ColorAlternatives_2_1_2_0
+             before(grammarAccess.getCellDisplayAccess().getColorAlternatives_2_1_2_0()); 
+            // InternalChessGame.g:2350:3: ( rule__CellDisplay__ColorAlternatives_2_1_2_0 )
+            // InternalChessGame.g:2350:4: rule__CellDisplay__ColorAlternatives_2_1_2_0
             {
             pushFollow(FOLLOW_2);
-            rule__CellDisplaySpec__ColorAlternatives_2_1_2_0();
+            rule__CellDisplay__ColorAlternatives_2_1_2_0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getCellDisplaySpecAccess().getColorAlternatives_2_1_2_0()); 
+             after(grammarAccess.getCellDisplayAccess().getColorAlternatives_2_1_2_0()); 
 
             }
 
@@ -6877,12 +6877,12 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__CellDisplaySpec__ColorAssignment_2_1_2"
+    // $ANTLR end "rule__CellDisplay__ColorAssignment_2_1_2"
 
 
-    // $ANTLR start "rule__TransitionSpec__TriggerAssignment_1"
-    // InternalChessGame.g:2358:1: rule__TransitionSpec__TriggerAssignment_1 : ( ruleMouseTrigger ) ;
-    public final void rule__TransitionSpec__TriggerAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__Transition__TriggerAssignment_1"
+    // InternalChessGame.g:2358:1: rule__Transition__TriggerAssignment_1 : ( ruleMouseTrigger ) ;
+    public final void rule__Transition__TriggerAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -6893,13 +6893,13 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
             // InternalChessGame.g:2363:2: ( ruleMouseTrigger )
             // InternalChessGame.g:2364:3: ruleMouseTrigger
             {
-             before(grammarAccess.getTransitionSpecAccess().getTriggerMouseTriggerParserRuleCall_1_0()); 
+             before(grammarAccess.getTransitionAccess().getTriggerMouseTriggerParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
             ruleMouseTrigger();
 
             state._fsp--;
 
-             after(grammarAccess.getTransitionSpecAccess().getTriggerMouseTriggerParserRuleCall_1_0()); 
+             after(grammarAccess.getTransitionAccess().getTriggerMouseTriggerParserRuleCall_1_0()); 
 
             }
 
@@ -6918,12 +6918,12 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__TransitionSpec__TriggerAssignment_1"
+    // $ANTLR end "rule__Transition__TriggerAssignment_1"
 
 
-    // $ANTLR start "rule__TransitionSpec__TargetAssignment_4"
-    // InternalChessGame.g:2373:1: rule__TransitionSpec__TargetAssignment_4 : ( ( RULE_ID ) ) ;
-    public final void rule__TransitionSpec__TargetAssignment_4() throws RecognitionException {
+    // $ANTLR start "rule__Transition__TargetAssignment_4"
+    // InternalChessGame.g:2373:1: rule__Transition__TargetAssignment_4 : ( ( RULE_ID ) ) ;
+    public final void rule__Transition__TargetAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -6934,17 +6934,17 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
             // InternalChessGame.g:2378:2: ( ( RULE_ID ) )
             // InternalChessGame.g:2379:3: ( RULE_ID )
             {
-             before(grammarAccess.getTransitionSpecAccess().getTargetCellStateCrossReference_4_0()); 
+             before(grammarAccess.getTransitionAccess().getTargetCellStateCrossReference_4_0()); 
             // InternalChessGame.g:2380:3: ( RULE_ID )
             // InternalChessGame.g:2381:4: RULE_ID
             {
-             before(grammarAccess.getTransitionSpecAccess().getTargetCellStateIDTerminalRuleCall_4_0_1()); 
+             before(grammarAccess.getTransitionAccess().getTargetCellStateIDTerminalRuleCall_4_0_1()); 
             match(input,RULE_ID,FOLLOW_2); 
-             after(grammarAccess.getTransitionSpecAccess().getTargetCellStateIDTerminalRuleCall_4_0_1()); 
+             after(grammarAccess.getTransitionAccess().getTargetCellStateIDTerminalRuleCall_4_0_1()); 
 
             }
 
-             after(grammarAccess.getTransitionSpecAccess().getTargetCellStateCrossReference_4_0()); 
+             after(grammarAccess.getTransitionAccess().getTargetCellStateCrossReference_4_0()); 
 
             }
 
@@ -6963,7 +6963,7 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__TransitionSpec__TargetAssignment_4"
+    // $ANTLR end "rule__Transition__TargetAssignment_4"
 
 
     // $ANTLR start "rule__MouseTrigger__MouseAssignment_0"
@@ -7049,25 +7049,25 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__GameEnd__ActionAssignment_4"
-    // InternalChessGame.g:2426:1: rule__GameEnd__ActionAssignment_4 : ( ruleContextExpression ) ;
+    // InternalChessGame.g:2426:1: rule__GameEnd__ActionAssignment_4 : ( ruleCellExpression ) ;
     public final void rule__GameEnd__ActionAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalChessGame.g:2430:1: ( ( ruleContextExpression ) )
-            // InternalChessGame.g:2431:2: ( ruleContextExpression )
+            // InternalChessGame.g:2430:1: ( ( ruleCellExpression ) )
+            // InternalChessGame.g:2431:2: ( ruleCellExpression )
             {
-            // InternalChessGame.g:2431:2: ( ruleContextExpression )
-            // InternalChessGame.g:2432:3: ruleContextExpression
+            // InternalChessGame.g:2431:2: ( ruleCellExpression )
+            // InternalChessGame.g:2432:3: ruleCellExpression
             {
-             before(grammarAccess.getGameEndAccess().getActionContextExpressionParserRuleCall_4_0()); 
+             before(grammarAccess.getGameEndAccess().getActionCellExpressionParserRuleCall_4_0()); 
             pushFollow(FOLLOW_2);
-            ruleContextExpression();
+            ruleCellExpression();
 
             state._fsp--;
 
-             after(grammarAccess.getGameEndAccess().getActionContextExpressionParserRuleCall_4_0()); 
+             after(grammarAccess.getGameEndAccess().getActionCellExpressionParserRuleCall_4_0()); 
 
             }
 
@@ -7130,26 +7130,26 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
     // $ANTLR end "rule__GameEnd__BehaviourAssignment_6"
 
 
-    // $ANTLR start "rule__ContextExpression__Sub_expAssignment_0"
-    // InternalChessGame.g:2456:1: rule__ContextExpression__Sub_expAssignment_0 : ( ruleStateFilterExpression ) ;
-    public final void rule__ContextExpression__Sub_expAssignment_0() throws RecognitionException {
+    // $ANTLR start "rule__CellExpression__StateAssignment_0"
+    // InternalChessGame.g:2456:1: rule__CellExpression__StateAssignment_0 : ( ruleStateCheck ) ;
+    public final void rule__CellExpression__StateAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalChessGame.g:2460:1: ( ( ruleStateFilterExpression ) )
-            // InternalChessGame.g:2461:2: ( ruleStateFilterExpression )
+            // InternalChessGame.g:2460:1: ( ( ruleStateCheck ) )
+            // InternalChessGame.g:2461:2: ( ruleStateCheck )
             {
-            // InternalChessGame.g:2461:2: ( ruleStateFilterExpression )
-            // InternalChessGame.g:2462:3: ruleStateFilterExpression
+            // InternalChessGame.g:2461:2: ( ruleStateCheck )
+            // InternalChessGame.g:2462:3: ruleStateCheck
             {
-             before(grammarAccess.getContextExpressionAccess().getSub_expStateFilterExpressionParserRuleCall_0_0()); 
+             before(grammarAccess.getCellExpressionAccess().getStateStateCheckParserRuleCall_0_0()); 
             pushFollow(FOLLOW_2);
-            ruleStateFilterExpression();
+            ruleStateCheck();
 
             state._fsp--;
 
-             after(grammarAccess.getContextExpressionAccess().getSub_expStateFilterExpressionParserRuleCall_0_0()); 
+             after(grammarAccess.getCellExpressionAccess().getStateStateCheckParserRuleCall_0_0()); 
 
             }
 
@@ -7168,12 +7168,12 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__ContextExpression__Sub_expAssignment_0"
+    // $ANTLR end "rule__CellExpression__StateAssignment_0"
 
 
-    // $ANTLR start "rule__ContextExpression__CellStateAssignment_2"
-    // InternalChessGame.g:2471:1: rule__ContextExpression__CellStateAssignment_2 : ( ruleEmptyExpression ) ;
-    public final void rule__ContextExpression__CellStateAssignment_2() throws RecognitionException {
+    // $ANTLR start "rule__CellExpression__CellStateAssignment_2"
+    // InternalChessGame.g:2471:1: rule__CellExpression__CellStateAssignment_2 : ( ruleEmptyExpression ) ;
+    public final void rule__CellExpression__CellStateAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -7184,13 +7184,13 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
             // InternalChessGame.g:2476:2: ( ruleEmptyExpression )
             // InternalChessGame.g:2477:3: ruleEmptyExpression
             {
-             before(grammarAccess.getContextExpressionAccess().getCellStateEmptyExpressionParserRuleCall_2_0()); 
+             before(grammarAccess.getCellExpressionAccess().getCellStateEmptyExpressionParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
             ruleEmptyExpression();
 
             state._fsp--;
 
-             after(grammarAccess.getContextExpressionAccess().getCellStateEmptyExpressionParserRuleCall_2_0()); 
+             after(grammarAccess.getCellExpressionAccess().getCellStateEmptyExpressionParserRuleCall_2_0()); 
 
             }
 
@@ -7209,12 +7209,12 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__ContextExpression__CellStateAssignment_2"
+    // $ANTLR end "rule__CellExpression__CellStateAssignment_2"
 
 
-    // $ANTLR start "rule__StateFilterExpression__Cell_stateAssignment_2"
-    // InternalChessGame.g:2486:1: rule__StateFilterExpression__Cell_stateAssignment_2 : ( ( RULE_ID ) ) ;
-    public final void rule__StateFilterExpression__Cell_stateAssignment_2() throws RecognitionException {
+    // $ANTLR start "rule__StateCheck__Cell_stateAssignment_2"
+    // InternalChessGame.g:2486:1: rule__StateCheck__Cell_stateAssignment_2 : ( ( RULE_ID ) ) ;
+    public final void rule__StateCheck__Cell_stateAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -7225,17 +7225,17 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
             // InternalChessGame.g:2491:2: ( ( RULE_ID ) )
             // InternalChessGame.g:2492:3: ( RULE_ID )
             {
-             before(grammarAccess.getStateFilterExpressionAccess().getCell_stateCellStateCrossReference_2_0()); 
+             before(grammarAccess.getStateCheckAccess().getCell_stateCellStateCrossReference_2_0()); 
             // InternalChessGame.g:2493:3: ( RULE_ID )
             // InternalChessGame.g:2494:4: RULE_ID
             {
-             before(grammarAccess.getStateFilterExpressionAccess().getCell_stateCellStateIDTerminalRuleCall_2_0_1()); 
+             before(grammarAccess.getStateCheckAccess().getCell_stateCellStateIDTerminalRuleCall_2_0_1()); 
             match(input,RULE_ID,FOLLOW_2); 
-             after(grammarAccess.getStateFilterExpressionAccess().getCell_stateCellStateIDTerminalRuleCall_2_0_1()); 
+             after(grammarAccess.getStateCheckAccess().getCell_stateCellStateIDTerminalRuleCall_2_0_1()); 
 
             }
 
-             after(grammarAccess.getStateFilterExpressionAccess().getCell_stateCellStateCrossReference_2_0()); 
+             after(grammarAccess.getStateCheckAccess().getCell_stateCellStateCrossReference_2_0()); 
 
             }
 
@@ -7254,7 +7254,7 @@ public class InternalChessGameParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__StateFilterExpression__Cell_stateAssignment_2"
+    // $ANTLR end "rule__StateCheck__Cell_stateAssignment_2"
 
 
     // $ANTLR start "rule__EndBehaviour__MessageAssignment_2"

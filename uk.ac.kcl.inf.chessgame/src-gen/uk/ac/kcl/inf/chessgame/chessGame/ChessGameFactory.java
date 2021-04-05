@@ -60,22 +60,22 @@ public interface ChessGameFactory extends EFactory
   CellState createCellState();
 
   /**
-   * Returns a new object of class '<em>Cell Display Spec</em>'.
+   * Returns a new object of class '<em>Cell Display</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Cell Display Spec</em>'.
+   * @return a new object of class '<em>Cell Display</em>'.
    * @generated
    */
-  CellDisplaySpec createCellDisplaySpec();
+  CellDisplay createCellDisplay();
 
   /**
-   * Returns a new object of class '<em>Transition Spec</em>'.
+   * Returns a new object of class '<em>Transition</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Transition Spec</em>'.
+   * @return a new object of class '<em>Transition</em>'.
    * @generated
    */
-  TransitionSpec createTransitionSpec();
+  Transition createTransition();
 
   /**
    * Returns a new object of class '<em>Mouse Trigger</em>'.
@@ -96,22 +96,22 @@ public interface ChessGameFactory extends EFactory
   GameEnd createGameEnd();
 
   /**
-   * Returns a new object of class '<em>Context Expression</em>'.
+   * Returns a new object of class '<em>Cell Expression</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Context Expression</em>'.
+   * @return a new object of class '<em>Cell Expression</em>'.
    * @generated
    */
-  ContextExpression createContextExpression();
+  CellExpression createCellExpression();
 
   /**
-   * Returns a new object of class '<em>State Filter Expression</em>'.
+   * Returns a new object of class '<em>State Check</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>State Filter Expression</em>'.
+   * @return a new object of class '<em>State Check</em>'.
    * @generated
    */
-  StateFilterExpression createStateFilterExpression();
+  StateCheck createStateCheck();
 
   /**
    * Returns a new object of class '<em>Empty Expression</em>'.

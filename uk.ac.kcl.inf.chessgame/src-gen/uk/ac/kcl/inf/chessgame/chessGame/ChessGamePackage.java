@@ -224,14 +224,14 @@ public interface ChessGamePackage extends EPackage
   int CELL_STATE_FEATURE_COUNT = 3;
 
   /**
-   * The meta object id for the '{@link uk.ac.kcl.inf.chessgame.chessGame.impl.CellDisplaySpecImpl <em>Cell Display Spec</em>}' class.
+   * The meta object id for the '{@link uk.ac.kcl.inf.chessgame.chessGame.impl.CellDisplayImpl <em>Cell Display</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see uk.ac.kcl.inf.chessgame.chessGame.impl.CellDisplaySpecImpl
-   * @see uk.ac.kcl.inf.chessgame.chessGame.impl.ChessGamePackageImpl#getCellDisplaySpec()
+   * @see uk.ac.kcl.inf.chessgame.chessGame.impl.CellDisplayImpl
+   * @see uk.ac.kcl.inf.chessgame.chessGame.impl.ChessGamePackageImpl#getCellDisplay()
    * @generated
    */
-  int CELL_DISPLAY_SPEC = 4;
+  int CELL_DISPLAY = 4;
 
   /**
    * The feature id for the '<em><b>Text</b></em>' attribute.
@@ -240,7 +240,7 @@ public interface ChessGamePackage extends EPackage
    * @generated
    * @ordered
    */
-  int CELL_DISPLAY_SPEC__TEXT = 0;
+  int CELL_DISPLAY__TEXT = 0;
 
   /**
    * The feature id for the '<em><b>Color</b></em>' attribute.
@@ -249,26 +249,26 @@ public interface ChessGamePackage extends EPackage
    * @generated
    * @ordered
    */
-  int CELL_DISPLAY_SPEC__COLOR = 1;
+  int CELL_DISPLAY__COLOR = 1;
 
   /**
-   * The number of structural features of the '<em>Cell Display Spec</em>' class.
+   * The number of structural features of the '<em>Cell Display</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CELL_DISPLAY_SPEC_FEATURE_COUNT = 2;
+  int CELL_DISPLAY_FEATURE_COUNT = 2;
 
   /**
-   * The meta object id for the '{@link uk.ac.kcl.inf.chessgame.chessGame.impl.TransitionSpecImpl <em>Transition Spec</em>}' class.
+   * The meta object id for the '{@link uk.ac.kcl.inf.chessgame.chessGame.impl.TransitionImpl <em>Transition</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see uk.ac.kcl.inf.chessgame.chessGame.impl.TransitionSpecImpl
-   * @see uk.ac.kcl.inf.chessgame.chessGame.impl.ChessGamePackageImpl#getTransitionSpec()
+   * @see uk.ac.kcl.inf.chessgame.chessGame.impl.TransitionImpl
+   * @see uk.ac.kcl.inf.chessgame.chessGame.impl.ChessGamePackageImpl#getTransition()
    * @generated
    */
-  int TRANSITION_SPEC = 5;
+  int TRANSITION = 5;
 
   /**
    * The feature id for the '<em><b>Trigger</b></em>' containment reference.
@@ -277,7 +277,7 @@ public interface ChessGamePackage extends EPackage
    * @generated
    * @ordered
    */
-  int TRANSITION_SPEC__TRIGGER = 0;
+  int TRANSITION__TRIGGER = 0;
 
   /**
    * The feature id for the '<em><b>Target</b></em>' reference.
@@ -286,16 +286,16 @@ public interface ChessGamePackage extends EPackage
    * @generated
    * @ordered
    */
-  int TRANSITION_SPEC__TARGET = 1;
+  int TRANSITION__TARGET = 1;
 
   /**
-   * The number of structural features of the '<em>Transition Spec</em>' class.
+   * The number of structural features of the '<em>Transition</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TRANSITION_SPEC_FEATURE_COUNT = 2;
+  int TRANSITION_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link uk.ac.kcl.inf.chessgame.chessGame.impl.MouseTriggerImpl <em>Mouse Trigger</em>}' class.
@@ -372,23 +372,23 @@ public interface ChessGamePackage extends EPackage
   int GAME_END_FEATURE_COUNT = 3;
 
   /**
-   * The meta object id for the '{@link uk.ac.kcl.inf.chessgame.chessGame.impl.ContextExpressionImpl <em>Context Expression</em>}' class.
+   * The meta object id for the '{@link uk.ac.kcl.inf.chessgame.chessGame.impl.CellExpressionImpl <em>Cell Expression</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see uk.ac.kcl.inf.chessgame.chessGame.impl.ContextExpressionImpl
-   * @see uk.ac.kcl.inf.chessgame.chessGame.impl.ChessGamePackageImpl#getContextExpression()
+   * @see uk.ac.kcl.inf.chessgame.chessGame.impl.CellExpressionImpl
+   * @see uk.ac.kcl.inf.chessgame.chessGame.impl.ChessGamePackageImpl#getCellExpression()
    * @generated
    */
-  int CONTEXT_EXPRESSION = 8;
+  int CELL_EXPRESSION = 8;
 
   /**
-   * The feature id for the '<em><b>Sub exp</b></em>' containment reference.
+   * The feature id for the '<em><b>State</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CONTEXT_EXPRESSION__SUB_EXP = 0;
+  int CELL_EXPRESSION__STATE = 0;
 
   /**
    * The feature id for the '<em><b>Cell State</b></em>' containment reference.
@@ -397,26 +397,26 @@ public interface ChessGamePackage extends EPackage
    * @generated
    * @ordered
    */
-  int CONTEXT_EXPRESSION__CELL_STATE = 1;
+  int CELL_EXPRESSION__CELL_STATE = 1;
 
   /**
-   * The number of structural features of the '<em>Context Expression</em>' class.
+   * The number of structural features of the '<em>Cell Expression</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CONTEXT_EXPRESSION_FEATURE_COUNT = 2;
+  int CELL_EXPRESSION_FEATURE_COUNT = 2;
 
   /**
-   * The meta object id for the '{@link uk.ac.kcl.inf.chessgame.chessGame.impl.StateFilterExpressionImpl <em>State Filter Expression</em>}' class.
+   * The meta object id for the '{@link uk.ac.kcl.inf.chessgame.chessGame.impl.StateCheckImpl <em>State Check</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see uk.ac.kcl.inf.chessgame.chessGame.impl.StateFilterExpressionImpl
-   * @see uk.ac.kcl.inf.chessgame.chessGame.impl.ChessGamePackageImpl#getStateFilterExpression()
+   * @see uk.ac.kcl.inf.chessgame.chessGame.impl.StateCheckImpl
+   * @see uk.ac.kcl.inf.chessgame.chessGame.impl.ChessGamePackageImpl#getStateCheck()
    * @generated
    */
-  int STATE_FILTER_EXPRESSION = 9;
+  int STATE_CHECK = 9;
 
   /**
    * The feature id for the '<em><b>Cell state</b></em>' reference.
@@ -425,16 +425,16 @@ public interface ChessGamePackage extends EPackage
    * @generated
    * @ordered
    */
-  int STATE_FILTER_EXPRESSION__CELL_STATE = 0;
+  int STATE_CHECK__CELL_STATE = 0;
 
   /**
-   * The number of structural features of the '<em>State Filter Expression</em>' class.
+   * The number of structural features of the '<em>State Check</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int STATE_FILTER_EXPRESSION_FEATURE_COUNT = 1;
+  int STATE_CHECK_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link uk.ac.kcl.inf.chessgame.chessGame.impl.EmptyExpressionImpl <em>Empty Expression</em>}' class.
@@ -635,68 +635,68 @@ public interface ChessGamePackage extends EPackage
   EReference getCellState_Transitions();
 
   /**
-   * Returns the meta object for class '{@link uk.ac.kcl.inf.chessgame.chessGame.CellDisplaySpec <em>Cell Display Spec</em>}'.
+   * Returns the meta object for class '{@link uk.ac.kcl.inf.chessgame.chessGame.CellDisplay <em>Cell Display</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Cell Display Spec</em>'.
-   * @see uk.ac.kcl.inf.chessgame.chessGame.CellDisplaySpec
+   * @return the meta object for class '<em>Cell Display</em>'.
+   * @see uk.ac.kcl.inf.chessgame.chessGame.CellDisplay
    * @generated
    */
-  EClass getCellDisplaySpec();
+  EClass getCellDisplay();
 
   /**
-   * Returns the meta object for the attribute '{@link uk.ac.kcl.inf.chessgame.chessGame.CellDisplaySpec#getText <em>Text</em>}'.
+   * Returns the meta object for the attribute '{@link uk.ac.kcl.inf.chessgame.chessGame.CellDisplay#getText <em>Text</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Text</em>'.
-   * @see uk.ac.kcl.inf.chessgame.chessGame.CellDisplaySpec#getText()
-   * @see #getCellDisplaySpec()
+   * @see uk.ac.kcl.inf.chessgame.chessGame.CellDisplay#getText()
+   * @see #getCellDisplay()
    * @generated
    */
-  EAttribute getCellDisplaySpec_Text();
+  EAttribute getCellDisplay_Text();
 
   /**
-   * Returns the meta object for the attribute '{@link uk.ac.kcl.inf.chessgame.chessGame.CellDisplaySpec#getColor <em>Color</em>}'.
+   * Returns the meta object for the attribute '{@link uk.ac.kcl.inf.chessgame.chessGame.CellDisplay#getColor <em>Color</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Color</em>'.
-   * @see uk.ac.kcl.inf.chessgame.chessGame.CellDisplaySpec#getColor()
-   * @see #getCellDisplaySpec()
+   * @see uk.ac.kcl.inf.chessgame.chessGame.CellDisplay#getColor()
+   * @see #getCellDisplay()
    * @generated
    */
-  EAttribute getCellDisplaySpec_Color();
+  EAttribute getCellDisplay_Color();
 
   /**
-   * Returns the meta object for class '{@link uk.ac.kcl.inf.chessgame.chessGame.TransitionSpec <em>Transition Spec</em>}'.
+   * Returns the meta object for class '{@link uk.ac.kcl.inf.chessgame.chessGame.Transition <em>Transition</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Transition Spec</em>'.
-   * @see uk.ac.kcl.inf.chessgame.chessGame.TransitionSpec
+   * @return the meta object for class '<em>Transition</em>'.
+   * @see uk.ac.kcl.inf.chessgame.chessGame.Transition
    * @generated
    */
-  EClass getTransitionSpec();
+  EClass getTransition();
 
   /**
-   * Returns the meta object for the containment reference '{@link uk.ac.kcl.inf.chessgame.chessGame.TransitionSpec#getTrigger <em>Trigger</em>}'.
+   * Returns the meta object for the containment reference '{@link uk.ac.kcl.inf.chessgame.chessGame.Transition#getTrigger <em>Trigger</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Trigger</em>'.
-   * @see uk.ac.kcl.inf.chessgame.chessGame.TransitionSpec#getTrigger()
-   * @see #getTransitionSpec()
+   * @see uk.ac.kcl.inf.chessgame.chessGame.Transition#getTrigger()
+   * @see #getTransition()
    * @generated
    */
-  EReference getTransitionSpec_Trigger();
+  EReference getTransition_Trigger();
 
   /**
-   * Returns the meta object for the reference '{@link uk.ac.kcl.inf.chessgame.chessGame.TransitionSpec#getTarget <em>Target</em>}'.
+   * Returns the meta object for the reference '{@link uk.ac.kcl.inf.chessgame.chessGame.Transition#getTarget <em>Target</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the reference '<em>Target</em>'.
-   * @see uk.ac.kcl.inf.chessgame.chessGame.TransitionSpec#getTarget()
-   * @see #getTransitionSpec()
+   * @see uk.ac.kcl.inf.chessgame.chessGame.Transition#getTarget()
+   * @see #getTransition()
    * @generated
    */
-  EReference getTransitionSpec_Target();
+  EReference getTransition_Target();
 
   /**
    * Returns the meta object for class '{@link uk.ac.kcl.inf.chessgame.chessGame.MouseTrigger <em>Mouse Trigger</em>}'.
@@ -763,57 +763,57 @@ public interface ChessGamePackage extends EPackage
   EReference getGameEnd_Behaviour();
 
   /**
-   * Returns the meta object for class '{@link uk.ac.kcl.inf.chessgame.chessGame.ContextExpression <em>Context Expression</em>}'.
+   * Returns the meta object for class '{@link uk.ac.kcl.inf.chessgame.chessGame.CellExpression <em>Cell Expression</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Context Expression</em>'.
-   * @see uk.ac.kcl.inf.chessgame.chessGame.ContextExpression
+   * @return the meta object for class '<em>Cell Expression</em>'.
+   * @see uk.ac.kcl.inf.chessgame.chessGame.CellExpression
    * @generated
    */
-  EClass getContextExpression();
+  EClass getCellExpression();
 
   /**
-   * Returns the meta object for the containment reference '{@link uk.ac.kcl.inf.chessgame.chessGame.ContextExpression#getSub_exp <em>Sub exp</em>}'.
+   * Returns the meta object for the containment reference '{@link uk.ac.kcl.inf.chessgame.chessGame.CellExpression#getState <em>State</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Sub exp</em>'.
-   * @see uk.ac.kcl.inf.chessgame.chessGame.ContextExpression#getSub_exp()
-   * @see #getContextExpression()
+   * @return the meta object for the containment reference '<em>State</em>'.
+   * @see uk.ac.kcl.inf.chessgame.chessGame.CellExpression#getState()
+   * @see #getCellExpression()
    * @generated
    */
-  EReference getContextExpression_Sub_exp();
+  EReference getCellExpression_State();
 
   /**
-   * Returns the meta object for the containment reference '{@link uk.ac.kcl.inf.chessgame.chessGame.ContextExpression#getCellState <em>Cell State</em>}'.
+   * Returns the meta object for the containment reference '{@link uk.ac.kcl.inf.chessgame.chessGame.CellExpression#getCellState <em>Cell State</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Cell State</em>'.
-   * @see uk.ac.kcl.inf.chessgame.chessGame.ContextExpression#getCellState()
-   * @see #getContextExpression()
+   * @see uk.ac.kcl.inf.chessgame.chessGame.CellExpression#getCellState()
+   * @see #getCellExpression()
    * @generated
    */
-  EReference getContextExpression_CellState();
+  EReference getCellExpression_CellState();
 
   /**
-   * Returns the meta object for class '{@link uk.ac.kcl.inf.chessgame.chessGame.StateFilterExpression <em>State Filter Expression</em>}'.
+   * Returns the meta object for class '{@link uk.ac.kcl.inf.chessgame.chessGame.StateCheck <em>State Check</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>State Filter Expression</em>'.
-   * @see uk.ac.kcl.inf.chessgame.chessGame.StateFilterExpression
+   * @return the meta object for class '<em>State Check</em>'.
+   * @see uk.ac.kcl.inf.chessgame.chessGame.StateCheck
    * @generated
    */
-  EClass getStateFilterExpression();
+  EClass getStateCheck();
 
   /**
-   * Returns the meta object for the reference '{@link uk.ac.kcl.inf.chessgame.chessGame.StateFilterExpression#getCell_state <em>Cell state</em>}'.
+   * Returns the meta object for the reference '{@link uk.ac.kcl.inf.chessgame.chessGame.StateCheck#getCell_state <em>Cell state</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the reference '<em>Cell state</em>'.
-   * @see uk.ac.kcl.inf.chessgame.chessGame.StateFilterExpression#getCell_state()
-   * @see #getStateFilterExpression()
+   * @see uk.ac.kcl.inf.chessgame.chessGame.StateCheck#getCell_state()
+   * @see #getStateCheck()
    * @generated
    */
-  EReference getStateFilterExpression_Cell_state();
+  EReference getStateCheck_Cell_state();
 
   /**
    * Returns the meta object for class '{@link uk.ac.kcl.inf.chessgame.chessGame.EmptyExpression <em>Empty Expression</em>}'.
@@ -990,14 +990,14 @@ public interface ChessGamePackage extends EPackage
     EReference CELL_STATE__TRANSITIONS = eINSTANCE.getCellState_Transitions();
 
     /**
-     * The meta object literal for the '{@link uk.ac.kcl.inf.chessgame.chessGame.impl.CellDisplaySpecImpl <em>Cell Display Spec</em>}' class.
+     * The meta object literal for the '{@link uk.ac.kcl.inf.chessgame.chessGame.impl.CellDisplayImpl <em>Cell Display</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see uk.ac.kcl.inf.chessgame.chessGame.impl.CellDisplaySpecImpl
-     * @see uk.ac.kcl.inf.chessgame.chessGame.impl.ChessGamePackageImpl#getCellDisplaySpec()
+     * @see uk.ac.kcl.inf.chessgame.chessGame.impl.CellDisplayImpl
+     * @see uk.ac.kcl.inf.chessgame.chessGame.impl.ChessGamePackageImpl#getCellDisplay()
      * @generated
      */
-    EClass CELL_DISPLAY_SPEC = eINSTANCE.getCellDisplaySpec();
+    EClass CELL_DISPLAY = eINSTANCE.getCellDisplay();
 
     /**
      * The meta object literal for the '<em><b>Text</b></em>' attribute feature.
@@ -1005,7 +1005,7 @@ public interface ChessGamePackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute CELL_DISPLAY_SPEC__TEXT = eINSTANCE.getCellDisplaySpec_Text();
+    EAttribute CELL_DISPLAY__TEXT = eINSTANCE.getCellDisplay_Text();
 
     /**
      * The meta object literal for the '<em><b>Color</b></em>' attribute feature.
@@ -1013,17 +1013,17 @@ public interface ChessGamePackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute CELL_DISPLAY_SPEC__COLOR = eINSTANCE.getCellDisplaySpec_Color();
+    EAttribute CELL_DISPLAY__COLOR = eINSTANCE.getCellDisplay_Color();
 
     /**
-     * The meta object literal for the '{@link uk.ac.kcl.inf.chessgame.chessGame.impl.TransitionSpecImpl <em>Transition Spec</em>}' class.
+     * The meta object literal for the '{@link uk.ac.kcl.inf.chessgame.chessGame.impl.TransitionImpl <em>Transition</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see uk.ac.kcl.inf.chessgame.chessGame.impl.TransitionSpecImpl
-     * @see uk.ac.kcl.inf.chessgame.chessGame.impl.ChessGamePackageImpl#getTransitionSpec()
+     * @see uk.ac.kcl.inf.chessgame.chessGame.impl.TransitionImpl
+     * @see uk.ac.kcl.inf.chessgame.chessGame.impl.ChessGamePackageImpl#getTransition()
      * @generated
      */
-    EClass TRANSITION_SPEC = eINSTANCE.getTransitionSpec();
+    EClass TRANSITION = eINSTANCE.getTransition();
 
     /**
      * The meta object literal for the '<em><b>Trigger</b></em>' containment reference feature.
@@ -1031,7 +1031,7 @@ public interface ChessGamePackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference TRANSITION_SPEC__TRIGGER = eINSTANCE.getTransitionSpec_Trigger();
+    EReference TRANSITION__TRIGGER = eINSTANCE.getTransition_Trigger();
 
     /**
      * The meta object literal for the '<em><b>Target</b></em>' reference feature.
@@ -1039,7 +1039,7 @@ public interface ChessGamePackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference TRANSITION_SPEC__TARGET = eINSTANCE.getTransitionSpec_Target();
+    EReference TRANSITION__TARGET = eINSTANCE.getTransition_Target();
 
     /**
      * The meta object literal for the '{@link uk.ac.kcl.inf.chessgame.chessGame.impl.MouseTriggerImpl <em>Mouse Trigger</em>}' class.
@@ -1094,22 +1094,22 @@ public interface ChessGamePackage extends EPackage
     EReference GAME_END__BEHAVIOUR = eINSTANCE.getGameEnd_Behaviour();
 
     /**
-     * The meta object literal for the '{@link uk.ac.kcl.inf.chessgame.chessGame.impl.ContextExpressionImpl <em>Context Expression</em>}' class.
+     * The meta object literal for the '{@link uk.ac.kcl.inf.chessgame.chessGame.impl.CellExpressionImpl <em>Cell Expression</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see uk.ac.kcl.inf.chessgame.chessGame.impl.ContextExpressionImpl
-     * @see uk.ac.kcl.inf.chessgame.chessGame.impl.ChessGamePackageImpl#getContextExpression()
+     * @see uk.ac.kcl.inf.chessgame.chessGame.impl.CellExpressionImpl
+     * @see uk.ac.kcl.inf.chessgame.chessGame.impl.ChessGamePackageImpl#getCellExpression()
      * @generated
      */
-    EClass CONTEXT_EXPRESSION = eINSTANCE.getContextExpression();
+    EClass CELL_EXPRESSION = eINSTANCE.getCellExpression();
 
     /**
-     * The meta object literal for the '<em><b>Sub exp</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>State</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference CONTEXT_EXPRESSION__SUB_EXP = eINSTANCE.getContextExpression_Sub_exp();
+    EReference CELL_EXPRESSION__STATE = eINSTANCE.getCellExpression_State();
 
     /**
      * The meta object literal for the '<em><b>Cell State</b></em>' containment reference feature.
@@ -1117,17 +1117,17 @@ public interface ChessGamePackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference CONTEXT_EXPRESSION__CELL_STATE = eINSTANCE.getContextExpression_CellState();
+    EReference CELL_EXPRESSION__CELL_STATE = eINSTANCE.getCellExpression_CellState();
 
     /**
-     * The meta object literal for the '{@link uk.ac.kcl.inf.chessgame.chessGame.impl.StateFilterExpressionImpl <em>State Filter Expression</em>}' class.
+     * The meta object literal for the '{@link uk.ac.kcl.inf.chessgame.chessGame.impl.StateCheckImpl <em>State Check</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see uk.ac.kcl.inf.chessgame.chessGame.impl.StateFilterExpressionImpl
-     * @see uk.ac.kcl.inf.chessgame.chessGame.impl.ChessGamePackageImpl#getStateFilterExpression()
+     * @see uk.ac.kcl.inf.chessgame.chessGame.impl.StateCheckImpl
+     * @see uk.ac.kcl.inf.chessgame.chessGame.impl.ChessGamePackageImpl#getStateCheck()
      * @generated
      */
-    EClass STATE_FILTER_EXPRESSION = eINSTANCE.getStateFilterExpression();
+    EClass STATE_CHECK = eINSTANCE.getStateCheck();
 
     /**
      * The meta object literal for the '<em><b>Cell state</b></em>' reference feature.
@@ -1135,7 +1135,7 @@ public interface ChessGamePackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference STATE_FILTER_EXPRESSION__CELL_STATE = eINSTANCE.getStateFilterExpression_Cell_state();
+    EReference STATE_CHECK__CELL_STATE = eINSTANCE.getStateCheck_Cell_state();
 
     /**
      * The meta object literal for the '{@link uk.ac.kcl.inf.chessgame.chessGame.impl.EmptyExpressionImpl <em>Empty Expression</em>}' class.

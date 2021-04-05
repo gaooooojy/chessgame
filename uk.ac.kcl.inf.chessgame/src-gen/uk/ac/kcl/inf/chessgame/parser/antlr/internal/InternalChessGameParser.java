@@ -673,7 +673,7 @@ public class InternalChessGameParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCellState"
-    // InternalChessGame.g:301:1: ruleCellState returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '{' ( (lv_display_2_0= ruleCellDisplaySpec ) ) (otherlv_3= 'transitions' otherlv_4= '{' ( (lv_transitions_5_0= ruleTransitionSpec ) )+ otherlv_6= '}' )? otherlv_7= '}' ) ;
+    // InternalChessGame.g:301:1: ruleCellState returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '{' ( (lv_display_2_0= ruleCellDisplay ) ) (otherlv_3= 'transitions' otherlv_4= '{' ( (lv_transitions_5_0= ruleTransition ) )+ otherlv_6= '}' )? otherlv_7= '}' ) ;
     public final EObject ruleCellState() throws RecognitionException {
         EObject current = null;
 
@@ -692,11 +692,11 @@ public class InternalChessGameParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalChessGame.g:307:2: ( ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '{' ( (lv_display_2_0= ruleCellDisplaySpec ) ) (otherlv_3= 'transitions' otherlv_4= '{' ( (lv_transitions_5_0= ruleTransitionSpec ) )+ otherlv_6= '}' )? otherlv_7= '}' ) )
-            // InternalChessGame.g:308:2: ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '{' ( (lv_display_2_0= ruleCellDisplaySpec ) ) (otherlv_3= 'transitions' otherlv_4= '{' ( (lv_transitions_5_0= ruleTransitionSpec ) )+ otherlv_6= '}' )? otherlv_7= '}' )
+            // InternalChessGame.g:307:2: ( ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '{' ( (lv_display_2_0= ruleCellDisplay ) ) (otherlv_3= 'transitions' otherlv_4= '{' ( (lv_transitions_5_0= ruleTransition ) )+ otherlv_6= '}' )? otherlv_7= '}' ) )
+            // InternalChessGame.g:308:2: ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '{' ( (lv_display_2_0= ruleCellDisplay ) ) (otherlv_3= 'transitions' otherlv_4= '{' ( (lv_transitions_5_0= ruleTransition ) )+ otherlv_6= '}' )? otherlv_7= '}' )
             {
-            // InternalChessGame.g:308:2: ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '{' ( (lv_display_2_0= ruleCellDisplaySpec ) ) (otherlv_3= 'transitions' otherlv_4= '{' ( (lv_transitions_5_0= ruleTransitionSpec ) )+ otherlv_6= '}' )? otherlv_7= '}' )
-            // InternalChessGame.g:309:3: ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '{' ( (lv_display_2_0= ruleCellDisplaySpec ) ) (otherlv_3= 'transitions' otherlv_4= '{' ( (lv_transitions_5_0= ruleTransitionSpec ) )+ otherlv_6= '}' )? otherlv_7= '}'
+            // InternalChessGame.g:308:2: ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '{' ( (lv_display_2_0= ruleCellDisplay ) ) (otherlv_3= 'transitions' otherlv_4= '{' ( (lv_transitions_5_0= ruleTransition ) )+ otherlv_6= '}' )? otherlv_7= '}' )
+            // InternalChessGame.g:309:3: ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '{' ( (lv_display_2_0= ruleCellDisplay ) ) (otherlv_3= 'transitions' otherlv_4= '{' ( (lv_transitions_5_0= ruleTransition ) )+ otherlv_6= '}' )? otherlv_7= '}'
             {
             // InternalChessGame.g:309:3: ( (lv_name_0_0= RULE_ID ) )
             // InternalChessGame.g:310:4: (lv_name_0_0= RULE_ID )
@@ -728,17 +728,17 @@ public class InternalChessGameParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getCellStateAccess().getLeftCurlyBracketKeyword_1());
             		
-            // InternalChessGame.g:331:3: ( (lv_display_2_0= ruleCellDisplaySpec ) )
-            // InternalChessGame.g:332:4: (lv_display_2_0= ruleCellDisplaySpec )
+            // InternalChessGame.g:331:3: ( (lv_display_2_0= ruleCellDisplay ) )
+            // InternalChessGame.g:332:4: (lv_display_2_0= ruleCellDisplay )
             {
-            // InternalChessGame.g:332:4: (lv_display_2_0= ruleCellDisplaySpec )
-            // InternalChessGame.g:333:5: lv_display_2_0= ruleCellDisplaySpec
+            // InternalChessGame.g:332:4: (lv_display_2_0= ruleCellDisplay )
+            // InternalChessGame.g:333:5: lv_display_2_0= ruleCellDisplay
             {
 
-            					newCompositeNode(grammarAccess.getCellStateAccess().getDisplayCellDisplaySpecParserRuleCall_2_0());
+            					newCompositeNode(grammarAccess.getCellStateAccess().getDisplayCellDisplayParserRuleCall_2_0());
             				
             pushFollow(FOLLOW_15);
-            lv_display_2_0=ruleCellDisplaySpec();
+            lv_display_2_0=ruleCellDisplay();
 
             state._fsp--;
 
@@ -750,7 +750,7 @@ public class InternalChessGameParser extends AbstractInternalAntlrParser {
             						current,
             						"display",
             						lv_display_2_0,
-            						"uk.ac.kcl.inf.chessgame.ChessGame.CellDisplaySpec");
+            						"uk.ac.kcl.inf.chessgame.ChessGame.CellDisplay");
             					afterParserOrEnumRuleCall();
             				
 
@@ -759,7 +759,7 @@ public class InternalChessGameParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalChessGame.g:350:3: (otherlv_3= 'transitions' otherlv_4= '{' ( (lv_transitions_5_0= ruleTransitionSpec ) )+ otherlv_6= '}' )?
+            // InternalChessGame.g:350:3: (otherlv_3= 'transitions' otherlv_4= '{' ( (lv_transitions_5_0= ruleTransition ) )+ otherlv_6= '}' )?
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -768,7 +768,7 @@ public class InternalChessGameParser extends AbstractInternalAntlrParser {
             }
             switch (alt4) {
                 case 1 :
-                    // InternalChessGame.g:351:4: otherlv_3= 'transitions' otherlv_4= '{' ( (lv_transitions_5_0= ruleTransitionSpec ) )+ otherlv_6= '}'
+                    // InternalChessGame.g:351:4: otherlv_3= 'transitions' otherlv_4= '{' ( (lv_transitions_5_0= ruleTransition ) )+ otherlv_6= '}'
                     {
                     otherlv_3=(Token)match(input,20,FOLLOW_5); 
 
@@ -778,7 +778,7 @@ public class InternalChessGameParser extends AbstractInternalAntlrParser {
 
                     				newLeafNode(otherlv_4, grammarAccess.getCellStateAccess().getLeftCurlyBracketKeyword_3_1());
                     			
-                    // InternalChessGame.g:359:4: ( (lv_transitions_5_0= ruleTransitionSpec ) )+
+                    // InternalChessGame.g:359:4: ( (lv_transitions_5_0= ruleTransition ) )+
                     int cnt3=0;
                     loop3:
                     do {
@@ -792,16 +792,16 @@ public class InternalChessGameParser extends AbstractInternalAntlrParser {
 
                         switch (alt3) {
                     	case 1 :
-                    	    // InternalChessGame.g:360:5: (lv_transitions_5_0= ruleTransitionSpec )
+                    	    // InternalChessGame.g:360:5: (lv_transitions_5_0= ruleTransition )
                     	    {
-                    	    // InternalChessGame.g:360:5: (lv_transitions_5_0= ruleTransitionSpec )
-                    	    // InternalChessGame.g:361:6: lv_transitions_5_0= ruleTransitionSpec
+                    	    // InternalChessGame.g:360:5: (lv_transitions_5_0= ruleTransition )
+                    	    // InternalChessGame.g:361:6: lv_transitions_5_0= ruleTransition
                     	    {
 
-                    	    						newCompositeNode(grammarAccess.getCellStateAccess().getTransitionsTransitionSpecParserRuleCall_3_2_0());
+                    	    						newCompositeNode(grammarAccess.getCellStateAccess().getTransitionsTransitionParserRuleCall_3_2_0());
                     	    					
                     	    pushFollow(FOLLOW_17);
-                    	    lv_transitions_5_0=ruleTransitionSpec();
+                    	    lv_transitions_5_0=ruleTransition();
 
                     	    state._fsp--;
 
@@ -813,7 +813,7 @@ public class InternalChessGameParser extends AbstractInternalAntlrParser {
                     	    							current,
                     	    							"transitions",
                     	    							lv_transitions_5_0,
-                    	    							"uk.ac.kcl.inf.chessgame.ChessGame.TransitionSpec");
+                    	    							"uk.ac.kcl.inf.chessgame.ChessGame.Transition");
                     	    						afterParserOrEnumRuleCall();
                     	    					
 
@@ -868,25 +868,25 @@ public class InternalChessGameParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleCellState"
 
 
-    // $ANTLR start "entryRuleCellDisplaySpec"
-    // InternalChessGame.g:391:1: entryRuleCellDisplaySpec returns [EObject current=null] : iv_ruleCellDisplaySpec= ruleCellDisplaySpec EOF ;
-    public final EObject entryRuleCellDisplaySpec() throws RecognitionException {
+    // $ANTLR start "entryRuleCellDisplay"
+    // InternalChessGame.g:391:1: entryRuleCellDisplay returns [EObject current=null] : iv_ruleCellDisplay= ruleCellDisplay EOF ;
+    public final EObject entryRuleCellDisplay() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_ruleCellDisplaySpec = null;
+        EObject iv_ruleCellDisplay = null;
 
 
         try {
-            // InternalChessGame.g:391:56: (iv_ruleCellDisplaySpec= ruleCellDisplaySpec EOF )
-            // InternalChessGame.g:392:2: iv_ruleCellDisplaySpec= ruleCellDisplaySpec EOF
+            // InternalChessGame.g:391:52: (iv_ruleCellDisplay= ruleCellDisplay EOF )
+            // InternalChessGame.g:392:2: iv_ruleCellDisplay= ruleCellDisplay EOF
             {
-             newCompositeNode(grammarAccess.getCellDisplaySpecRule()); 
+             newCompositeNode(grammarAccess.getCellDisplayRule()); 
             pushFollow(FOLLOW_1);
-            iv_ruleCellDisplaySpec=ruleCellDisplaySpec();
+            iv_ruleCellDisplay=ruleCellDisplay();
 
             state._fsp--;
 
-             current =iv_ruleCellDisplaySpec; 
+             current =iv_ruleCellDisplay; 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -901,12 +901,12 @@ public class InternalChessGameParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "entryRuleCellDisplaySpec"
+    // $ANTLR end "entryRuleCellDisplay"
 
 
-    // $ANTLR start "ruleCellDisplaySpec"
-    // InternalChessGame.g:398:1: ruleCellDisplaySpec returns [EObject current=null] : (otherlv_0= 'display' otherlv_1= '{' ( (otherlv_2= 'text' otherlv_3= '=' ( (lv_text_4_0= RULE_STRING ) ) ) | (otherlv_5= 'color' otherlv_6= '=' ( ( (lv_color_7_1= 'black' | lv_color_7_2= 'white' ) ) ) ) ) otherlv_8= '}' ) ;
-    public final EObject ruleCellDisplaySpec() throws RecognitionException {
+    // $ANTLR start "ruleCellDisplay"
+    // InternalChessGame.g:398:1: ruleCellDisplay returns [EObject current=null] : (otherlv_0= 'display' otherlv_1= '{' ( (otherlv_2= 'text' otherlv_3= '=' ( (lv_text_4_0= RULE_STRING ) ) ) | (otherlv_5= 'color' otherlv_6= '=' ( ( (lv_color_7_1= 'black' | lv_color_7_2= 'white' ) ) ) ) ) otherlv_8= '}' ) ;
+    public final EObject ruleCellDisplay() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
@@ -932,11 +932,11 @@ public class InternalChessGameParser extends AbstractInternalAntlrParser {
             {
             otherlv_0=(Token)match(input,21,FOLLOW_5); 
 
-            			newLeafNode(otherlv_0, grammarAccess.getCellDisplaySpecAccess().getDisplayKeyword_0());
+            			newLeafNode(otherlv_0, grammarAccess.getCellDisplayAccess().getDisplayKeyword_0());
             		
             otherlv_1=(Token)match(input,12,FOLLOW_18); 
 
-            			newLeafNode(otherlv_1, grammarAccess.getCellDisplaySpecAccess().getLeftCurlyBracketKeyword_1());
+            			newLeafNode(otherlv_1, grammarAccess.getCellDisplayAccess().getLeftCurlyBracketKeyword_1());
             		
             // InternalChessGame.g:414:3: ( (otherlv_2= 'text' otherlv_3= '=' ( (lv_text_4_0= RULE_STRING ) ) ) | (otherlv_5= 'color' otherlv_6= '=' ( ( (lv_color_7_1= 'black' | lv_color_7_2= 'white' ) ) ) ) )
             int alt6=2;
@@ -963,11 +963,11 @@ public class InternalChessGameParser extends AbstractInternalAntlrParser {
                     {
                     otherlv_2=(Token)match(input,22,FOLLOW_7); 
 
-                    					newLeafNode(otherlv_2, grammarAccess.getCellDisplaySpecAccess().getTextKeyword_2_0_0());
+                    					newLeafNode(otherlv_2, grammarAccess.getCellDisplayAccess().getTextKeyword_2_0_0());
                     				
                     otherlv_3=(Token)match(input,14,FOLLOW_19); 
 
-                    					newLeafNode(otherlv_3, grammarAccess.getCellDisplaySpecAccess().getEqualsSignKeyword_2_0_1());
+                    					newLeafNode(otherlv_3, grammarAccess.getCellDisplayAccess().getEqualsSignKeyword_2_0_1());
                     				
                     // InternalChessGame.g:424:5: ( (lv_text_4_0= RULE_STRING ) )
                     // InternalChessGame.g:425:6: (lv_text_4_0= RULE_STRING )
@@ -977,11 +977,11 @@ public class InternalChessGameParser extends AbstractInternalAntlrParser {
                     {
                     lv_text_4_0=(Token)match(input,RULE_STRING,FOLLOW_12); 
 
-                    							newLeafNode(lv_text_4_0, grammarAccess.getCellDisplaySpecAccess().getTextSTRINGTerminalRuleCall_2_0_2_0());
+                    							newLeafNode(lv_text_4_0, grammarAccess.getCellDisplayAccess().getTextSTRINGTerminalRuleCall_2_0_2_0());
                     						
 
                     							if (current==null) {
-                    								current = createModelElement(grammarAccess.getCellDisplaySpecRule());
+                    								current = createModelElement(grammarAccess.getCellDisplayRule());
                     							}
                     							setWithLastConsumed(
                     								current,
@@ -1009,11 +1009,11 @@ public class InternalChessGameParser extends AbstractInternalAntlrParser {
                     {
                     otherlv_5=(Token)match(input,23,FOLLOW_7); 
 
-                    					newLeafNode(otherlv_5, grammarAccess.getCellDisplaySpecAccess().getColorKeyword_2_1_0());
+                    					newLeafNode(otherlv_5, grammarAccess.getCellDisplayAccess().getColorKeyword_2_1_0());
                     				
                     otherlv_6=(Token)match(input,14,FOLLOW_20); 
 
-                    					newLeafNode(otherlv_6, grammarAccess.getCellDisplaySpecAccess().getEqualsSignKeyword_2_1_1());
+                    					newLeafNode(otherlv_6, grammarAccess.getCellDisplayAccess().getEqualsSignKeyword_2_1_1());
                     				
                     // InternalChessGame.g:453:5: ( ( (lv_color_7_1= 'black' | lv_color_7_2= 'white' ) ) )
                     // InternalChessGame.g:454:6: ( (lv_color_7_1= 'black' | lv_color_7_2= 'white' ) )
@@ -1043,11 +1043,11 @@ public class InternalChessGameParser extends AbstractInternalAntlrParser {
                             {
                             lv_color_7_1=(Token)match(input,24,FOLLOW_12); 
 
-                            								newLeafNode(lv_color_7_1, grammarAccess.getCellDisplaySpecAccess().getColorBlackKeyword_2_1_2_0_0());
+                            								newLeafNode(lv_color_7_1, grammarAccess.getCellDisplayAccess().getColorBlackKeyword_2_1_2_0_0());
                             							
 
                             								if (current==null) {
-                            									current = createModelElement(grammarAccess.getCellDisplaySpecRule());
+                            									current = createModelElement(grammarAccess.getCellDisplayRule());
                             								}
                             								setWithLastConsumed(current, "color", lv_color_7_1, null);
                             							
@@ -1059,11 +1059,11 @@ public class InternalChessGameParser extends AbstractInternalAntlrParser {
                             {
                             lv_color_7_2=(Token)match(input,25,FOLLOW_12); 
 
-                            								newLeafNode(lv_color_7_2, grammarAccess.getCellDisplaySpecAccess().getColorWhiteKeyword_2_1_2_0_1());
+                            								newLeafNode(lv_color_7_2, grammarAccess.getCellDisplayAccess().getColorWhiteKeyword_2_1_2_0_1());
                             							
 
                             								if (current==null) {
-                            									current = createModelElement(grammarAccess.getCellDisplaySpecRule());
+                            									current = createModelElement(grammarAccess.getCellDisplayRule());
                             								}
                             								setWithLastConsumed(current, "color", lv_color_7_2, null);
                             							
@@ -1090,7 +1090,7 @@ public class InternalChessGameParser extends AbstractInternalAntlrParser {
 
             otherlv_8=(Token)match(input,19,FOLLOW_2); 
 
-            			newLeafNode(otherlv_8, grammarAccess.getCellDisplaySpecAccess().getRightCurlyBracketKeyword_3());
+            			newLeafNode(otherlv_8, grammarAccess.getCellDisplayAccess().getRightCurlyBracketKeyword_3());
             		
 
             }
@@ -1111,28 +1111,28 @@ public class InternalChessGameParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "ruleCellDisplaySpec"
+    // $ANTLR end "ruleCellDisplay"
 
 
-    // $ANTLR start "entryRuleTransitionSpec"
-    // InternalChessGame.g:490:1: entryRuleTransitionSpec returns [EObject current=null] : iv_ruleTransitionSpec= ruleTransitionSpec EOF ;
-    public final EObject entryRuleTransitionSpec() throws RecognitionException {
+    // $ANTLR start "entryRuleTransition"
+    // InternalChessGame.g:490:1: entryRuleTransition returns [EObject current=null] : iv_ruleTransition= ruleTransition EOF ;
+    public final EObject entryRuleTransition() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_ruleTransitionSpec = null;
+        EObject iv_ruleTransition = null;
 
 
         try {
-            // InternalChessGame.g:490:55: (iv_ruleTransitionSpec= ruleTransitionSpec EOF )
-            // InternalChessGame.g:491:2: iv_ruleTransitionSpec= ruleTransitionSpec EOF
+            // InternalChessGame.g:490:51: (iv_ruleTransition= ruleTransition EOF )
+            // InternalChessGame.g:491:2: iv_ruleTransition= ruleTransition EOF
             {
-             newCompositeNode(grammarAccess.getTransitionSpecRule()); 
+             newCompositeNode(grammarAccess.getTransitionRule()); 
             pushFollow(FOLLOW_1);
-            iv_ruleTransitionSpec=ruleTransitionSpec();
+            iv_ruleTransition=ruleTransition();
 
             state._fsp--;
 
-             current =iv_ruleTransitionSpec; 
+             current =iv_ruleTransition; 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -1147,12 +1147,12 @@ public class InternalChessGameParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "entryRuleTransitionSpec"
+    // $ANTLR end "entryRuleTransition"
 
 
-    // $ANTLR start "ruleTransitionSpec"
-    // InternalChessGame.g:497:1: ruleTransitionSpec returns [EObject current=null] : (otherlv_0= 'click' ( (lv_trigger_1_0= ruleMouseTrigger ) ) otherlv_2= 'and' otherlv_3= 'goto' ( (otherlv_4= RULE_ID ) ) ) ;
-    public final EObject ruleTransitionSpec() throws RecognitionException {
+    // $ANTLR start "ruleTransition"
+    // InternalChessGame.g:497:1: ruleTransition returns [EObject current=null] : (otherlv_0= 'click' ( (lv_trigger_1_0= ruleMouseTrigger ) ) otherlv_2= 'and' otherlv_3= 'goto' ( (otherlv_4= RULE_ID ) ) ) ;
+    public final EObject ruleTransition() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
@@ -1174,7 +1174,7 @@ public class InternalChessGameParser extends AbstractInternalAntlrParser {
             {
             otherlv_0=(Token)match(input,26,FOLLOW_21); 
 
-            			newLeafNode(otherlv_0, grammarAccess.getTransitionSpecAccess().getClickKeyword_0());
+            			newLeafNode(otherlv_0, grammarAccess.getTransitionAccess().getClickKeyword_0());
             		
             // InternalChessGame.g:509:3: ( (lv_trigger_1_0= ruleMouseTrigger ) )
             // InternalChessGame.g:510:4: (lv_trigger_1_0= ruleMouseTrigger )
@@ -1183,7 +1183,7 @@ public class InternalChessGameParser extends AbstractInternalAntlrParser {
             // InternalChessGame.g:511:5: lv_trigger_1_0= ruleMouseTrigger
             {
 
-            					newCompositeNode(grammarAccess.getTransitionSpecAccess().getTriggerMouseTriggerParserRuleCall_1_0());
+            					newCompositeNode(grammarAccess.getTransitionAccess().getTriggerMouseTriggerParserRuleCall_1_0());
             				
             pushFollow(FOLLOW_22);
             lv_trigger_1_0=ruleMouseTrigger();
@@ -1192,7 +1192,7 @@ public class InternalChessGameParser extends AbstractInternalAntlrParser {
 
 
             					if (current==null) {
-            						current = createModelElementForParent(grammarAccess.getTransitionSpecRule());
+            						current = createModelElementForParent(grammarAccess.getTransitionRule());
             					}
             					set(
             						current,
@@ -1209,11 +1209,11 @@ public class InternalChessGameParser extends AbstractInternalAntlrParser {
 
             otherlv_2=(Token)match(input,27,FOLLOW_23); 
 
-            			newLeafNode(otherlv_2, grammarAccess.getTransitionSpecAccess().getAndKeyword_2());
+            			newLeafNode(otherlv_2, grammarAccess.getTransitionAccess().getAndKeyword_2());
             		
             otherlv_3=(Token)match(input,28,FOLLOW_3); 
 
-            			newLeafNode(otherlv_3, grammarAccess.getTransitionSpecAccess().getGotoKeyword_3());
+            			newLeafNode(otherlv_3, grammarAccess.getTransitionAccess().getGotoKeyword_3());
             		
             // InternalChessGame.g:536:3: ( (otherlv_4= RULE_ID ) )
             // InternalChessGame.g:537:4: (otherlv_4= RULE_ID )
@@ -1223,12 +1223,12 @@ public class InternalChessGameParser extends AbstractInternalAntlrParser {
             {
 
             					if (current==null) {
-            						current = createModelElement(grammarAccess.getTransitionSpecRule());
+            						current = createModelElement(grammarAccess.getTransitionRule());
             					}
             				
             otherlv_4=(Token)match(input,RULE_ID,FOLLOW_2); 
 
-            					newLeafNode(otherlv_4, grammarAccess.getTransitionSpecAccess().getTargetCellStateCrossReference_4_0());
+            					newLeafNode(otherlv_4, grammarAccess.getTransitionAccess().getTargetCellStateCrossReference_4_0());
             				
 
             }
@@ -1255,7 +1255,7 @@ public class InternalChessGameParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "ruleTransitionSpec"
+    // $ANTLR end "ruleTransition"
 
 
     // $ANTLR start "entryRuleMouseTrigger"
@@ -1440,7 +1440,7 @@ public class InternalChessGameParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGameEnd"
-    // InternalChessGame.g:607:1: ruleGameEnd returns [EObject current=null] : (otherlv_0= 'action' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'when' ( (lv_action_4_0= ruleContextExpression ) ) otherlv_5= 'do' ( (lv_behaviour_6_0= ruleEndBehaviour ) ) otherlv_7= '}' ) ;
+    // InternalChessGame.g:607:1: ruleGameEnd returns [EObject current=null] : (otherlv_0= 'action' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'when' ( (lv_action_4_0= ruleCellExpression ) ) otherlv_5= 'do' ( (lv_behaviour_6_0= ruleEndBehaviour ) ) otherlv_7= '}' ) ;
     public final EObject ruleGameEnd() throws RecognitionException {
         EObject current = null;
 
@@ -1459,11 +1459,11 @@ public class InternalChessGameParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalChessGame.g:613:2: ( (otherlv_0= 'action' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'when' ( (lv_action_4_0= ruleContextExpression ) ) otherlv_5= 'do' ( (lv_behaviour_6_0= ruleEndBehaviour ) ) otherlv_7= '}' ) )
-            // InternalChessGame.g:614:2: (otherlv_0= 'action' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'when' ( (lv_action_4_0= ruleContextExpression ) ) otherlv_5= 'do' ( (lv_behaviour_6_0= ruleEndBehaviour ) ) otherlv_7= '}' )
+            // InternalChessGame.g:613:2: ( (otherlv_0= 'action' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'when' ( (lv_action_4_0= ruleCellExpression ) ) otherlv_5= 'do' ( (lv_behaviour_6_0= ruleEndBehaviour ) ) otherlv_7= '}' ) )
+            // InternalChessGame.g:614:2: (otherlv_0= 'action' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'when' ( (lv_action_4_0= ruleCellExpression ) ) otherlv_5= 'do' ( (lv_behaviour_6_0= ruleEndBehaviour ) ) otherlv_7= '}' )
             {
-            // InternalChessGame.g:614:2: (otherlv_0= 'action' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'when' ( (lv_action_4_0= ruleContextExpression ) ) otherlv_5= 'do' ( (lv_behaviour_6_0= ruleEndBehaviour ) ) otherlv_7= '}' )
-            // InternalChessGame.g:615:3: otherlv_0= 'action' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'when' ( (lv_action_4_0= ruleContextExpression ) ) otherlv_5= 'do' ( (lv_behaviour_6_0= ruleEndBehaviour ) ) otherlv_7= '}'
+            // InternalChessGame.g:614:2: (otherlv_0= 'action' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'when' ( (lv_action_4_0= ruleCellExpression ) ) otherlv_5= 'do' ( (lv_behaviour_6_0= ruleEndBehaviour ) ) otherlv_7= '}' )
+            // InternalChessGame.g:615:3: otherlv_0= 'action' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'when' ( (lv_action_4_0= ruleCellExpression ) ) otherlv_5= 'do' ( (lv_behaviour_6_0= ruleEndBehaviour ) ) otherlv_7= '}'
             {
             otherlv_0=(Token)match(input,31,FOLLOW_3); 
 
@@ -1503,17 +1503,17 @@ public class InternalChessGameParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_3, grammarAccess.getGameEndAccess().getWhenKeyword_3());
             		
-            // InternalChessGame.g:645:3: ( (lv_action_4_0= ruleContextExpression ) )
-            // InternalChessGame.g:646:4: (lv_action_4_0= ruleContextExpression )
+            // InternalChessGame.g:645:3: ( (lv_action_4_0= ruleCellExpression ) )
+            // InternalChessGame.g:646:4: (lv_action_4_0= ruleCellExpression )
             {
-            // InternalChessGame.g:646:4: (lv_action_4_0= ruleContextExpression )
-            // InternalChessGame.g:647:5: lv_action_4_0= ruleContextExpression
+            // InternalChessGame.g:646:4: (lv_action_4_0= ruleCellExpression )
+            // InternalChessGame.g:647:5: lv_action_4_0= ruleCellExpression
             {
 
-            					newCompositeNode(grammarAccess.getGameEndAccess().getActionContextExpressionParserRuleCall_4_0());
+            					newCompositeNode(grammarAccess.getGameEndAccess().getActionCellExpressionParserRuleCall_4_0());
             				
             pushFollow(FOLLOW_26);
-            lv_action_4_0=ruleContextExpression();
+            lv_action_4_0=ruleCellExpression();
 
             state._fsp--;
 
@@ -1525,7 +1525,7 @@ public class InternalChessGameParser extends AbstractInternalAntlrParser {
             						current,
             						"action",
             						lv_action_4_0,
-            						"uk.ac.kcl.inf.chessgame.ChessGame.ContextExpression");
+            						"uk.ac.kcl.inf.chessgame.ChessGame.CellExpression");
             					afterParserOrEnumRuleCall();
             				
 
@@ -1595,25 +1595,25 @@ public class InternalChessGameParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleGameEnd"
 
 
-    // $ANTLR start "entryRuleContextExpression"
-    // InternalChessGame.g:695:1: entryRuleContextExpression returns [EObject current=null] : iv_ruleContextExpression= ruleContextExpression EOF ;
-    public final EObject entryRuleContextExpression() throws RecognitionException {
+    // $ANTLR start "entryRuleCellExpression"
+    // InternalChessGame.g:695:1: entryRuleCellExpression returns [EObject current=null] : iv_ruleCellExpression= ruleCellExpression EOF ;
+    public final EObject entryRuleCellExpression() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_ruleContextExpression = null;
+        EObject iv_ruleCellExpression = null;
 
 
         try {
-            // InternalChessGame.g:695:58: (iv_ruleContextExpression= ruleContextExpression EOF )
-            // InternalChessGame.g:696:2: iv_ruleContextExpression= ruleContextExpression EOF
+            // InternalChessGame.g:695:55: (iv_ruleCellExpression= ruleCellExpression EOF )
+            // InternalChessGame.g:696:2: iv_ruleCellExpression= ruleCellExpression EOF
             {
-             newCompositeNode(grammarAccess.getContextExpressionRule()); 
+             newCompositeNode(grammarAccess.getCellExpressionRule()); 
             pushFollow(FOLLOW_1);
-            iv_ruleContextExpression=ruleContextExpression();
+            iv_ruleCellExpression=ruleCellExpression();
 
             state._fsp--;
 
-             current =iv_ruleContextExpression; 
+             current =iv_ruleCellExpression; 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -1628,16 +1628,16 @@ public class InternalChessGameParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "entryRuleContextExpression"
+    // $ANTLR end "entryRuleCellExpression"
 
 
-    // $ANTLR start "ruleContextExpression"
-    // InternalChessGame.g:702:1: ruleContextExpression returns [EObject current=null] : ( ( (lv_sub_exp_0_0= ruleStateFilterExpression ) ) otherlv_1= '.' ( (lv_cellState_2_0= ruleEmptyExpression ) ) ) ;
-    public final EObject ruleContextExpression() throws RecognitionException {
+    // $ANTLR start "ruleCellExpression"
+    // InternalChessGame.g:702:1: ruleCellExpression returns [EObject current=null] : ( ( (lv_state_0_0= ruleStateCheck ) ) otherlv_1= '.' ( (lv_cellState_2_0= ruleEmptyExpression ) ) ) ;
+    public final EObject ruleCellExpression() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_1=null;
-        EObject lv_sub_exp_0_0 = null;
+        EObject lv_state_0_0 = null;
 
         EObject lv_cellState_2_0 = null;
 
@@ -1646,35 +1646,35 @@ public class InternalChessGameParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalChessGame.g:708:2: ( ( ( (lv_sub_exp_0_0= ruleStateFilterExpression ) ) otherlv_1= '.' ( (lv_cellState_2_0= ruleEmptyExpression ) ) ) )
-            // InternalChessGame.g:709:2: ( ( (lv_sub_exp_0_0= ruleStateFilterExpression ) ) otherlv_1= '.' ( (lv_cellState_2_0= ruleEmptyExpression ) ) )
+            // InternalChessGame.g:708:2: ( ( ( (lv_state_0_0= ruleStateCheck ) ) otherlv_1= '.' ( (lv_cellState_2_0= ruleEmptyExpression ) ) ) )
+            // InternalChessGame.g:709:2: ( ( (lv_state_0_0= ruleStateCheck ) ) otherlv_1= '.' ( (lv_cellState_2_0= ruleEmptyExpression ) ) )
             {
-            // InternalChessGame.g:709:2: ( ( (lv_sub_exp_0_0= ruleStateFilterExpression ) ) otherlv_1= '.' ( (lv_cellState_2_0= ruleEmptyExpression ) ) )
-            // InternalChessGame.g:710:3: ( (lv_sub_exp_0_0= ruleStateFilterExpression ) ) otherlv_1= '.' ( (lv_cellState_2_0= ruleEmptyExpression ) )
+            // InternalChessGame.g:709:2: ( ( (lv_state_0_0= ruleStateCheck ) ) otherlv_1= '.' ( (lv_cellState_2_0= ruleEmptyExpression ) ) )
+            // InternalChessGame.g:710:3: ( (lv_state_0_0= ruleStateCheck ) ) otherlv_1= '.' ( (lv_cellState_2_0= ruleEmptyExpression ) )
             {
-            // InternalChessGame.g:710:3: ( (lv_sub_exp_0_0= ruleStateFilterExpression ) )
-            // InternalChessGame.g:711:4: (lv_sub_exp_0_0= ruleStateFilterExpression )
+            // InternalChessGame.g:710:3: ( (lv_state_0_0= ruleStateCheck ) )
+            // InternalChessGame.g:711:4: (lv_state_0_0= ruleStateCheck )
             {
-            // InternalChessGame.g:711:4: (lv_sub_exp_0_0= ruleStateFilterExpression )
-            // InternalChessGame.g:712:5: lv_sub_exp_0_0= ruleStateFilterExpression
+            // InternalChessGame.g:711:4: (lv_state_0_0= ruleStateCheck )
+            // InternalChessGame.g:712:5: lv_state_0_0= ruleStateCheck
             {
 
-            					newCompositeNode(grammarAccess.getContextExpressionAccess().getSub_expStateFilterExpressionParserRuleCall_0_0());
+            					newCompositeNode(grammarAccess.getCellExpressionAccess().getStateStateCheckParserRuleCall_0_0());
             				
             pushFollow(FOLLOW_28);
-            lv_sub_exp_0_0=ruleStateFilterExpression();
+            lv_state_0_0=ruleStateCheck();
 
             state._fsp--;
 
 
             					if (current==null) {
-            						current = createModelElementForParent(grammarAccess.getContextExpressionRule());
+            						current = createModelElementForParent(grammarAccess.getCellExpressionRule());
             					}
             					set(
             						current,
-            						"sub_exp",
-            						lv_sub_exp_0_0,
-            						"uk.ac.kcl.inf.chessgame.ChessGame.StateFilterExpression");
+            						"state",
+            						lv_state_0_0,
+            						"uk.ac.kcl.inf.chessgame.ChessGame.StateCheck");
             					afterParserOrEnumRuleCall();
             				
 
@@ -1685,7 +1685,7 @@ public class InternalChessGameParser extends AbstractInternalAntlrParser {
 
             otherlv_1=(Token)match(input,34,FOLLOW_29); 
 
-            			newLeafNode(otherlv_1, grammarAccess.getContextExpressionAccess().getFullStopKeyword_1());
+            			newLeafNode(otherlv_1, grammarAccess.getCellExpressionAccess().getFullStopKeyword_1());
             		
             // InternalChessGame.g:733:3: ( (lv_cellState_2_0= ruleEmptyExpression ) )
             // InternalChessGame.g:734:4: (lv_cellState_2_0= ruleEmptyExpression )
@@ -1694,7 +1694,7 @@ public class InternalChessGameParser extends AbstractInternalAntlrParser {
             // InternalChessGame.g:735:5: lv_cellState_2_0= ruleEmptyExpression
             {
 
-            					newCompositeNode(grammarAccess.getContextExpressionAccess().getCellStateEmptyExpressionParserRuleCall_2_0());
+            					newCompositeNode(grammarAccess.getCellExpressionAccess().getCellStateEmptyExpressionParserRuleCall_2_0());
             				
             pushFollow(FOLLOW_2);
             lv_cellState_2_0=ruleEmptyExpression();
@@ -1703,7 +1703,7 @@ public class InternalChessGameParser extends AbstractInternalAntlrParser {
 
 
             					if (current==null) {
-            						current = createModelElementForParent(grammarAccess.getContextExpressionRule());
+            						current = createModelElementForParent(grammarAccess.getCellExpressionRule());
             					}
             					set(
             						current,
@@ -1737,28 +1737,28 @@ public class InternalChessGameParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "ruleContextExpression"
+    // $ANTLR end "ruleCellExpression"
 
 
-    // $ANTLR start "entryRuleStateFilterExpression"
-    // InternalChessGame.g:756:1: entryRuleStateFilterExpression returns [EObject current=null] : iv_ruleStateFilterExpression= ruleStateFilterExpression EOF ;
-    public final EObject entryRuleStateFilterExpression() throws RecognitionException {
+    // $ANTLR start "entryRuleStateCheck"
+    // InternalChessGame.g:756:1: entryRuleStateCheck returns [EObject current=null] : iv_ruleStateCheck= ruleStateCheck EOF ;
+    public final EObject entryRuleStateCheck() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_ruleStateFilterExpression = null;
+        EObject iv_ruleStateCheck = null;
 
 
         try {
-            // InternalChessGame.g:756:62: (iv_ruleStateFilterExpression= ruleStateFilterExpression EOF )
-            // InternalChessGame.g:757:2: iv_ruleStateFilterExpression= ruleStateFilterExpression EOF
+            // InternalChessGame.g:756:51: (iv_ruleStateCheck= ruleStateCheck EOF )
+            // InternalChessGame.g:757:2: iv_ruleStateCheck= ruleStateCheck EOF
             {
-             newCompositeNode(grammarAccess.getStateFilterExpressionRule()); 
+             newCompositeNode(grammarAccess.getStateCheckRule()); 
             pushFollow(FOLLOW_1);
-            iv_ruleStateFilterExpression=ruleStateFilterExpression();
+            iv_ruleStateCheck=ruleStateCheck();
 
             state._fsp--;
 
-             current =iv_ruleStateFilterExpression; 
+             current =iv_ruleStateCheck; 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -1773,12 +1773,12 @@ public class InternalChessGameParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "entryRuleStateFilterExpression"
+    // $ANTLR end "entryRuleStateCheck"
 
 
-    // $ANTLR start "ruleStateFilterExpression"
-    // InternalChessGame.g:763:1: ruleStateFilterExpression returns [EObject current=null] : (otherlv_0= 'allCellState' otherlv_1= '(' ( (otherlv_2= RULE_ID ) ) otherlv_3= ')' ) ;
-    public final EObject ruleStateFilterExpression() throws RecognitionException {
+    // $ANTLR start "ruleStateCheck"
+    // InternalChessGame.g:763:1: ruleStateCheck returns [EObject current=null] : (otherlv_0= 'allCellState' otherlv_1= '(' ( (otherlv_2= RULE_ID ) ) otherlv_3= ')' ) ;
+    public final EObject ruleStateCheck() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
@@ -1798,11 +1798,11 @@ public class InternalChessGameParser extends AbstractInternalAntlrParser {
             {
             otherlv_0=(Token)match(input,35,FOLLOW_30); 
 
-            			newLeafNode(otherlv_0, grammarAccess.getStateFilterExpressionAccess().getAllCellStateKeyword_0());
+            			newLeafNode(otherlv_0, grammarAccess.getStateCheckAccess().getAllCellStateKeyword_0());
             		
             otherlv_1=(Token)match(input,36,FOLLOW_3); 
 
-            			newLeafNode(otherlv_1, grammarAccess.getStateFilterExpressionAccess().getLeftParenthesisKeyword_1());
+            			newLeafNode(otherlv_1, grammarAccess.getStateCheckAccess().getLeftParenthesisKeyword_1());
             		
             // InternalChessGame.g:779:3: ( (otherlv_2= RULE_ID ) )
             // InternalChessGame.g:780:4: (otherlv_2= RULE_ID )
@@ -1812,12 +1812,12 @@ public class InternalChessGameParser extends AbstractInternalAntlrParser {
             {
 
             					if (current==null) {
-            						current = createModelElement(grammarAccess.getStateFilterExpressionRule());
+            						current = createModelElement(grammarAccess.getStateCheckRule());
             					}
             				
             otherlv_2=(Token)match(input,RULE_ID,FOLLOW_31); 
 
-            					newLeafNode(otherlv_2, grammarAccess.getStateFilterExpressionAccess().getCell_stateCellStateCrossReference_2_0());
+            					newLeafNode(otherlv_2, grammarAccess.getStateCheckAccess().getCell_stateCellStateCrossReference_2_0());
             				
 
             }
@@ -1827,7 +1827,7 @@ public class InternalChessGameParser extends AbstractInternalAntlrParser {
 
             otherlv_3=(Token)match(input,37,FOLLOW_2); 
 
-            			newLeafNode(otherlv_3, grammarAccess.getStateFilterExpressionAccess().getRightParenthesisKeyword_3());
+            			newLeafNode(otherlv_3, grammarAccess.getStateCheckAccess().getRightParenthesisKeyword_3());
             		
 
             }
@@ -1848,7 +1848,7 @@ public class InternalChessGameParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "ruleStateFilterExpression"
+    // $ANTLR end "ruleStateCheck"
 
 
     // $ANTLR start "entryRuleEmptyExpression"

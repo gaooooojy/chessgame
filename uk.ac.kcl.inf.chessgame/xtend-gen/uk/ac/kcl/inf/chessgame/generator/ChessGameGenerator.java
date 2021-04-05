@@ -3,10 +3,19 @@
  */
 package uk.ac.kcl.inf.chessgame.generator;
 
+import com.google.common.collect.Iterators;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.generator.AbstractGenerator;
 import org.eclipse.xtext.generator.IFileSystemAccess2;
 import org.eclipse.xtext.generator.IGeneratorContext;
+import org.eclipse.xtext.xbase.lib.IterableExtensions;
+import org.eclipse.xtext.xbase.lib.IteratorExtensions;
+import uk.ac.kcl.inf.chessgame.chessGame.CellDisplay;
+import uk.ac.kcl.inf.chessgame.chessGame.CellState;
+import uk.ac.kcl.inf.chessgame.chessGame.ChessProgram;
+import uk.ac.kcl.inf.chessgame.chessGame.Transition;
 
 /**
  * Generates code from your model files on save.
@@ -17,5 +26,36 @@ import org.eclipse.xtext.generator.IGeneratorContext;
 public class ChessGameGenerator extends AbstractGenerator {
   @Override
   public void doGenerate(final Resource resource, final IFileSystemAccess2 fsa, final IGeneratorContext context) {
+    EObject _head = IterableExtensions.<EObject>head(resource.getContents());
+    final ChessProgram model = ((ChessProgram) _head);
+    fsa.generateFile(this.deriveTargetFileNameFor(model, resource), this.generate(model));
+  }
+  
+  public String deriveTargetFileNameFor(final ChessProgram program, final Resource resource) {
+    return resource.getURI().appendFileExtension("txt").lastSegment();
+  }
+  
+  public CharSequence generate(final ChessProgram program) {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("Program contains:");
+    _builder.newLine();
+    _builder.newLine();
+    _builder.append("- ");
+    int _size = IteratorExtensions.size(Iterators.<CellState>filter(program.eAllContents(), CellState.class));
+    _builder.append(_size);
+    _builder.append(" cell states");
+    _builder.newLineIfNotEmpty();
+    _builder.append("- ");
+    int _size_1 = IteratorExtensions.size(Iterators.<CellDisplay>filter(program.eAllContents(), CellDisplay.class));
+    _builder.append(_size_1);
+    _builder.append(" cell displays");
+    _builder.newLineIfNotEmpty();
+    _builder.append("- ");
+    int _size_2 = IteratorExtensions.size(Iterators.<Transition>filter(program.eAllContents(), Transition.class));
+    _builder.append(_size_2);
+    _builder.append(" transitions");
+    _builder.newLineIfNotEmpty();
+    _builder.newLine();
+    return _builder;
   }
 }

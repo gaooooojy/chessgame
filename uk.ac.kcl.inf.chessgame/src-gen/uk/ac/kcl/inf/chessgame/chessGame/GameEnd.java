@@ -52,12 +52,12 @@ public interface GameEnd extends EObject
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the value of the '<em>Action</em>' containment reference.
-   * @see #setAction(ContextExpression)
+   * @see #setAction(CellExpression)
    * @see uk.ac.kcl.inf.chessgame.chessGame.ChessGamePackage#getGameEnd_Action()
    * @model containment="true"
    * @generated
    */
-  ContextExpression getAction();
+  CellExpression getAction();
 
   /**
    * Sets the value of the '{@link uk.ac.kcl.inf.chessgame.chessGame.GameEnd#getAction <em>Action</em>}' containment reference.
@@ -67,7 +67,7 @@ public interface GameEnd extends EObject
    * @see #getAction()
    * @generated
    */
-  void setAction(ContextExpression value);
+  void setAction(CellExpression value);
 
   /**
    * Returns the value of the '<em><b>Behaviour</b></em>' containment reference.

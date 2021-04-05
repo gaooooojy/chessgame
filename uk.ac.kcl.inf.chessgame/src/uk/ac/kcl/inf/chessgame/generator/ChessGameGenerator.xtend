@@ -7,6 +7,10 @@ import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.AbstractGenerator
 import org.eclipse.xtext.generator.IFileSystemAccess2
 import org.eclipse.xtext.generator.IGeneratorContext
+import uk.ac.kcl.inf.chessgame.chessGame.ChessProgram
+import uk.ac.kcl.inf.chessgame.chessGame.CellState
+import uk.ac.kcl.inf.chessgame.chessGame.CellDisplay
+import uk.ac.kcl.inf.chessgame.chessGame.Transition
 
 /**
  * Generates code from your model files on save.
@@ -15,11 +19,24 @@ import org.eclipse.xtext.generator.IGeneratorContext
  */
 class ChessGameGenerator extends AbstractGenerator {
 
-	override void doGenerate(Resource resource, IFileSystemAccess2 fsa, IGeneratorContext context) {
-//		fsa.generateFile('greetings.txt', 'People to greet: ' + 
-//			resource.allContents
-//				.filter(Greeting)
-//				.map[name]
-//				.join(', '))
+		override void doGenerate(Resource resource, IFileSystemAccess2 fsa, IGeneratorContext context) {
+		
+		val model = resource.contents.head as ChessProgram
+		
+		fsa.generateFile(deriveTargetFileNameFor(model, resource), model.generate)
 	}
+	
+		def deriveTargetFileNameFor(ChessProgram program, Resource resource) {
+			resource.URI.appendFileExtension('txt').lastSegment
+		}
+		
+		def generate(ChessProgram program)'''
+		    Program contains:
+		    
+		    - «program.eAllContents.filter(CellState).size» cell states
+		    - «program.eAllContents.filter(CellDisplay).size» cell displays
+		    - «program.eAllContents.filter(Transition).size» transitions
+		    
+		'''
+	
 }

@@ -175,26 +175,26 @@ public class ChessGameGrammarAccess extends AbstractElementFinder.AbstractGramma
 		private final RuleCall cNameIDTerminalRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cDisplayAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cDisplayCellDisplaySpecParserRuleCall_2_0 = (RuleCall)cDisplayAssignment_2.eContents().get(0);
+		private final RuleCall cDisplayCellDisplayParserRuleCall_2_0 = (RuleCall)cDisplayAssignment_2.eContents().get(0);
 		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
 		private final Keyword cTransitionsKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_3_1 = (Keyword)cGroup_3.eContents().get(1);
 		private final Assignment cTransitionsAssignment_3_2 = (Assignment)cGroup_3.eContents().get(2);
-		private final RuleCall cTransitionsTransitionSpecParserRuleCall_3_2_0 = (RuleCall)cTransitionsAssignment_3_2.eContents().get(0);
+		private final RuleCall cTransitionsTransitionParserRuleCall_3_2_0 = (RuleCall)cTransitionsAssignment_3_2.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_3_3 = (Keyword)cGroup_3.eContents().get(3);
 		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//CellState:
 		//	name=ID "{"
-		//	display=CellDisplaySpec ("transitions" "{"
-		//	transitions+=TransitionSpec+
+		//	display=CellDisplay ("transitions" "{"
+		//	transitions+=Transition+
 		//	"}")?
 		//	"}";
 		@Override public ParserRule getRule() { return rule; }
 		
 		//name=ID "{"
-		//display=CellDisplaySpec ("transitions" "{"
-		//transitions+=TransitionSpec+
+		//display=CellDisplay ("transitions" "{"
+		//transitions+=Transition+
 		//"}")?
 		//"}"
 		public Group getGroup() { return cGroup; }
@@ -208,14 +208,14 @@ public class ChessGameGrammarAccess extends AbstractElementFinder.AbstractGramma
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
 		
-		//display=CellDisplaySpec
+		//display=CellDisplay
 		public Assignment getDisplayAssignment_2() { return cDisplayAssignment_2; }
 		
-		//CellDisplaySpec
-		public RuleCall getDisplayCellDisplaySpecParserRuleCall_2_0() { return cDisplayCellDisplaySpecParserRuleCall_2_0; }
+		//CellDisplay
+		public RuleCall getDisplayCellDisplayParserRuleCall_2_0() { return cDisplayCellDisplayParserRuleCall_2_0; }
 		
 		//("transitions" "{"
-		//transitions+=TransitionSpec+
+		//transitions+=Transition+
 		//"}")?
 		public Group getGroup_3() { return cGroup_3; }
 		
@@ -225,11 +225,11 @@ public class ChessGameGrammarAccess extends AbstractElementFinder.AbstractGramma
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_3_1() { return cLeftCurlyBracketKeyword_3_1; }
 		
-		//transitions+=TransitionSpec+
+		//transitions+=Transition+
 		public Assignment getTransitionsAssignment_3_2() { return cTransitionsAssignment_3_2; }
 		
-		//TransitionSpec
-		public RuleCall getTransitionsTransitionSpecParserRuleCall_3_2_0() { return cTransitionsTransitionSpecParserRuleCall_3_2_0; }
+		//Transition
+		public RuleCall getTransitionsTransitionParserRuleCall_3_2_0() { return cTransitionsTransitionParserRuleCall_3_2_0; }
 		
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_3_3() { return cRightCurlyBracketKeyword_3_3; }
@@ -237,8 +237,8 @@ public class ChessGameGrammarAccess extends AbstractElementFinder.AbstractGramma
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
 	}
-	public class CellDisplaySpecElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "uk.ac.kcl.inf.chessgame.ChessGame.CellDisplaySpec");
+	public class CellDisplayElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "uk.ac.kcl.inf.chessgame.ChessGame.CellDisplay");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cDisplayKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
@@ -257,7 +257,7 @@ public class ChessGameGrammarAccess extends AbstractElementFinder.AbstractGramma
 		private final Keyword cColorWhiteKeyword_2_1_2_0_1 = (Keyword)cColorAlternatives_2_1_2_0.eContents().get(1);
 		private final Keyword cRightCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
-		//CellDisplaySpec:
+		//CellDisplay:
 		//	"display" "{" ("text" "=" text=STRING | "color" "=" color=("black" | "white"))
 		//	"}";
 		@Override public ParserRule getRule() { return rule; }
@@ -314,8 +314,8 @@ public class ChessGameGrammarAccess extends AbstractElementFinder.AbstractGramma
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_3() { return cRightCurlyBracketKeyword_3; }
 	}
-	public class TransitionSpecElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "uk.ac.kcl.inf.chessgame.ChessGame.TransitionSpec");
+	public class TransitionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "uk.ac.kcl.inf.chessgame.ChessGame.Transition");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cClickKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cTriggerAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -326,7 +326,7 @@ public class ChessGameGrammarAccess extends AbstractElementFinder.AbstractGramma
 		private final CrossReference cTargetCellStateCrossReference_4_0 = (CrossReference)cTargetAssignment_4.eContents().get(0);
 		private final RuleCall cTargetCellStateIDTerminalRuleCall_4_0_1 = (RuleCall)cTargetCellStateCrossReference_4_0.eContents().get(1);
 		
-		//TransitionSpec:
+		//Transition:
 		//	"click" trigger=MouseTrigger "and" "goto" target=[CellState];
 		@Override public ParserRule getRule() { return rule; }
 		
@@ -397,7 +397,7 @@ public class ChessGameGrammarAccess extends AbstractElementFinder.AbstractGramma
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Keyword cWhenKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cActionAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cActionContextExpressionParserRuleCall_4_0 = (RuleCall)cActionAssignment_4.eContents().get(0);
+		private final RuleCall cActionCellExpressionParserRuleCall_4_0 = (RuleCall)cActionAssignment_4.eContents().get(0);
 		private final Keyword cDoKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		private final Assignment cBehaviourAssignment_6 = (Assignment)cGroup.eContents().get(6);
 		private final RuleCall cBehaviourEndBehaviourParserRuleCall_6_0 = (RuleCall)cBehaviourAssignment_6.eContents().get(0);
@@ -405,13 +405,13 @@ public class ChessGameGrammarAccess extends AbstractElementFinder.AbstractGramma
 		
 		//GameEnd:
 		//	"action" name=ID "{"
-		//	"when" action=ContextExpression
+		//	"when" action=CellExpression
 		//	"do" behaviour=EndBehaviour
 		//	"}";
 		@Override public ParserRule getRule() { return rule; }
 		
 		//"action" name=ID "{"
-		//"when" action=ContextExpression
+		//"when" action=CellExpression
 		//"do" behaviour=EndBehaviour
 		//"}"
 		public Group getGroup() { return cGroup; }
@@ -431,11 +431,11 @@ public class ChessGameGrammarAccess extends AbstractElementFinder.AbstractGramma
 		//"when"
 		public Keyword getWhenKeyword_3() { return cWhenKeyword_3; }
 		
-		//action=ContextExpression
+		//action=CellExpression
 		public Assignment getActionAssignment_4() { return cActionAssignment_4; }
 		
-		//ContextExpression
-		public RuleCall getActionContextExpressionParserRuleCall_4_0() { return cActionContextExpressionParserRuleCall_4_0; }
+		//CellExpression
+		public RuleCall getActionCellExpressionParserRuleCall_4_0() { return cActionCellExpressionParserRuleCall_4_0; }
 		
 		//"do"
 		public Keyword getDoKeyword_5() { return cDoKeyword_5; }
@@ -449,30 +449,27 @@ public class ChessGameGrammarAccess extends AbstractElementFinder.AbstractGramma
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
 	}
-	public class ContextExpressionElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "uk.ac.kcl.inf.chessgame.ChessGame.ContextExpression");
+	public class CellExpressionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "uk.ac.kcl.inf.chessgame.ChessGame.CellExpression");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cSub_expAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cSub_expStateFilterExpressionParserRuleCall_0_0 = (RuleCall)cSub_expAssignment_0.eContents().get(0);
+		private final Assignment cStateAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cStateStateCheckParserRuleCall_0_0 = (RuleCall)cStateAssignment_0.eContents().get(0);
 		private final Keyword cFullStopKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cCellStateAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cCellStateEmptyExpressionParserRuleCall_2_0 = (RuleCall)cCellStateAssignment_2.eContents().get(0);
 		
-		////ContextExpression:
-		////	"noEmptyCellLeft" "("  ")"
-		////;
-		//ContextExpression:
-		//	sub_exp=StateFilterExpression "." cellState=EmptyExpression;
+		//CellExpression:
+		//	state=StateCheck "." cellState=EmptyExpression;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//sub_exp=StateFilterExpression "." cellState=EmptyExpression
+		//state=StateCheck "." cellState=EmptyExpression
 		public Group getGroup() { return cGroup; }
 		
-		//sub_exp=StateFilterExpression
-		public Assignment getSub_expAssignment_0() { return cSub_expAssignment_0; }
+		//state=StateCheck
+		public Assignment getStateAssignment_0() { return cStateAssignment_0; }
 		
-		//StateFilterExpression
-		public RuleCall getSub_expStateFilterExpressionParserRuleCall_0_0() { return cSub_expStateFilterExpressionParserRuleCall_0_0; }
+		//StateCheck
+		public RuleCall getStateStateCheckParserRuleCall_0_0() { return cStateStateCheckParserRuleCall_0_0; }
 		
 		//"."
 		public Keyword getFullStopKeyword_1() { return cFullStopKeyword_1; }
@@ -483,8 +480,8 @@ public class ChessGameGrammarAccess extends AbstractElementFinder.AbstractGramma
 		//EmptyExpression
 		public RuleCall getCellStateEmptyExpressionParserRuleCall_2_0() { return cCellStateEmptyExpressionParserRuleCall_2_0; }
 	}
-	public class StateFilterExpressionElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "uk.ac.kcl.inf.chessgame.ChessGame.StateFilterExpression");
+	public class StateCheckElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "uk.ac.kcl.inf.chessgame.ChessGame.StateCheck");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cAllCellStateKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cLeftParenthesisKeyword_1 = (Keyword)cGroup.eContents().get(1);
@@ -493,7 +490,7 @@ public class ChessGameGrammarAccess extends AbstractElementFinder.AbstractGramma
 		private final RuleCall cCell_stateCellStateIDTerminalRuleCall_2_0_1 = (RuleCall)cCell_stateCellStateCrossReference_2_0.eContents().get(1);
 		private final Keyword cRightParenthesisKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
-		//StateFilterExpression:
+		//StateCheck:
 		//	"allCellState" "(" cell_state=[CellState] ")";
 		@Override public ParserRule getRule() { return rule; }
 		
@@ -582,12 +579,12 @@ public class ChessGameGrammarAccess extends AbstractElementFinder.AbstractGramma
 	private final FieldSpecificationElements pFieldSpecification;
 	private final OptionSpecificationElements pOptionSpecification;
 	private final CellStateElements pCellState;
-	private final CellDisplaySpecElements pCellDisplaySpec;
-	private final TransitionSpecElements pTransitionSpec;
+	private final CellDisplayElements pCellDisplay;
+	private final TransitionElements pTransition;
 	private final MouseTriggerElements pMouseTrigger;
 	private final GameEndElements pGameEnd;
-	private final ContextExpressionElements pContextExpression;
-	private final StateFilterExpressionElements pStateFilterExpression;
+	private final CellExpressionElements pCellExpression;
+	private final StateCheckElements pStateCheck;
 	private final EmptyExpressionElements pEmptyExpression;
 	private final EndBehaviourElements pEndBehaviour;
 	
@@ -604,12 +601,12 @@ public class ChessGameGrammarAccess extends AbstractElementFinder.AbstractGramma
 		this.pFieldSpecification = new FieldSpecificationElements();
 		this.pOptionSpecification = new OptionSpecificationElements();
 		this.pCellState = new CellStateElements();
-		this.pCellDisplaySpec = new CellDisplaySpecElements();
-		this.pTransitionSpec = new TransitionSpecElements();
+		this.pCellDisplay = new CellDisplayElements();
+		this.pTransition = new TransitionElements();
 		this.pMouseTrigger = new MouseTriggerElements();
 		this.pGameEnd = new GameEndElements();
-		this.pContextExpression = new ContextExpressionElements();
-		this.pStateFilterExpression = new StateFilterExpressionElements();
+		this.pCellExpression = new CellExpressionElements();
+		this.pStateCheck = new StateCheckElements();
 		this.pEmptyExpression = new EmptyExpressionElements();
 		this.pEndBehaviour = new EndBehaviourElements();
 	}
@@ -680,8 +677,8 @@ public class ChessGameGrammarAccess extends AbstractElementFinder.AbstractGramma
 	
 	//CellState:
 	//	name=ID "{"
-	//	display=CellDisplaySpec ("transitions" "{"
-	//	transitions+=TransitionSpec+
+	//	display=CellDisplay ("transitions" "{"
+	//	transitions+=Transition+
 	//	"}")?
 	//	"}";
 	public CellStateElements getCellStateAccess() {
@@ -692,25 +689,25 @@ public class ChessGameGrammarAccess extends AbstractElementFinder.AbstractGramma
 		return getCellStateAccess().getRule();
 	}
 	
-	//CellDisplaySpec:
+	//CellDisplay:
 	//	"display" "{" ("text" "=" text=STRING | "color" "=" color=("black" | "white"))
 	//	"}";
-	public CellDisplaySpecElements getCellDisplaySpecAccess() {
-		return pCellDisplaySpec;
+	public CellDisplayElements getCellDisplayAccess() {
+		return pCellDisplay;
 	}
 	
-	public ParserRule getCellDisplaySpecRule() {
-		return getCellDisplaySpecAccess().getRule();
+	public ParserRule getCellDisplayRule() {
+		return getCellDisplayAccess().getRule();
 	}
 	
-	//TransitionSpec:
+	//Transition:
 	//	"click" trigger=MouseTrigger "and" "goto" target=[CellState];
-	public TransitionSpecElements getTransitionSpecAccess() {
-		return pTransitionSpec;
+	public TransitionElements getTransitionAccess() {
+		return pTransition;
 	}
 	
-	public ParserRule getTransitionSpecRule() {
-		return getTransitionSpecAccess().getRule();
+	public ParserRule getTransitionRule() {
+		return getTransitionAccess().getRule();
 	}
 	
 	//MouseTrigger:
@@ -725,7 +722,7 @@ public class ChessGameGrammarAccess extends AbstractElementFinder.AbstractGramma
 	
 	//GameEnd:
 	//	"action" name=ID "{"
-	//	"when" action=ContextExpression
+	//	"when" action=CellExpression
 	//	"do" behaviour=EndBehaviour
 	//	"}";
 	public GameEndElements getGameEndAccess() {
@@ -736,27 +733,24 @@ public class ChessGameGrammarAccess extends AbstractElementFinder.AbstractGramma
 		return getGameEndAccess().getRule();
 	}
 	
-	////ContextExpression:
-	////	"noEmptyCellLeft" "("  ")"
-	////;
-	//ContextExpression:
-	//	sub_exp=StateFilterExpression "." cellState=EmptyExpression;
-	public ContextExpressionElements getContextExpressionAccess() {
-		return pContextExpression;
+	//CellExpression:
+	//	state=StateCheck "." cellState=EmptyExpression;
+	public CellExpressionElements getCellExpressionAccess() {
+		return pCellExpression;
 	}
 	
-	public ParserRule getContextExpressionRule() {
-		return getContextExpressionAccess().getRule();
+	public ParserRule getCellExpressionRule() {
+		return getCellExpressionAccess().getRule();
 	}
 	
-	//StateFilterExpression:
+	//StateCheck:
 	//	"allCellState" "(" cell_state=[CellState] ")";
-	public StateFilterExpressionElements getStateFilterExpressionAccess() {
-		return pStateFilterExpression;
+	public StateCheckElements getStateCheckAccess() {
+		return pStateCheck;
 	}
 	
-	public ParserRule getStateFilterExpressionRule() {
-		return getStateFilterExpressionAccess().getRule();
+	public ParserRule getStateCheckRule() {
+		return getStateCheckAccess().getRule();
 	}
 	
 	//EmptyExpression:

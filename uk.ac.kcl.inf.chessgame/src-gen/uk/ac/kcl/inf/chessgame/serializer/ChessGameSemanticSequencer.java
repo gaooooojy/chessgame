@@ -14,19 +14,19 @@ import org.eclipse.xtext.serializer.ISerializationContext;
 import org.eclipse.xtext.serializer.acceptor.SequenceFeeder;
 import org.eclipse.xtext.serializer.sequencer.AbstractDelegatingSemanticSequencer;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
-import uk.ac.kcl.inf.chessgame.chessGame.CellDisplaySpec;
+import uk.ac.kcl.inf.chessgame.chessGame.CellDisplay;
+import uk.ac.kcl.inf.chessgame.chessGame.CellExpression;
 import uk.ac.kcl.inf.chessgame.chessGame.CellState;
 import uk.ac.kcl.inf.chessgame.chessGame.ChessGamePackage;
 import uk.ac.kcl.inf.chessgame.chessGame.ChessProgram;
-import uk.ac.kcl.inf.chessgame.chessGame.ContextExpression;
 import uk.ac.kcl.inf.chessgame.chessGame.EmptyExpression;
 import uk.ac.kcl.inf.chessgame.chessGame.EndBehaviour;
 import uk.ac.kcl.inf.chessgame.chessGame.FieldSpecification;
 import uk.ac.kcl.inf.chessgame.chessGame.GameEnd;
 import uk.ac.kcl.inf.chessgame.chessGame.MouseTrigger;
 import uk.ac.kcl.inf.chessgame.chessGame.OptionSpecification;
-import uk.ac.kcl.inf.chessgame.chessGame.StateFilterExpression;
-import uk.ac.kcl.inf.chessgame.chessGame.TransitionSpec;
+import uk.ac.kcl.inf.chessgame.chessGame.StateCheck;
+import uk.ac.kcl.inf.chessgame.chessGame.Transition;
 import uk.ac.kcl.inf.chessgame.services.ChessGameGrammarAccess;
 
 @SuppressWarnings("all")
@@ -43,17 +43,17 @@ public class ChessGameSemanticSequencer extends AbstractDelegatingSemanticSequen
 		Set<Parameter> parameters = context.getEnabledBooleanParameters();
 		if (epackage == ChessGamePackage.eINSTANCE)
 			switch (semanticObject.eClass().getClassifierID()) {
-			case ChessGamePackage.CELL_DISPLAY_SPEC:
-				sequence_CellDisplaySpec(context, (CellDisplaySpec) semanticObject); 
+			case ChessGamePackage.CELL_DISPLAY:
+				sequence_CellDisplay(context, (CellDisplay) semanticObject); 
+				return; 
+			case ChessGamePackage.CELL_EXPRESSION:
+				sequence_CellExpression(context, (CellExpression) semanticObject); 
 				return; 
 			case ChessGamePackage.CELL_STATE:
 				sequence_CellState(context, (CellState) semanticObject); 
 				return; 
 			case ChessGamePackage.CHESS_PROGRAM:
 				sequence_ChessProgram(context, (ChessProgram) semanticObject); 
-				return; 
-			case ChessGamePackage.CONTEXT_EXPRESSION:
-				sequence_ContextExpression(context, (ContextExpression) semanticObject); 
 				return; 
 			case ChessGamePackage.EMPTY_EXPRESSION:
 				sequence_EmptyExpression(context, (EmptyExpression) semanticObject); 
@@ -73,11 +73,11 @@ public class ChessGameSemanticSequencer extends AbstractDelegatingSemanticSequen
 			case ChessGamePackage.OPTION_SPECIFICATION:
 				sequence_OptionSpecification(context, (OptionSpecification) semanticObject); 
 				return; 
-			case ChessGamePackage.STATE_FILTER_EXPRESSION:
-				sequence_StateFilterExpression(context, (StateFilterExpression) semanticObject); 
+			case ChessGamePackage.STATE_CHECK:
+				sequence_StateCheck(context, (StateCheck) semanticObject); 
 				return; 
-			case ChessGamePackage.TRANSITION_SPEC:
-				sequence_TransitionSpec(context, (TransitionSpec) semanticObject); 
+			case ChessGamePackage.TRANSITION:
+				sequence_Transition(context, (Transition) semanticObject); 
 				return; 
 			}
 		if (errorAcceptor != null)
@@ -86,13 +86,34 @@ public class ChessGameSemanticSequencer extends AbstractDelegatingSemanticSequen
 	
 	/**
 	 * Contexts:
-	 *     CellDisplaySpec returns CellDisplaySpec
+	 *     CellDisplay returns CellDisplay
 	 *
 	 * Constraint:
 	 *     (text=STRING | color='black' | color='white')
 	 */
-	protected void sequence_CellDisplaySpec(ISerializationContext context, CellDisplaySpec semanticObject) {
+	protected void sequence_CellDisplay(ISerializationContext context, CellDisplay semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     CellExpression returns CellExpression
+	 *
+	 * Constraint:
+	 *     (state=StateCheck cellState=EmptyExpression)
+	 */
+	protected void sequence_CellExpression(ISerializationContext context, CellExpression semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, ChessGamePackage.Literals.CELL_EXPRESSION__STATE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ChessGamePackage.Literals.CELL_EXPRESSION__STATE));
+			if (transientValues.isValueTransient(semanticObject, ChessGamePackage.Literals.CELL_EXPRESSION__CELL_STATE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ChessGamePackage.Literals.CELL_EXPRESSION__CELL_STATE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getCellExpressionAccess().getStateStateCheckParserRuleCall_0_0(), semanticObject.getState());
+		feeder.accept(grammarAccess.getCellExpressionAccess().getCellStateEmptyExpressionParserRuleCall_2_0(), semanticObject.getCellState());
+		feeder.finish();
 	}
 	
 	
@@ -101,7 +122,7 @@ public class ChessGameSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 *     CellState returns CellState
 	 *
 	 * Constraint:
-	 *     (name=ID display=CellDisplaySpec transitions+=TransitionSpec*)
+	 *     (name=ID display=CellDisplay transitions+=Transition*)
 	 */
 	protected void sequence_CellState(ISerializationContext context, CellState semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -117,27 +138,6 @@ public class ChessGameSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 */
 	protected void sequence_ChessProgram(ISerializationContext context, ChessProgram semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     ContextExpression returns ContextExpression
-	 *
-	 * Constraint:
-	 *     (sub_exp=StateFilterExpression cellState=EmptyExpression)
-	 */
-	protected void sequence_ContextExpression(ISerializationContext context, ContextExpression semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, ChessGamePackage.Literals.CONTEXT_EXPRESSION__SUB_EXP) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ChessGamePackage.Literals.CONTEXT_EXPRESSION__SUB_EXP));
-			if (transientValues.isValueTransient(semanticObject, ChessGamePackage.Literals.CONTEXT_EXPRESSION__CELL_STATE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ChessGamePackage.Literals.CONTEXT_EXPRESSION__CELL_STATE));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getContextExpressionAccess().getSub_expStateFilterExpressionParserRuleCall_0_0(), semanticObject.getSub_exp());
-		feeder.accept(grammarAccess.getContextExpressionAccess().getCellStateEmptyExpressionParserRuleCall_2_0(), semanticObject.getCellState());
-		feeder.finish();
 	}
 	
 	
@@ -188,7 +188,7 @@ public class ChessGameSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 *     GameEnd returns GameEnd
 	 *
 	 * Constraint:
-	 *     (name=ID action=ContextExpression behaviour=EndBehaviour)
+	 *     (name=ID action=CellExpression behaviour=EndBehaviour)
 	 */
 	protected void sequence_GameEnd(ISerializationContext context, GameEnd semanticObject) {
 		if (errorAcceptor != null) {
@@ -201,7 +201,7 @@ public class ChessGameSemanticSequencer extends AbstractDelegatingSemanticSequen
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getGameEndAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getGameEndAccess().getActionContextExpressionParserRuleCall_4_0(), semanticObject.getAction());
+		feeder.accept(grammarAccess.getGameEndAccess().getActionCellExpressionParserRuleCall_4_0(), semanticObject.getAction());
 		feeder.accept(grammarAccess.getGameEndAccess().getBehaviourEndBehaviourParserRuleCall_6_0(), semanticObject.getBehaviour());
 		feeder.finish();
 	}
@@ -233,39 +233,39 @@ public class ChessGameSemanticSequencer extends AbstractDelegatingSemanticSequen
 	
 	/**
 	 * Contexts:
-	 *     StateFilterExpression returns StateFilterExpression
+	 *     StateCheck returns StateCheck
 	 *
 	 * Constraint:
 	 *     cell_state=[CellState|ID]
 	 */
-	protected void sequence_StateFilterExpression(ISerializationContext context, StateFilterExpression semanticObject) {
+	protected void sequence_StateCheck(ISerializationContext context, StateCheck semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, ChessGamePackage.Literals.STATE_FILTER_EXPRESSION__CELL_STATE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ChessGamePackage.Literals.STATE_FILTER_EXPRESSION__CELL_STATE));
+			if (transientValues.isValueTransient(semanticObject, ChessGamePackage.Literals.STATE_CHECK__CELL_STATE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ChessGamePackage.Literals.STATE_CHECK__CELL_STATE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getStateFilterExpressionAccess().getCell_stateCellStateIDTerminalRuleCall_2_0_1(), semanticObject.eGet(ChessGamePackage.Literals.STATE_FILTER_EXPRESSION__CELL_STATE, false));
+		feeder.accept(grammarAccess.getStateCheckAccess().getCell_stateCellStateIDTerminalRuleCall_2_0_1(), semanticObject.eGet(ChessGamePackage.Literals.STATE_CHECK__CELL_STATE, false));
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     TransitionSpec returns TransitionSpec
+	 *     Transition returns Transition
 	 *
 	 * Constraint:
 	 *     (trigger=MouseTrigger target=[CellState|ID])
 	 */
-	protected void sequence_TransitionSpec(ISerializationContext context, TransitionSpec semanticObject) {
+	protected void sequence_Transition(ISerializationContext context, Transition semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, ChessGamePackage.Literals.TRANSITION_SPEC__TRIGGER) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ChessGamePackage.Literals.TRANSITION_SPEC__TRIGGER));
-			if (transientValues.isValueTransient(semanticObject, ChessGamePackage.Literals.TRANSITION_SPEC__TARGET) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ChessGamePackage.Literals.TRANSITION_SPEC__TARGET));
+			if (transientValues.isValueTransient(semanticObject, ChessGamePackage.Literals.TRANSITION__TRIGGER) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ChessGamePackage.Literals.TRANSITION__TRIGGER));
+			if (transientValues.isValueTransient(semanticObject, ChessGamePackage.Literals.TRANSITION__TARGET) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ChessGamePackage.Literals.TRANSITION__TARGET));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getTransitionSpecAccess().getTriggerMouseTriggerParserRuleCall_1_0(), semanticObject.getTrigger());
-		feeder.accept(grammarAccess.getTransitionSpecAccess().getTargetCellStateIDTerminalRuleCall_4_0_1(), semanticObject.eGet(ChessGamePackage.Literals.TRANSITION_SPEC__TARGET, false));
+		feeder.accept(grammarAccess.getTransitionAccess().getTriggerMouseTriggerParserRuleCall_1_0(), semanticObject.getTrigger());
+		feeder.accept(grammarAccess.getTransitionAccess().getTargetCellStateIDTerminalRuleCall_4_0_1(), semanticObject.eGet(ChessGamePackage.Literals.TRANSITION__TARGET, false));
 		feeder.finish();
 	}
 	

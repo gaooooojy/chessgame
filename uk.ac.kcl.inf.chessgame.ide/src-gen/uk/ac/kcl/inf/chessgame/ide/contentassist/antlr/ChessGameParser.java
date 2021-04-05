@@ -32,21 +32,21 @@ public class ChessGameParser extends AbstractContentAssistParser {
 		
 		private static void init(ImmutableMap.Builder<AbstractElement, String> builder, ChessGameGrammarAccess grammarAccess) {
 			builder.put(grammarAccess.getFieldSpecificationAccess().getNameAlternatives_10_0(), "rule__FieldSpecification__NameAlternatives_10_0");
-			builder.put(grammarAccess.getCellDisplaySpecAccess().getAlternatives_2(), "rule__CellDisplaySpec__Alternatives_2");
-			builder.put(grammarAccess.getCellDisplaySpecAccess().getColorAlternatives_2_1_2_0(), "rule__CellDisplaySpec__ColorAlternatives_2_1_2_0");
+			builder.put(grammarAccess.getCellDisplayAccess().getAlternatives_2(), "rule__CellDisplay__Alternatives_2");
+			builder.put(grammarAccess.getCellDisplayAccess().getColorAlternatives_2_1_2_0(), "rule__CellDisplay__ColorAlternatives_2_1_2_0");
 			builder.put(grammarAccess.getMouseTriggerAccess().getAlternatives(), "rule__MouseTrigger__Alternatives");
 			builder.put(grammarAccess.getChessProgramAccess().getGroup(), "rule__ChessProgram__Group__0");
 			builder.put(grammarAccess.getFieldSpecificationAccess().getGroup(), "rule__FieldSpecification__Group__0");
 			builder.put(grammarAccess.getCellStateAccess().getGroup(), "rule__CellState__Group__0");
 			builder.put(grammarAccess.getCellStateAccess().getGroup_3(), "rule__CellState__Group_3__0");
-			builder.put(grammarAccess.getCellDisplaySpecAccess().getGroup(), "rule__CellDisplaySpec__Group__0");
-			builder.put(grammarAccess.getCellDisplaySpecAccess().getGroup_2_0(), "rule__CellDisplaySpec__Group_2_0__0");
-			builder.put(grammarAccess.getCellDisplaySpecAccess().getGroup_2_1(), "rule__CellDisplaySpec__Group_2_1__0");
-			builder.put(grammarAccess.getTransitionSpecAccess().getGroup(), "rule__TransitionSpec__Group__0");
+			builder.put(grammarAccess.getCellDisplayAccess().getGroup(), "rule__CellDisplay__Group__0");
+			builder.put(grammarAccess.getCellDisplayAccess().getGroup_2_0(), "rule__CellDisplay__Group_2_0__0");
+			builder.put(grammarAccess.getCellDisplayAccess().getGroup_2_1(), "rule__CellDisplay__Group_2_1__0");
+			builder.put(grammarAccess.getTransitionAccess().getGroup(), "rule__Transition__Group__0");
 			builder.put(grammarAccess.getMouseTriggerAccess().getGroup_1(), "rule__MouseTrigger__Group_1__0");
 			builder.put(grammarAccess.getGameEndAccess().getGroup(), "rule__GameEnd__Group__0");
-			builder.put(grammarAccess.getContextExpressionAccess().getGroup(), "rule__ContextExpression__Group__0");
-			builder.put(grammarAccess.getStateFilterExpressionAccess().getGroup(), "rule__StateFilterExpression__Group__0");
+			builder.put(grammarAccess.getCellExpressionAccess().getGroup(), "rule__CellExpression__Group__0");
+			builder.put(grammarAccess.getStateCheckAccess().getGroup(), "rule__StateCheck__Group__0");
 			builder.put(grammarAccess.getEmptyExpressionAccess().getGroup(), "rule__EmptyExpression__Group__0");
 			builder.put(grammarAccess.getEndBehaviourAccess().getGroup(), "rule__EndBehaviour__Group__0");
 			builder.put(grammarAccess.getChessProgramAccess().getSizeAssignment_0(), "rule__ChessProgram__SizeAssignment_0");
@@ -59,17 +59,17 @@ public class ChessGameParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getCellStateAccess().getNameAssignment_0(), "rule__CellState__NameAssignment_0");
 			builder.put(grammarAccess.getCellStateAccess().getDisplayAssignment_2(), "rule__CellState__DisplayAssignment_2");
 			builder.put(grammarAccess.getCellStateAccess().getTransitionsAssignment_3_2(), "rule__CellState__TransitionsAssignment_3_2");
-			builder.put(grammarAccess.getCellDisplaySpecAccess().getTextAssignment_2_0_2(), "rule__CellDisplaySpec__TextAssignment_2_0_2");
-			builder.put(grammarAccess.getCellDisplaySpecAccess().getColorAssignment_2_1_2(), "rule__CellDisplaySpec__ColorAssignment_2_1_2");
-			builder.put(grammarAccess.getTransitionSpecAccess().getTriggerAssignment_1(), "rule__TransitionSpec__TriggerAssignment_1");
-			builder.put(grammarAccess.getTransitionSpecAccess().getTargetAssignment_4(), "rule__TransitionSpec__TargetAssignment_4");
+			builder.put(grammarAccess.getCellDisplayAccess().getTextAssignment_2_0_2(), "rule__CellDisplay__TextAssignment_2_0_2");
+			builder.put(grammarAccess.getCellDisplayAccess().getColorAssignment_2_1_2(), "rule__CellDisplay__ColorAssignment_2_1_2");
+			builder.put(grammarAccess.getTransitionAccess().getTriggerAssignment_1(), "rule__Transition__TriggerAssignment_1");
+			builder.put(grammarAccess.getTransitionAccess().getTargetAssignment_4(), "rule__Transition__TargetAssignment_4");
 			builder.put(grammarAccess.getMouseTriggerAccess().getMouseAssignment_0(), "rule__MouseTrigger__MouseAssignment_0");
 			builder.put(grammarAccess.getGameEndAccess().getNameAssignment_1(), "rule__GameEnd__NameAssignment_1");
 			builder.put(grammarAccess.getGameEndAccess().getActionAssignment_4(), "rule__GameEnd__ActionAssignment_4");
 			builder.put(grammarAccess.getGameEndAccess().getBehaviourAssignment_6(), "rule__GameEnd__BehaviourAssignment_6");
-			builder.put(grammarAccess.getContextExpressionAccess().getSub_expAssignment_0(), "rule__ContextExpression__Sub_expAssignment_0");
-			builder.put(grammarAccess.getContextExpressionAccess().getCellStateAssignment_2(), "rule__ContextExpression__CellStateAssignment_2");
-			builder.put(grammarAccess.getStateFilterExpressionAccess().getCell_stateAssignment_2(), "rule__StateFilterExpression__Cell_stateAssignment_2");
+			builder.put(grammarAccess.getCellExpressionAccess().getStateAssignment_0(), "rule__CellExpression__StateAssignment_0");
+			builder.put(grammarAccess.getCellExpressionAccess().getCellStateAssignment_2(), "rule__CellExpression__CellStateAssignment_2");
+			builder.put(grammarAccess.getStateCheckAccess().getCell_stateAssignment_2(), "rule__StateCheck__Cell_stateAssignment_2");
 			builder.put(grammarAccess.getEndBehaviourAccess().getMessageAssignment_2(), "rule__EndBehaviour__MessageAssignment_2");
 		}
 	}

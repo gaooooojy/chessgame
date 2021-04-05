@@ -101,17 +101,17 @@ public class ChessGameSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case ChessGamePackage.CELL_DISPLAY_SPEC:
+      case ChessGamePackage.CELL_DISPLAY:
       {
-        CellDisplaySpec cellDisplaySpec = (CellDisplaySpec)theEObject;
-        T result = caseCellDisplaySpec(cellDisplaySpec);
+        CellDisplay cellDisplay = (CellDisplay)theEObject;
+        T result = caseCellDisplay(cellDisplay);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case ChessGamePackage.TRANSITION_SPEC:
+      case ChessGamePackage.TRANSITION:
       {
-        TransitionSpec transitionSpec = (TransitionSpec)theEObject;
-        T result = caseTransitionSpec(transitionSpec);
+        Transition transition = (Transition)theEObject;
+        T result = caseTransition(transition);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -129,17 +129,17 @@ public class ChessGameSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case ChessGamePackage.CONTEXT_EXPRESSION:
+      case ChessGamePackage.CELL_EXPRESSION:
       {
-        ContextExpression contextExpression = (ContextExpression)theEObject;
-        T result = caseContextExpression(contextExpression);
+        CellExpression cellExpression = (CellExpression)theEObject;
+        T result = caseCellExpression(cellExpression);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case ChessGamePackage.STATE_FILTER_EXPRESSION:
+      case ChessGamePackage.STATE_CHECK:
       {
-        StateFilterExpression stateFilterExpression = (StateFilterExpression)theEObject;
-        T result = caseStateFilterExpression(stateFilterExpression);
+        StateCheck stateCheck = (StateCheck)theEObject;
+        T result = caseStateCheck(stateCheck);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -226,33 +226,33 @@ public class ChessGameSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Cell Display Spec</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Cell Display</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Cell Display Spec</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Cell Display</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseCellDisplaySpec(CellDisplaySpec object)
+  public T caseCellDisplay(CellDisplay object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Transition Spec</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Transition</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Transition Spec</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Transition</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseTransitionSpec(TransitionSpec object)
+  public T caseTransition(Transition object)
   {
     return null;
   }
@@ -290,33 +290,33 @@ public class ChessGameSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Context Expression</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Cell Expression</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Context Expression</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Cell Expression</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseContextExpression(ContextExpression object)
+  public T caseCellExpression(CellExpression object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>State Filter Expression</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>State Check</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>State Filter Expression</em>'.
+   * @return the result of interpreting the object as an instance of '<em>State Check</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseStateFilterExpression(StateFilterExpression object)
+  public T caseStateCheck(StateCheck object)
   {
     return null;
   }

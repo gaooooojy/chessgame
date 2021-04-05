@@ -96,14 +96,14 @@ public class ChessGameAdapterFactory extends AdapterFactoryImpl
         return createCellStateAdapter();
       }
       @Override
-      public Adapter caseCellDisplaySpec(CellDisplaySpec object)
+      public Adapter caseCellDisplay(CellDisplay object)
       {
-        return createCellDisplaySpecAdapter();
+        return createCellDisplayAdapter();
       }
       @Override
-      public Adapter caseTransitionSpec(TransitionSpec object)
+      public Adapter caseTransition(Transition object)
       {
-        return createTransitionSpecAdapter();
+        return createTransitionAdapter();
       }
       @Override
       public Adapter caseMouseTrigger(MouseTrigger object)
@@ -116,14 +116,14 @@ public class ChessGameAdapterFactory extends AdapterFactoryImpl
         return createGameEndAdapter();
       }
       @Override
-      public Adapter caseContextExpression(ContextExpression object)
+      public Adapter caseCellExpression(CellExpression object)
       {
-        return createContextExpressionAdapter();
+        return createCellExpressionAdapter();
       }
       @Override
-      public Adapter caseStateFilterExpression(StateFilterExpression object)
+      public Adapter caseStateCheck(StateCheck object)
       {
-        return createStateFilterExpressionAdapter();
+        return createStateCheckAdapter();
       }
       @Override
       public Adapter caseEmptyExpression(EmptyExpression object)
@@ -218,31 +218,31 @@ public class ChessGameAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link uk.ac.kcl.inf.chessgame.chessGame.CellDisplaySpec <em>Cell Display Spec</em>}'.
+   * Creates a new adapter for an object of class '{@link uk.ac.kcl.inf.chessgame.chessGame.CellDisplay <em>Cell Display</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see uk.ac.kcl.inf.chessgame.chessGame.CellDisplaySpec
+   * @see uk.ac.kcl.inf.chessgame.chessGame.CellDisplay
    * @generated
    */
-  public Adapter createCellDisplaySpecAdapter()
+  public Adapter createCellDisplayAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link uk.ac.kcl.inf.chessgame.chessGame.TransitionSpec <em>Transition Spec</em>}'.
+   * Creates a new adapter for an object of class '{@link uk.ac.kcl.inf.chessgame.chessGame.Transition <em>Transition</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see uk.ac.kcl.inf.chessgame.chessGame.TransitionSpec
+   * @see uk.ac.kcl.inf.chessgame.chessGame.Transition
    * @generated
    */
-  public Adapter createTransitionSpecAdapter()
+  public Adapter createTransitionAdapter()
   {
     return null;
   }
@@ -278,31 +278,31 @@ public class ChessGameAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link uk.ac.kcl.inf.chessgame.chessGame.ContextExpression <em>Context Expression</em>}'.
+   * Creates a new adapter for an object of class '{@link uk.ac.kcl.inf.chessgame.chessGame.CellExpression <em>Cell Expression</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see uk.ac.kcl.inf.chessgame.chessGame.ContextExpression
+   * @see uk.ac.kcl.inf.chessgame.chessGame.CellExpression
    * @generated
    */
-  public Adapter createContextExpressionAdapter()
+  public Adapter createCellExpressionAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link uk.ac.kcl.inf.chessgame.chessGame.StateFilterExpression <em>State Filter Expression</em>}'.
+   * Creates a new adapter for an object of class '{@link uk.ac.kcl.inf.chessgame.chessGame.StateCheck <em>State Check</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see uk.ac.kcl.inf.chessgame.chessGame.StateFilterExpression
+   * @see uk.ac.kcl.inf.chessgame.chessGame.StateCheck
    * @generated
    */
-  public Adapter createStateFilterExpressionAdapter()
+  public Adapter createStateCheckAdapter()
   {
     return null;
   }

@@ -19,10 +19,10 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import uk.ac.kcl.inf.chessgame.chessGame.CellDisplaySpec;
+import uk.ac.kcl.inf.chessgame.chessGame.CellDisplay;
 import uk.ac.kcl.inf.chessgame.chessGame.CellState;
 import uk.ac.kcl.inf.chessgame.chessGame.ChessGamePackage;
-import uk.ac.kcl.inf.chessgame.chessGame.TransitionSpec;
+import uk.ac.kcl.inf.chessgame.chessGame.Transition;
 
 /**
  * <!-- begin-user-doc -->
@@ -69,7 +69,7 @@ public class CellStateImpl extends MinimalEObjectImpl.Container implements CellS
    * @generated
    * @ordered
    */
-  protected CellDisplaySpec display;
+  protected CellDisplay display;
 
   /**
    * The cached value of the '{@link #getTransitions() <em>Transitions</em>}' containment reference list.
@@ -79,7 +79,7 @@ public class CellStateImpl extends MinimalEObjectImpl.Container implements CellS
    * @generated
    * @ordered
    */
-  protected EList<TransitionSpec> transitions;
+  protected EList<Transition> transitions;
 
   /**
    * <!-- begin-user-doc -->
@@ -133,7 +133,7 @@ public class CellStateImpl extends MinimalEObjectImpl.Container implements CellS
    * @generated
    */
   @Override
-  public CellDisplaySpec getDisplay()
+  public CellDisplay getDisplay()
   {
     return display;
   }
@@ -143,9 +143,9 @@ public class CellStateImpl extends MinimalEObjectImpl.Container implements CellS
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetDisplay(CellDisplaySpec newDisplay, NotificationChain msgs)
+  public NotificationChain basicSetDisplay(CellDisplay newDisplay, NotificationChain msgs)
   {
-    CellDisplaySpec oldDisplay = display;
+    CellDisplay oldDisplay = display;
     display = newDisplay;
     if (eNotificationRequired())
     {
@@ -161,7 +161,7 @@ public class CellStateImpl extends MinimalEObjectImpl.Container implements CellS
    * @generated
    */
   @Override
-  public void setDisplay(CellDisplaySpec newDisplay)
+  public void setDisplay(CellDisplay newDisplay)
   {
     if (newDisplay != display)
     {
@@ -183,11 +183,11 @@ public class CellStateImpl extends MinimalEObjectImpl.Container implements CellS
    * @generated
    */
   @Override
-  public EList<TransitionSpec> getTransitions()
+  public EList<Transition> getTransitions()
   {
     if (transitions == null)
     {
-      transitions = new EObjectContainmentEList<TransitionSpec>(TransitionSpec.class, this, ChessGamePackage.CELL_STATE__TRANSITIONS);
+      transitions = new EObjectContainmentEList<Transition>(Transition.class, this, ChessGamePackage.CELL_STATE__TRANSITIONS);
     }
     return transitions;
   }
@@ -245,11 +245,11 @@ public class CellStateImpl extends MinimalEObjectImpl.Container implements CellS
         setName((String)newValue);
         return;
       case ChessGamePackage.CELL_STATE__DISPLAY:
-        setDisplay((CellDisplaySpec)newValue);
+        setDisplay((CellDisplay)newValue);
         return;
       case ChessGamePackage.CELL_STATE__TRANSITIONS:
         getTransitions().clear();
-        getTransitions().addAll((Collection<? extends TransitionSpec>)newValue);
+        getTransitions().addAll((Collection<? extends Transition>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -269,7 +269,7 @@ public class CellStateImpl extends MinimalEObjectImpl.Container implements CellS
         setName(NAME_EDEFAULT);
         return;
       case ChessGamePackage.CELL_STATE__DISPLAY:
-        setDisplay((CellDisplaySpec)null);
+        setDisplay((CellDisplay)null);
         return;
       case ChessGamePackage.CELL_STATE__TRANSITIONS:
         getTransitions().clear();

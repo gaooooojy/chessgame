@@ -12,8 +12,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import uk.ac.kcl.inf.chessgame.chessGame.CellExpression;
 import uk.ac.kcl.inf.chessgame.chessGame.ChessGamePackage;
-import uk.ac.kcl.inf.chessgame.chessGame.ContextExpression;
 import uk.ac.kcl.inf.chessgame.chessGame.EndBehaviour;
 import uk.ac.kcl.inf.chessgame.chessGame.GameEnd;
 
@@ -62,7 +62,7 @@ public class GameEndImpl extends MinimalEObjectImpl.Container implements GameEnd
    * @generated
    * @ordered
    */
-  protected ContextExpression action;
+  protected CellExpression action;
 
   /**
    * The cached value of the '{@link #getBehaviour() <em>Behaviour</em>}' containment reference.
@@ -126,7 +126,7 @@ public class GameEndImpl extends MinimalEObjectImpl.Container implements GameEnd
    * @generated
    */
   @Override
-  public ContextExpression getAction()
+  public CellExpression getAction()
   {
     return action;
   }
@@ -136,9 +136,9 @@ public class GameEndImpl extends MinimalEObjectImpl.Container implements GameEnd
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetAction(ContextExpression newAction, NotificationChain msgs)
+  public NotificationChain basicSetAction(CellExpression newAction, NotificationChain msgs)
   {
-    ContextExpression oldAction = action;
+    CellExpression oldAction = action;
     action = newAction;
     if (eNotificationRequired())
     {
@@ -154,7 +154,7 @@ public class GameEndImpl extends MinimalEObjectImpl.Container implements GameEnd
    * @generated
    */
   @Override
-  public void setAction(ContextExpression newAction)
+  public void setAction(CellExpression newAction)
   {
     if (newAction != action)
     {
@@ -272,7 +272,7 @@ public class GameEndImpl extends MinimalEObjectImpl.Container implements GameEnd
         setName((String)newValue);
         return;
       case ChessGamePackage.GAME_END__ACTION:
-        setAction((ContextExpression)newValue);
+        setAction((CellExpression)newValue);
         return;
       case ChessGamePackage.GAME_END__BEHAVIOUR:
         setBehaviour((EndBehaviour)newValue);
@@ -295,7 +295,7 @@ public class GameEndImpl extends MinimalEObjectImpl.Container implements GameEnd
         setName(NAME_EDEFAULT);
         return;
       case ChessGamePackage.GAME_END__ACTION:
-        setAction((ContextExpression)null);
+        setAction((CellExpression)null);
         return;
       case ChessGamePackage.GAME_END__BEHAVIOUR:
         setBehaviour((EndBehaviour)null);
