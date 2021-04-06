@@ -4,6 +4,7 @@
 package uk.ac.kcl.inf.chessgame.chessGame.impl;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -68,7 +69,6 @@ public class ChessGameFactoryImpl extends EFactoryImpl implements ChessGameFacto
       case ChessGamePackage.CHESS_PROGRAM: return createChessProgram();
       case ChessGamePackage.STATEMENTS: return createStatements();
       case ChessGamePackage.FIELD_SPECIFICATION: return createFieldSpecification();
-      case ChessGamePackage.OPTION_SPECIFICATION: return createOptionSpecification();
       case ChessGamePackage.CELL_STATE: return createCellState();
       case ChessGamePackage.CELL_DISPLAY: return createCellDisplay();
       case ChessGamePackage.TRANSITION: return createTransition();
@@ -80,6 +80,40 @@ public class ChessGameFactoryImpl extends EFactoryImpl implements ChessGameFacto
       case ChessGamePackage.END_BEHAVIOUR: return createEndBehaviour();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+    }
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Object createFromString(EDataType eDataType, String initialValue)
+  {
+    switch (eDataType.getClassifierID())
+    {
+      case ChessGamePackage.COLOR_CHOICE:
+        return createcolorChoiceFromString(eDataType, initialValue);
+      default:
+        throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+    }
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String convertToString(EDataType eDataType, Object instanceValue)
+  {
+    switch (eDataType.getClassifierID())
+    {
+      case ChessGamePackage.COLOR_CHOICE:
+        return convertcolorChoiceToString(eDataType, instanceValue);
+      default:
+        throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
   }
 
@@ -117,18 +151,6 @@ public class ChessGameFactoryImpl extends EFactoryImpl implements ChessGameFacto
   {
     FieldSpecificationImpl fieldSpecification = new FieldSpecificationImpl();
     return fieldSpecification;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public OptionSpecification createOptionSpecification()
-  {
-    OptionSpecificationImpl optionSpecification = new OptionSpecificationImpl();
-    return optionSpecification;
   }
 
   /**
@@ -237,6 +259,28 @@ public class ChessGameFactoryImpl extends EFactoryImpl implements ChessGameFacto
   {
     EndBehaviourImpl endBehaviour = new EndBehaviourImpl();
     return endBehaviour;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public colorChoice createcolorChoiceFromString(EDataType eDataType, String initialValue)
+  {
+    colorChoice result = colorChoice.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertcolorChoiceToString(EDataType eDataType, Object instanceValue)
+  {
+    return instanceValue == null ? null : instanceValue.toString();
   }
 
   /**

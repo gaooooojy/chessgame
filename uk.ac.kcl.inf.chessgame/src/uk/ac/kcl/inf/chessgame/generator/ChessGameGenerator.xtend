@@ -13,7 +13,6 @@ import uk.ac.kcl.inf.chessgame.chessGame.CellDisplay
 import uk.ac.kcl.inf.chessgame.chessGame.Transition
 import uk.ac.kcl.inf.chessgame.chessGame.Statements
 import uk.ac.kcl.inf.chessgame.chessGame.FieldSpecification
-import uk.ac.kcl.inf.chessgame.chessGame.OptionSpecification
 
 /**
  * Generates code from your model files on save.
@@ -80,23 +79,33 @@ class ChessGameGenerator extends AbstractGenerator {
 	
 	dispatch def String generateJavaStatement(Statements stmt, Environment env)''''''
 	dispatch def String generateJavaStatement(FieldSpecification stmt, Environment env)'''
-	createField{
+	public createField{
 		width = «stmt.width»;
 		height = «stmt.height»;
-	}'''
-	dispatch def String generateJavaStatement(OptionSpecification stmt, Environment env)''''''
-	dispatch def String generateJavaStatement(Transition stmt, Environment env)''''''
-	dispatch def String generateJavaStatement(CellState stmt, Environment env)'''
-«««	createCellState «stmt.name»{
-«««		display{
-«««			text = «stmt.display.text»
-«««		}
-«««		transitions{
-«««			click «stmt.transitions» and goto «stmt»
-«««		}
-«««	}
-	createCellState{
-		«stmt.name»
 	}
 	'''
+	dispatch def String generateJavaStatement(CellState stmt, Environment env)'''
+	public createCellState «stmt.name»{
+		display{
+			
+			text = 
+		}
+	}
+	'''
+//	dispatch def String generateJavaStatement(CellState stmt, Environment env)'''
+//	createCellState «stmt.name»{
+//		display{
+//			text = «stmt.display.text»
+//		}
+//		transitions{
+//			click «stmt.transitions» and goto «stmt»
+//		}
+//	}
+//	'''
+//	dispatch def String generateJavaExpression(CellState exp)'''
+//	«exp.name»
+//	'''
+//	dispatch def String generateJavaExpression(CellDisplay exp)'''
+//	«exp.text»
+//	'''
 }

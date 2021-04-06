@@ -26,9 +26,7 @@ public class TestChessGame {
 					height = 20;
 					}
 					
-					createCellState{
-					begin
-				}
+				}	
 			};
 				
 			c.run();

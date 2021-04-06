@@ -5,8 +5,6 @@ package uk.ac.kcl.inf.chessgame.chessGame;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Cell State</b></em>'.
@@ -25,7 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface CellState extends EObject
+public interface CellState extends Statements
 {
   /**
    * Returns the value of the '<em><b>Name</b></em>' attribute.

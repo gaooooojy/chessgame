@@ -605,10 +605,10 @@ public class InternalChessGameLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalChessGame.g:2344:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // InternalChessGame.g:2344:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalChessGame.g:2313:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // InternalChessGame.g:2313:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // InternalChessGame.g:2344:11: ( '^' )?
+            // InternalChessGame.g:2313:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -617,7 +617,7 @@ public class InternalChessGameLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // InternalChessGame.g:2344:11: '^'
+                    // InternalChessGame.g:2313:11: '^'
                     {
                     match('^'); 
 
@@ -635,7 +635,7 @@ public class InternalChessGameLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // InternalChessGame.g:2344:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalChessGame.g:2313:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -684,10 +684,10 @@ public class InternalChessGameLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalChessGame.g:2346:10: ( ( '0' .. '9' )+ )
-            // InternalChessGame.g:2346:12: ( '0' .. '9' )+
+            // InternalChessGame.g:2315:10: ( ( '0' .. '9' )+ )
+            // InternalChessGame.g:2315:12: ( '0' .. '9' )+
             {
-            // InternalChessGame.g:2346:12: ( '0' .. '9' )+
+            // InternalChessGame.g:2315:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -701,7 +701,7 @@ public class InternalChessGameLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // InternalChessGame.g:2346:13: '0' .. '9'
+            	    // InternalChessGame.g:2315:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -733,10 +733,10 @@ public class InternalChessGameLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalChessGame.g:2348:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // InternalChessGame.g:2348:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalChessGame.g:2317:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // InternalChessGame.g:2317:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // InternalChessGame.g:2348:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalChessGame.g:2317:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -754,10 +754,10 @@ public class InternalChessGameLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // InternalChessGame.g:2348:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // InternalChessGame.g:2317:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // InternalChessGame.g:2348:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // InternalChessGame.g:2317:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -773,7 +773,7 @@ public class InternalChessGameLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // InternalChessGame.g:2348:21: '\\\\' .
+                    	    // InternalChessGame.g:2317:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -781,7 +781,7 @@ public class InternalChessGameLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalChessGame.g:2348:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // InternalChessGame.g:2317:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -806,10 +806,10 @@ public class InternalChessGameLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // InternalChessGame.g:2348:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // InternalChessGame.g:2317:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // InternalChessGame.g:2348:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // InternalChessGame.g:2317:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -825,7 +825,7 @@ public class InternalChessGameLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // InternalChessGame.g:2348:54: '\\\\' .
+                    	    // InternalChessGame.g:2317:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -833,7 +833,7 @@ public class InternalChessGameLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalChessGame.g:2348:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // InternalChessGame.g:2317:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -876,12 +876,12 @@ public class InternalChessGameLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalChessGame.g:2350:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // InternalChessGame.g:2350:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // InternalChessGame.g:2319:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // InternalChessGame.g:2319:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // InternalChessGame.g:2350:24: ( options {greedy=false; } : . )*
+            // InternalChessGame.g:2319:24: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -906,7 +906,7 @@ public class InternalChessGameLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // InternalChessGame.g:2350:52: .
+            	    // InternalChessGame.g:2319:52: .
             	    {
             	    matchAny(); 
 
@@ -936,12 +936,12 @@ public class InternalChessGameLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalChessGame.g:2352:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // InternalChessGame.g:2352:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // InternalChessGame.g:2321:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // InternalChessGame.g:2321:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // InternalChessGame.g:2352:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // InternalChessGame.g:2321:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -954,7 +954,7 @@ public class InternalChessGameLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // InternalChessGame.g:2352:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // InternalChessGame.g:2321:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -974,7 +974,7 @@ public class InternalChessGameLexer extends Lexer {
                 }
             } while (true);
 
-            // InternalChessGame.g:2352:40: ( ( '\\r' )? '\\n' )?
+            // InternalChessGame.g:2321:40: ( ( '\\r' )? '\\n' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -983,9 +983,9 @@ public class InternalChessGameLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // InternalChessGame.g:2352:41: ( '\\r' )? '\\n'
+                    // InternalChessGame.g:2321:41: ( '\\r' )? '\\n'
                     {
-                    // InternalChessGame.g:2352:41: ( '\\r' )?
+                    // InternalChessGame.g:2321:41: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -994,7 +994,7 @@ public class InternalChessGameLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // InternalChessGame.g:2352:41: '\\r'
+                            // InternalChessGame.g:2321:41: '\\r'
                             {
                             match('\r'); 
 
@@ -1026,10 +1026,10 @@ public class InternalChessGameLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalChessGame.g:2354:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // InternalChessGame.g:2354:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalChessGame.g:2323:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // InternalChessGame.g:2323:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // InternalChessGame.g:2354:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalChessGame.g:2323:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt11=0;
             loop11:
             do {
@@ -1083,8 +1083,8 @@ public class InternalChessGameLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalChessGame.g:2356:16: ( . )
-            // InternalChessGame.g:2356:18: .
+            // InternalChessGame.g:2325:16: ( . )
+            // InternalChessGame.g:2325:18: .
             {
             matchAny(); 
 

@@ -23,6 +23,7 @@ import org.eclipse.xtext.parser.*;
 import org.eclipse.xtext.parser.impl.*;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.common.util.Enumerator;
 import org.eclipse.xtext.parser.antlr.AbstractInternalAntlrParser;
 import org.eclipse.xtext.parser.antlr.XtextTokenStream;
 import org.eclipse.xtext.parser.antlr.XtextTokenStream.HiddenTokens;
@@ -122,11 +123,11 @@ ruleStatements returns [EObject current=null]
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getStatementsAccess().getOptionSpecificationParserRuleCall_1());
+			newCompositeNode(grammarAccess.getStatementsAccess().getCellStateParserRuleCall_1());
 		}
-		this_OptionSpecification_1=ruleOptionSpecification
+		this_CellState_1=ruleCellState
 		{
-			$current = $this_OptionSpecification_1.current;
+			$current = $this_CellState_1.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
@@ -222,42 +223,6 @@ ruleFieldSpecification returns [EObject current=null]
 			newLeafNode(otherlv_8, grammarAccess.getFieldSpecificationAccess().getRightCurlyBracketKeyword_8());
 		}
 	)
-;
-
-// Entry rule entryRuleOptionSpecification
-entryRuleOptionSpecification returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getOptionSpecificationRule()); }
-	iv_ruleOptionSpecification=ruleOptionSpecification
-	{ $current=$iv_ruleOptionSpecification.current; }
-	EOF;
-
-// Rule OptionSpecification
-ruleOptionSpecification returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		(
-			{
-				newCompositeNode(grammarAccess.getOptionSpecificationAccess().getStatesCellStateParserRuleCall_0());
-			}
-			lv_states_0_0=ruleCellState
-			{
-				if ($current==null) {
-					$current = createModelElementForParent(grammarAccess.getOptionSpecificationRule());
-				}
-				add(
-					$current,
-					"states",
-					lv_states_0_0,
-					"uk.ac.kcl.inf.chessgame.ChessGame.CellState");
-				afterParserOrEnumRuleCall();
-			}
-		)
-	)+
 ;
 
 // Entry rule entryRuleCellState
@@ -422,29 +387,21 @@ ruleCellDisplay returns [EObject current=null]
 				}
 				(
 					(
-						(
-							lv_color_7_1='black'
-							{
-								newLeafNode(lv_color_7_1, grammarAccess.getCellDisplayAccess().getColorBlackKeyword_2_1_2_0_0());
+						{
+							newCompositeNode(grammarAccess.getCellDisplayAccess().getColorColorChoiceEnumRuleCall_2_1_2_0());
+						}
+						lv_color_7_0=rulecolorChoice
+						{
+							if ($current==null) {
+								$current = createModelElementForParent(grammarAccess.getCellDisplayRule());
 							}
-							{
-								if ($current==null) {
-									$current = createModelElement(grammarAccess.getCellDisplayRule());
-								}
-								setWithLastConsumed($current, "color", lv_color_7_1, null);
-							}
-							    |
-							lv_color_7_2='white'
-							{
-								newLeafNode(lv_color_7_2, grammarAccess.getCellDisplayAccess().getColorWhiteKeyword_2_1_2_0_1());
-							}
-							{
-								if ($current==null) {
-									$current = createModelElement(grammarAccess.getCellDisplayRule());
-								}
-								setWithLastConsumed($current, "color", lv_color_7_2, null);
-							}
-						)
+							set(
+								$current,
+								"color",
+								lv_color_7_0,
+								"uk.ac.kcl.inf.chessgame.ChessGame.colorChoice");
+							afterParserOrEnumRuleCall();
+						}
 					)
 				)
 			)
@@ -850,6 +807,33 @@ ruleEndBehaviour returns [EObject current=null]
 		{
 			newLeafNode(otherlv_3, grammarAccess.getEndBehaviourAccess().getRightParenthesisKeyword_3());
 		}
+	)
+;
+
+// Rule colorChoice
+rulecolorChoice returns [Enumerator current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			enumLiteral_0='black'
+			{
+				$current = grammarAccess.getColorChoiceAccess().getBlackEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_0, grammarAccess.getColorChoiceAccess().getBlackEnumLiteralDeclaration_0());
+			}
+		)
+		    |
+		(
+			enumLiteral_1='white'
+			{
+				$current = grammarAccess.getColorChoiceAccess().getWhiteEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_1, grammarAccess.getColorChoiceAccess().getWhiteEnumLiteralDeclaration_1());
+			}
+		)
 	)
 ;
 

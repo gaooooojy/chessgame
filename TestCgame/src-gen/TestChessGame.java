@@ -5,9 +5,27 @@ public class TestChessGame {
 		ChessGame c = new ChessGame(cg) {
 			@Override
 			public void run() {
-				createField{
-					width = 10;
-					height = 10;
+				public createField{
+					width = 20;
+					height = 20;
+				}
+				
+				public createCellState begin{
+					display{
+						text = 
+					}
+				}
+				
+				public createCellState black_cell{
+					display{
+						text = 
+					}
+				}
+				
+				public createCellState white_cell{
+					display{
+						text = 
+					}
 				}
 				
 				

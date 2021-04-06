@@ -5,6 +5,7 @@ package uk.ac.kcl.inf.chessgame.chessGame.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -21,10 +22,10 @@ import uk.ac.kcl.inf.chessgame.chessGame.EndBehaviour;
 import uk.ac.kcl.inf.chessgame.chessGame.FieldSpecification;
 import uk.ac.kcl.inf.chessgame.chessGame.GameEnd;
 import uk.ac.kcl.inf.chessgame.chessGame.MouseTrigger;
-import uk.ac.kcl.inf.chessgame.chessGame.OptionSpecification;
 import uk.ac.kcl.inf.chessgame.chessGame.StateCheck;
 import uk.ac.kcl.inf.chessgame.chessGame.Statements;
 import uk.ac.kcl.inf.chessgame.chessGame.Transition;
+import uk.ac.kcl.inf.chessgame.chessGame.colorChoice;
 
 /**
  * <!-- begin-user-doc -->
@@ -54,13 +55,6 @@ public class ChessGamePackageImpl extends EPackageImpl implements ChessGamePacka
    * @generated
    */
   private EClass fieldSpecificationEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass optionSpecificationEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -124,6 +118,13 @@ public class ChessGamePackageImpl extends EPackageImpl implements ChessGamePacka
    * @generated
    */
   private EClass endBehaviourEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EEnum colorChoiceEEnum = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -252,28 +253,6 @@ public class ChessGamePackageImpl extends EPackageImpl implements ChessGamePacka
   public EAttribute getFieldSpecification_Height()
   {
     return (EAttribute)fieldSpecificationEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EClass getOptionSpecification()
-  {
-    return optionSpecificationEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EReference getOptionSpecification_States()
-  {
-    return (EReference)optionSpecificationEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -546,6 +525,17 @@ public class ChessGamePackageImpl extends EPackageImpl implements ChessGamePacka
    * @generated
    */
   @Override
+  public EEnum getcolorChoice()
+  {
+    return colorChoiceEEnum;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public ChessGameFactory getChessGameFactory()
   {
     return (ChessGameFactory)getEFactoryInstance();
@@ -580,9 +570,6 @@ public class ChessGamePackageImpl extends EPackageImpl implements ChessGamePacka
     createEAttribute(fieldSpecificationEClass, FIELD_SPECIFICATION__WIDTH);
     createEAttribute(fieldSpecificationEClass, FIELD_SPECIFICATION__HEIGHT);
 
-    optionSpecificationEClass = createEClass(OPTION_SPECIFICATION);
-    createEReference(optionSpecificationEClass, OPTION_SPECIFICATION__STATES);
-
     cellStateEClass = createEClass(CELL_STATE);
     createEAttribute(cellStateEClass, CELL_STATE__NAME);
     createEReference(cellStateEClass, CELL_STATE__DISPLAY);
@@ -615,6 +602,9 @@ public class ChessGamePackageImpl extends EPackageImpl implements ChessGamePacka
 
     endBehaviourEClass = createEClass(END_BEHAVIOUR);
     createEAttribute(endBehaviourEClass, END_BEHAVIOUR__MESSAGE);
+
+    // Create enums
+    colorChoiceEEnum = createEEnum(COLOR_CHOICE);
   }
 
   /**
@@ -647,7 +637,7 @@ public class ChessGamePackageImpl extends EPackageImpl implements ChessGamePacka
 
     // Add supertypes to classes
     fieldSpecificationEClass.getESuperTypes().add(this.getStatements());
-    optionSpecificationEClass.getESuperTypes().add(this.getStatements());
+    cellStateEClass.getESuperTypes().add(this.getStatements());
     gameEndEClass.getESuperTypes().add(this.getStatements());
 
     // Initialize classes and features; add operations and parameters
@@ -660,9 +650,6 @@ public class ChessGamePackageImpl extends EPackageImpl implements ChessGamePacka
     initEAttribute(getFieldSpecification_Width(), ecorePackage.getEInt(), "width", null, 0, 1, FieldSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getFieldSpecification_Height(), ecorePackage.getEInt(), "height", null, 0, 1, FieldSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(optionSpecificationEClass, OptionSpecification.class, "OptionSpecification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getOptionSpecification_States(), this.getCellState(), null, "states", null, 0, -1, OptionSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
     initEClass(cellStateEClass, CellState.class, "CellState", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getCellState_Name(), ecorePackage.getEString(), "name", null, 0, 1, CellState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getCellState_Display(), this.getCellDisplay(), null, "display", null, 0, 1, CellState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -670,7 +657,7 @@ public class ChessGamePackageImpl extends EPackageImpl implements ChessGamePacka
 
     initEClass(cellDisplayEClass, CellDisplay.class, "CellDisplay", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getCellDisplay_Text(), ecorePackage.getEString(), "text", null, 0, 1, CellDisplay.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getCellDisplay_Color(), ecorePackage.getEString(), "color", null, 0, 1, CellDisplay.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getCellDisplay_Color(), this.getcolorChoice(), "color", null, 0, 1, CellDisplay.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(transitionEClass, Transition.class, "Transition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getTransition_Trigger(), this.getMouseTrigger(), null, "trigger", null, 0, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -695,6 +682,11 @@ public class ChessGamePackageImpl extends EPackageImpl implements ChessGamePacka
 
     initEClass(endBehaviourEClass, EndBehaviour.class, "EndBehaviour", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getEndBehaviour_Message(), ecorePackage.getEString(), "message", null, 0, 1, EndBehaviour.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    // Initialize enums and add enum literals
+    initEEnum(colorChoiceEEnum, colorChoice.class, "colorChoice");
+    addEEnumLiteral(colorChoiceEEnum, colorChoice.BLACK);
+    addEEnumLiteral(colorChoiceEEnum, colorChoice.WHITE);
 
     // Create resource
     createResource(eNS_URI);

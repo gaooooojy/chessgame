@@ -51,15 +51,6 @@ public interface ChessGameFactory extends EFactory
   FieldSpecification createFieldSpecification();
 
   /**
-   * Returns a new object of class '<em>Option Specification</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Option Specification</em>'.
-   * @generated
-   */
-  OptionSpecification createOptionSpecification();
-
-  /**
    * Returns a new object of class '<em>Cell State</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

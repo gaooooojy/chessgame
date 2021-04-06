@@ -12,6 +12,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import uk.ac.kcl.inf.chessgame.chessGame.CellDisplay;
 import uk.ac.kcl.inf.chessgame.chessGame.ChessGamePackage;
+import uk.ac.kcl.inf.chessgame.chessGame.colorChoice;
 
 /**
  * <!-- begin-user-doc -->
@@ -57,7 +58,7 @@ public class CellDisplayImpl extends MinimalEObjectImpl.Container implements Cel
    * @generated
    * @ordered
    */
-  protected static final String COLOR_EDEFAULT = null;
+  protected static final colorChoice COLOR_EDEFAULT = colorChoice.BLACK;
 
   /**
    * The cached value of the '{@link #getColor() <em>Color</em>}' attribute.
@@ -67,7 +68,7 @@ public class CellDisplayImpl extends MinimalEObjectImpl.Container implements Cel
    * @generated
    * @ordered
    */
-  protected String color = COLOR_EDEFAULT;
+  protected colorChoice color = COLOR_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -121,7 +122,7 @@ public class CellDisplayImpl extends MinimalEObjectImpl.Container implements Cel
    * @generated
    */
   @Override
-  public String getColor()
+  public colorChoice getColor()
   {
     return color;
   }
@@ -132,10 +133,10 @@ public class CellDisplayImpl extends MinimalEObjectImpl.Container implements Cel
    * @generated
    */
   @Override
-  public void setColor(String newColor)
+  public void setColor(colorChoice newColor)
   {
-    String oldColor = color;
-    color = newColor;
+    colorChoice oldColor = color;
+    color = newColor == null ? COLOR_EDEFAULT : newColor;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, ChessGamePackage.CELL_DISPLAY__COLOR, oldColor, color));
   }
@@ -172,7 +173,7 @@ public class CellDisplayImpl extends MinimalEObjectImpl.Container implements Cel
         setText((String)newValue);
         return;
       case ChessGamePackage.CELL_DISPLAY__COLOR:
-        setColor((String)newValue);
+        setColor((colorChoice)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -211,7 +212,7 @@ public class CellDisplayImpl extends MinimalEObjectImpl.Container implements Cel
       case ChessGamePackage.CELL_DISPLAY__TEXT:
         return TEXT_EDEFAULT == null ? text != null : !TEXT_EDEFAULT.equals(text);
       case ChessGamePackage.CELL_DISPLAY__COLOR:
-        return COLOR_EDEFAULT == null ? color != null : !COLOR_EDEFAULT.equals(color);
+        return color != COLOR_EDEFAULT;
     }
     return super.eIsSet(featureID);
   }

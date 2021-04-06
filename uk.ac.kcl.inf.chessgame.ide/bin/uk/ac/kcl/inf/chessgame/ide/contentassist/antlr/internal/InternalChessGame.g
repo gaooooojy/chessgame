@@ -124,38 +124,6 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-// Entry rule entryRuleOptionSpecification
-entryRuleOptionSpecification
-:
-{ before(grammarAccess.getOptionSpecificationRule()); }
-	 ruleOptionSpecification
-{ after(grammarAccess.getOptionSpecificationRule()); } 
-	 EOF 
-;
-
-// Rule OptionSpecification
-ruleOptionSpecification 
-	@init {
-		int stackSize = keepStackSize();
-	}
-	:
-	(
-		(
-			{ before(grammarAccess.getOptionSpecificationAccess().getStatesAssignment()); }
-			(rule__OptionSpecification__StatesAssignment)
-			{ after(grammarAccess.getOptionSpecificationAccess().getStatesAssignment()); }
-		)
-		(
-			{ before(grammarAccess.getOptionSpecificationAccess().getStatesAssignment()); }
-			(rule__OptionSpecification__StatesAssignment)*
-			{ after(grammarAccess.getOptionSpecificationAccess().getStatesAssignment()); }
-		)
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
 // Entry rule entryRuleCellState
 entryRuleCellState
 :
@@ -381,6 +349,22 @@ finally {
 	restoreStackSize(stackSize);
 }
 
+// Rule colorChoice
+rulecolorChoice
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getColorChoiceAccess().getAlternatives()); }
+		(rule__ColorChoice__Alternatives)
+		{ after(grammarAccess.getColorChoiceAccess().getAlternatives()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
 rule__Statements__Alternatives
 	@init {
 		int stackSize = keepStackSize();
@@ -393,9 +377,9 @@ rule__Statements__Alternatives
 	)
 	|
 	(
-		{ before(grammarAccess.getStatementsAccess().getOptionSpecificationParserRuleCall_1()); }
-		ruleOptionSpecification
-		{ after(grammarAccess.getStatementsAccess().getOptionSpecificationParserRuleCall_1()); }
+		{ before(grammarAccess.getStatementsAccess().getCellStateParserRuleCall_1()); }
+		ruleCellState
+		{ after(grammarAccess.getStatementsAccess().getCellStateParserRuleCall_1()); }
 	)
 	|
 	(
@@ -429,27 +413,6 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__CellDisplay__ColorAlternatives_2_1_2_0
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getCellDisplayAccess().getColorBlackKeyword_2_1_2_0_0()); }
-		'black'
-		{ after(grammarAccess.getCellDisplayAccess().getColorBlackKeyword_2_1_2_0_0()); }
-	)
-	|
-	(
-		{ before(grammarAccess.getCellDisplayAccess().getColorWhiteKeyword_2_1_2_0_1()); }
-		'white'
-		{ after(grammarAccess.getCellDisplayAccess().getColorWhiteKeyword_2_1_2_0_1()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
 rule__MouseTrigger__Alternatives
 	@init {
 		int stackSize = keepStackSize();
@@ -465,6 +428,27 @@ rule__MouseTrigger__Alternatives
 		{ before(grammarAccess.getMouseTriggerAccess().getGroup_1()); }
 		(rule__MouseTrigger__Group_1__0)
 		{ after(grammarAccess.getMouseTriggerAccess().getGroup_1()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__ColorChoice__Alternatives
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getColorChoiceAccess().getBlackEnumLiteralDeclaration_0()); }
+		('black')
+		{ after(grammarAccess.getColorChoiceAccess().getBlackEnumLiteralDeclaration_0()); }
+	)
+	|
+	(
+		{ before(grammarAccess.getColorChoiceAccess().getWhiteEnumLiteralDeclaration_1()); }
+		('white')
+		{ after(grammarAccess.getColorChoiceAccess().getWhiteEnumLiteralDeclaration_1()); }
 	)
 ;
 finally {
@@ -2089,21 +2073,6 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__OptionSpecification__StatesAssignment
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getOptionSpecificationAccess().getStatesCellStateParserRuleCall_0()); }
-		ruleCellState
-		{ after(grammarAccess.getOptionSpecificationAccess().getStatesCellStateParserRuleCall_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
 rule__CellState__NameAssignment_0
 	@init {
 		int stackSize = keepStackSize();
@@ -2170,9 +2139,9 @@ rule__CellDisplay__ColorAssignment_2_1_2
 	}
 :
 	(
-		{ before(grammarAccess.getCellDisplayAccess().getColorAlternatives_2_1_2_0()); }
-		(rule__CellDisplay__ColorAlternatives_2_1_2_0)
-		{ after(grammarAccess.getCellDisplayAccess().getColorAlternatives_2_1_2_0()); }
+		{ before(grammarAccess.getCellDisplayAccess().getColorColorChoiceEnumRuleCall_2_1_2_0()); }
+		rulecolorChoice
+		{ after(grammarAccess.getCellDisplayAccess().getColorColorChoiceEnumRuleCall_2_1_2_0()); }
 	)
 ;
 finally {

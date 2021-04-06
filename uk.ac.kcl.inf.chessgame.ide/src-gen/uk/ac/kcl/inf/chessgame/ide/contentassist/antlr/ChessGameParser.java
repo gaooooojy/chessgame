@@ -33,8 +33,8 @@ public class ChessGameParser extends AbstractContentAssistParser {
 		private static void init(ImmutableMap.Builder<AbstractElement, String> builder, ChessGameGrammarAccess grammarAccess) {
 			builder.put(grammarAccess.getStatementsAccess().getAlternatives(), "rule__Statements__Alternatives");
 			builder.put(grammarAccess.getCellDisplayAccess().getAlternatives_2(), "rule__CellDisplay__Alternatives_2");
-			builder.put(grammarAccess.getCellDisplayAccess().getColorAlternatives_2_1_2_0(), "rule__CellDisplay__ColorAlternatives_2_1_2_0");
 			builder.put(grammarAccess.getMouseTriggerAccess().getAlternatives(), "rule__MouseTrigger__Alternatives");
+			builder.put(grammarAccess.getColorChoiceAccess().getAlternatives(), "rule__ColorChoice__Alternatives");
 			builder.put(grammarAccess.getFieldSpecificationAccess().getGroup(), "rule__FieldSpecification__Group__0");
 			builder.put(grammarAccess.getCellStateAccess().getGroup(), "rule__CellState__Group__0");
 			builder.put(grammarAccess.getCellStateAccess().getGroup_3(), "rule__CellState__Group_3__0");
@@ -51,7 +51,6 @@ public class ChessGameParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getChessProgramAccess().getStatesAssignment(), "rule__ChessProgram__StatesAssignment");
 			builder.put(grammarAccess.getFieldSpecificationAccess().getWidthAssignment_4(), "rule__FieldSpecification__WidthAssignment_4");
 			builder.put(grammarAccess.getFieldSpecificationAccess().getHeightAssignment_7(), "rule__FieldSpecification__HeightAssignment_7");
-			builder.put(grammarAccess.getOptionSpecificationAccess().getStatesAssignment(), "rule__OptionSpecification__StatesAssignment");
 			builder.put(grammarAccess.getCellStateAccess().getNameAssignment_0(), "rule__CellState__NameAssignment_0");
 			builder.put(grammarAccess.getCellStateAccess().getDisplayAssignment_2(), "rule__CellState__DisplayAssignment_2");
 			builder.put(grammarAccess.getCellStateAccess().getTransitionsAssignment_3_2(), "rule__CellState__TransitionsAssignment_3_2");

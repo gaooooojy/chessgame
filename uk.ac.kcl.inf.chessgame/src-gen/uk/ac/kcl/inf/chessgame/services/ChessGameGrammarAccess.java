@@ -10,6 +10,8 @@ import org.eclipse.xtext.Action;
 import org.eclipse.xtext.Alternatives;
 import org.eclipse.xtext.Assignment;
 import org.eclipse.xtext.CrossReference;
+import org.eclipse.xtext.EnumLiteralDeclaration;
+import org.eclipse.xtext.EnumRule;
 import org.eclipse.xtext.Grammar;
 import org.eclipse.xtext.GrammarUtil;
 import org.eclipse.xtext.Group;
@@ -43,21 +45,21 @@ public class ChessGameGrammarAccess extends AbstractElementFinder.AbstractGramma
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "uk.ac.kcl.inf.chessgame.ChessGame.Statements");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cFieldSpecificationParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cOptionSpecificationParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cCellStateParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		private final RuleCall cGameEndParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		
 		//Statements:
-		//	FieldSpecification | OptionSpecification | GameEnd;
+		//	FieldSpecification | CellState | GameEnd;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//FieldSpecification | OptionSpecification | GameEnd
+		//FieldSpecification | CellState | GameEnd
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//FieldSpecification
 		public RuleCall getFieldSpecificationParserRuleCall_0() { return cFieldSpecificationParserRuleCall_0; }
 		
-		//OptionSpecification
-		public RuleCall getOptionSpecificationParserRuleCall_1() { return cOptionSpecificationParserRuleCall_1; }
+		//CellState
+		public RuleCall getCellStateParserRuleCall_1() { return cCellStateParserRuleCall_1; }
 		
 		//GameEnd
 		public RuleCall getGameEndParserRuleCall_2() { return cGameEndParserRuleCall_2; }
@@ -81,14 +83,12 @@ public class ChessGameGrammarAccess extends AbstractElementFinder.AbstractGramma
 		//	'field' '{'
 		//	"width" "=" width=INT
 		//	"height" "=" height=INT
-		////		"Counter" "=" counter=INT
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'field' '{'
 		//"width" "=" width=INT
 		//"height" "=" height=INT
-		////		"Counter" "=" counter=INT
 		//'}'
 		public Group getGroup() { return cGroup; }
 		
@@ -122,24 +122,8 @@ public class ChessGameGrammarAccess extends AbstractElementFinder.AbstractGramma
 		//INT
 		public RuleCall getHeightINTTerminalRuleCall_7_0() { return cHeightINTTerminalRuleCall_7_0; }
 		
-		////		"Counter" "=" counter=INT
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_8() { return cRightCurlyBracketKeyword_8; }
-	}
-	public class OptionSpecificationElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "uk.ac.kcl.inf.chessgame.ChessGame.OptionSpecification");
-		private final Assignment cStatesAssignment = (Assignment)rule.eContents().get(1);
-		private final RuleCall cStatesCellStateParserRuleCall_0 = (RuleCall)cStatesAssignment.eContents().get(0);
-		
-		//OptionSpecification:
-		//	states+=CellState+;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//states+=CellState+
-		public Assignment getStatesAssignment() { return cStatesAssignment; }
-		
-		//CellState
-		public RuleCall getStatesCellStateParserRuleCall_0() { return cStatesCellStateParserRuleCall_0; }
 	}
 	public class CellStateElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "uk.ac.kcl.inf.chessgame.ChessGame.CellState");
@@ -225,17 +209,15 @@ public class ChessGameGrammarAccess extends AbstractElementFinder.AbstractGramma
 		private final Keyword cColorKeyword_2_1_0 = (Keyword)cGroup_2_1.eContents().get(0);
 		private final Keyword cEqualsSignKeyword_2_1_1 = (Keyword)cGroup_2_1.eContents().get(1);
 		private final Assignment cColorAssignment_2_1_2 = (Assignment)cGroup_2_1.eContents().get(2);
-		private final Alternatives cColorAlternatives_2_1_2_0 = (Alternatives)cColorAssignment_2_1_2.eContents().get(0);
-		private final Keyword cColorBlackKeyword_2_1_2_0_0 = (Keyword)cColorAlternatives_2_1_2_0.eContents().get(0);
-		private final Keyword cColorWhiteKeyword_2_1_2_0_1 = (Keyword)cColorAlternatives_2_1_2_0.eContents().get(1);
+		private final RuleCall cColorColorChoiceEnumRuleCall_2_1_2_0 = (RuleCall)cColorAssignment_2_1_2.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//CellDisplay:
-		//	"display" "{" ("text" "=" text=STRING | "color" "=" color=("black" | "white"))
+		//	"display" "{" ("text" "=" text=STRING | "color" "=" color=colorChoice)
 		//	"}";
 		@Override public ParserRule getRule() { return rule; }
 		
-		//"display" "{" ("text" "=" text=STRING | "color" "=" color=("black" | "white"))
+		//"display" "{" ("text" "=" text=STRING | "color" "=" color=colorChoice)
 		//"}"
 		public Group getGroup() { return cGroup; }
 		
@@ -245,7 +227,7 @@ public class ChessGameGrammarAccess extends AbstractElementFinder.AbstractGramma
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
 		
-		//("text" "=" text=STRING | "color" "=" color=("black" | "white"))
+		//("text" "=" text=STRING | "color" "=" color=colorChoice)
 		public Alternatives getAlternatives_2() { return cAlternatives_2; }
 		
 		//"text" "=" text=STRING
@@ -263,7 +245,7 @@ public class ChessGameGrammarAccess extends AbstractElementFinder.AbstractGramma
 		//STRING
 		public RuleCall getTextSTRINGTerminalRuleCall_2_0_2_0() { return cTextSTRINGTerminalRuleCall_2_0_2_0; }
 		
-		//"color" "=" color=("black" | "white")
+		//"color" "=" color=colorChoice
 		public Group getGroup_2_1() { return cGroup_2_1; }
 		
 		//"color"
@@ -272,17 +254,11 @@ public class ChessGameGrammarAccess extends AbstractElementFinder.AbstractGramma
 		//"="
 		public Keyword getEqualsSignKeyword_2_1_1() { return cEqualsSignKeyword_2_1_1; }
 		
-		//color=("black" | "white")
+		//color=colorChoice
 		public Assignment getColorAssignment_2_1_2() { return cColorAssignment_2_1_2; }
 		
-		//("black" | "white")
-		public Alternatives getColorAlternatives_2_1_2_0() { return cColorAlternatives_2_1_2_0; }
-		
-		//"black"
-		public Keyword getColorBlackKeyword_2_1_2_0_0() { return cColorBlackKeyword_2_1_2_0_0; }
-		
-		//"white"
-		public Keyword getColorWhiteKeyword_2_1_2_0_1() { return cColorWhiteKeyword_2_1_2_0_1; }
+		//colorChoice
+		public RuleCall getColorColorChoiceEnumRuleCall_2_1_2_0() { return cColorColorChoiceEnumRuleCall_2_1_2_0; }
 		
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_3() { return cRightCurlyBracketKeyword_3; }
@@ -547,13 +523,40 @@ public class ChessGameGrammarAccess extends AbstractElementFinder.AbstractGramma
 		public Keyword getRightParenthesisKeyword_3() { return cRightParenthesisKeyword_3; }
 	}
 	
+	public class ColorChoiceElements extends AbstractElementFinder.AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "uk.ac.kcl.inf.chessgame.ChessGame.colorChoice");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final EnumLiteralDeclaration cBlackEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
+		private final Keyword cBlackBlackKeyword_0_0 = (Keyword)cBlackEnumLiteralDeclaration_0.eContents().get(0);
+		private final EnumLiteralDeclaration cWhiteEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
+		private final Keyword cWhiteWhiteKeyword_1_0 = (Keyword)cWhiteEnumLiteralDeclaration_1.eContents().get(0);
+		
+		//enum colorChoice:
+		//	black | white;
+		public EnumRule getRule() { return rule; }
+		
+		//black | white
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//black
+		public EnumLiteralDeclaration getBlackEnumLiteralDeclaration_0() { return cBlackEnumLiteralDeclaration_0; }
+		
+		//"black"
+		public Keyword getBlackBlackKeyword_0_0() { return cBlackBlackKeyword_0_0; }
+		
+		//white
+		public EnumLiteralDeclaration getWhiteEnumLiteralDeclaration_1() { return cWhiteEnumLiteralDeclaration_1; }
+		
+		//"white"
+		public Keyword getWhiteWhiteKeyword_1_0() { return cWhiteWhiteKeyword_1_0; }
+	}
 	
 	private final ChessProgramElements pChessProgram;
 	private final StatementsElements pStatements;
 	private final FieldSpecificationElements pFieldSpecification;
-	private final OptionSpecificationElements pOptionSpecification;
 	private final CellStateElements pCellState;
 	private final CellDisplayElements pCellDisplay;
+	private final ColorChoiceElements eColorChoice;
 	private final TransitionElements pTransition;
 	private final MouseTriggerElements pMouseTrigger;
 	private final GameEndElements pGameEnd;
@@ -574,9 +577,9 @@ public class ChessGameGrammarAccess extends AbstractElementFinder.AbstractGramma
 		this.pChessProgram = new ChessProgramElements();
 		this.pStatements = new StatementsElements();
 		this.pFieldSpecification = new FieldSpecificationElements();
-		this.pOptionSpecification = new OptionSpecificationElements();
 		this.pCellState = new CellStateElements();
 		this.pCellDisplay = new CellDisplayElements();
+		this.eColorChoice = new ColorChoiceElements();
 		this.pTransition = new TransitionElements();
 		this.pMouseTrigger = new MouseTriggerElements();
 		this.pGameEnd = new GameEndElements();
@@ -624,7 +627,7 @@ public class ChessGameGrammarAccess extends AbstractElementFinder.AbstractGramma
 	}
 	
 	//Statements:
-	//	FieldSpecification | OptionSpecification | GameEnd;
+	//	FieldSpecification | CellState | GameEnd;
 	public StatementsElements getStatementsAccess() {
 		return pStatements;
 	}
@@ -637,7 +640,6 @@ public class ChessGameGrammarAccess extends AbstractElementFinder.AbstractGramma
 	//	'field' '{'
 	//	"width" "=" width=INT
 	//	"height" "=" height=INT
-	////		"Counter" "=" counter=INT
 	//	'}';
 	public FieldSpecificationElements getFieldSpecificationAccess() {
 		return pFieldSpecification;
@@ -645,16 +647,6 @@ public class ChessGameGrammarAccess extends AbstractElementFinder.AbstractGramma
 	
 	public ParserRule getFieldSpecificationRule() {
 		return getFieldSpecificationAccess().getRule();
-	}
-	
-	//OptionSpecification:
-	//	states+=CellState+;
-	public OptionSpecificationElements getOptionSpecificationAccess() {
-		return pOptionSpecification;
-	}
-	
-	public ParserRule getOptionSpecificationRule() {
-		return getOptionSpecificationAccess().getRule();
 	}
 	
 	//CellState:
@@ -672,7 +664,7 @@ public class ChessGameGrammarAccess extends AbstractElementFinder.AbstractGramma
 	}
 	
 	//CellDisplay:
-	//	"display" "{" ("text" "=" text=STRING | "color" "=" color=("black" | "white"))
+	//	"display" "{" ("text" "=" text=STRING | "color" "=" color=colorChoice)
 	//	"}";
 	public CellDisplayElements getCellDisplayAccess() {
 		return pCellDisplay;
@@ -680,6 +672,16 @@ public class ChessGameGrammarAccess extends AbstractElementFinder.AbstractGramma
 	
 	public ParserRule getCellDisplayRule() {
 		return getCellDisplayAccess().getRule();
+	}
+	
+	//enum colorChoice:
+	//	black | white;
+	public ColorChoiceElements getColorChoiceAccess() {
+		return eColorChoice;
+	}
+	
+	public EnumRule getColorChoiceRule() {
+		return getColorChoiceAccess().getRule();
 	}
 	
 	//Transition:

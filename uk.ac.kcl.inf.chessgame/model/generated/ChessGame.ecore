@@ -11,11 +11,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="width" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="height" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="OptionSpecification" eSuperTypes="#//Statements">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="states" upperBound="-1"
-        eType="#//CellState" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CellState">
+  <eClassifiers xsi:type="ecore:EClass" name="CellState" eSuperTypes="#//Statements">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="display" eType="#//CellDisplay"
         containment="true"/>
@@ -24,7 +20,11 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CellDisplay">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="color" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="color" eType="#//colorChoice"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="colorChoice">
+    <eLiterals name="black" literal="black"/>
+    <eLiterals name="white" value="1" literal="white"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Transition">
     <eStructuralFeatures xsi:type="ecore:EReference" name="trigger" eType="#//MouseTrigger"

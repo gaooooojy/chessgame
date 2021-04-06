@@ -8,7 +8,7 @@ ChessProgram:
 
 Statements:
 	FieldSpecification |
-	OptionSpecification |
+	CellState |
 	GameEnd
 ;
 
@@ -17,10 +17,6 @@ FieldSpecification:
 		"width" "=" width=INT  
 		"height" "=" height=INT 
 	'}'
-;
-
-OptionSpecification:
-	states += CellState+
 ;
 
 CellState :

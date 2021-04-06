@@ -5,6 +5,7 @@ package uk.ac.kcl.inf.chessgame.chessGame;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -142,34 +143,6 @@ public interface ChessGamePackage extends EPackage
   int FIELD_SPECIFICATION_FEATURE_COUNT = STATEMENTS_FEATURE_COUNT + 2;
 
   /**
-   * The meta object id for the '{@link uk.ac.kcl.inf.chessgame.chessGame.impl.OptionSpecificationImpl <em>Option Specification</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see uk.ac.kcl.inf.chessgame.chessGame.impl.OptionSpecificationImpl
-   * @see uk.ac.kcl.inf.chessgame.chessGame.impl.ChessGamePackageImpl#getOptionSpecification()
-   * @generated
-   */
-  int OPTION_SPECIFICATION = 3;
-
-  /**
-   * The feature id for the '<em><b>States</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int OPTION_SPECIFICATION__STATES = STATEMENTS_FEATURE_COUNT + 0;
-
-  /**
-   * The number of structural features of the '<em>Option Specification</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int OPTION_SPECIFICATION_FEATURE_COUNT = STATEMENTS_FEATURE_COUNT + 1;
-
-  /**
    * The meta object id for the '{@link uk.ac.kcl.inf.chessgame.chessGame.impl.CellStateImpl <em>Cell State</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -177,7 +150,7 @@ public interface ChessGamePackage extends EPackage
    * @see uk.ac.kcl.inf.chessgame.chessGame.impl.ChessGamePackageImpl#getCellState()
    * @generated
    */
-  int CELL_STATE = 4;
+  int CELL_STATE = 3;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -186,7 +159,7 @@ public interface ChessGamePackage extends EPackage
    * @generated
    * @ordered
    */
-  int CELL_STATE__NAME = 0;
+  int CELL_STATE__NAME = STATEMENTS_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Display</b></em>' containment reference.
@@ -195,7 +168,7 @@ public interface ChessGamePackage extends EPackage
    * @generated
    * @ordered
    */
-  int CELL_STATE__DISPLAY = 1;
+  int CELL_STATE__DISPLAY = STATEMENTS_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Transitions</b></em>' containment reference list.
@@ -204,7 +177,7 @@ public interface ChessGamePackage extends EPackage
    * @generated
    * @ordered
    */
-  int CELL_STATE__TRANSITIONS = 2;
+  int CELL_STATE__TRANSITIONS = STATEMENTS_FEATURE_COUNT + 2;
 
   /**
    * The number of structural features of the '<em>Cell State</em>' class.
@@ -213,7 +186,7 @@ public interface ChessGamePackage extends EPackage
    * @generated
    * @ordered
    */
-  int CELL_STATE_FEATURE_COUNT = 3;
+  int CELL_STATE_FEATURE_COUNT = STATEMENTS_FEATURE_COUNT + 3;
 
   /**
    * The meta object id for the '{@link uk.ac.kcl.inf.chessgame.chessGame.impl.CellDisplayImpl <em>Cell Display</em>}' class.
@@ -223,7 +196,7 @@ public interface ChessGamePackage extends EPackage
    * @see uk.ac.kcl.inf.chessgame.chessGame.impl.ChessGamePackageImpl#getCellDisplay()
    * @generated
    */
-  int CELL_DISPLAY = 5;
+  int CELL_DISPLAY = 4;
 
   /**
    * The feature id for the '<em><b>Text</b></em>' attribute.
@@ -260,7 +233,7 @@ public interface ChessGamePackage extends EPackage
    * @see uk.ac.kcl.inf.chessgame.chessGame.impl.ChessGamePackageImpl#getTransition()
    * @generated
    */
-  int TRANSITION = 6;
+  int TRANSITION = 5;
 
   /**
    * The feature id for the '<em><b>Trigger</b></em>' containment reference.
@@ -297,7 +270,7 @@ public interface ChessGamePackage extends EPackage
    * @see uk.ac.kcl.inf.chessgame.chessGame.impl.ChessGamePackageImpl#getMouseTrigger()
    * @generated
    */
-  int MOUSE_TRIGGER = 7;
+  int MOUSE_TRIGGER = 6;
 
   /**
    * The feature id for the '<em><b>Mouse</b></em>' attribute.
@@ -325,7 +298,7 @@ public interface ChessGamePackage extends EPackage
    * @see uk.ac.kcl.inf.chessgame.chessGame.impl.ChessGamePackageImpl#getGameEnd()
    * @generated
    */
-  int GAME_END = 8;
+  int GAME_END = 7;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -371,7 +344,7 @@ public interface ChessGamePackage extends EPackage
    * @see uk.ac.kcl.inf.chessgame.chessGame.impl.ChessGamePackageImpl#getCellExpression()
    * @generated
    */
-  int CELL_EXPRESSION = 9;
+  int CELL_EXPRESSION = 8;
 
   /**
    * The feature id for the '<em><b>State</b></em>' containment reference.
@@ -408,7 +381,7 @@ public interface ChessGamePackage extends EPackage
    * @see uk.ac.kcl.inf.chessgame.chessGame.impl.ChessGamePackageImpl#getStateCheck()
    * @generated
    */
-  int STATE_CHECK = 10;
+  int STATE_CHECK = 9;
 
   /**
    * The feature id for the '<em><b>Cell state</b></em>' reference.
@@ -436,7 +409,7 @@ public interface ChessGamePackage extends EPackage
    * @see uk.ac.kcl.inf.chessgame.chessGame.impl.ChessGamePackageImpl#getEmptyExpression()
    * @generated
    */
-  int EMPTY_EXPRESSION = 11;
+  int EMPTY_EXPRESSION = 10;
 
   /**
    * The number of structural features of the '<em>Empty Expression</em>' class.
@@ -455,7 +428,7 @@ public interface ChessGamePackage extends EPackage
    * @see uk.ac.kcl.inf.chessgame.chessGame.impl.ChessGamePackageImpl#getEndBehaviour()
    * @generated
    */
-  int END_BEHAVIOUR = 12;
+  int END_BEHAVIOUR = 11;
 
   /**
    * The feature id for the '<em><b>Message</b></em>' attribute.
@@ -474,6 +447,16 @@ public interface ChessGamePackage extends EPackage
    * @ordered
    */
   int END_BEHAVIOUR_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link uk.ac.kcl.inf.chessgame.chessGame.colorChoice <em>color Choice</em>}' enum.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see uk.ac.kcl.inf.chessgame.chessGame.colorChoice
+   * @see uk.ac.kcl.inf.chessgame.chessGame.impl.ChessGamePackageImpl#getcolorChoice()
+   * @generated
+   */
+  int COLOR_CHOICE = 12;
 
 
   /**
@@ -538,27 +521,6 @@ public interface ChessGamePackage extends EPackage
    * @generated
    */
   EAttribute getFieldSpecification_Height();
-
-  /**
-   * Returns the meta object for class '{@link uk.ac.kcl.inf.chessgame.chessGame.OptionSpecification <em>Option Specification</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Option Specification</em>'.
-   * @see uk.ac.kcl.inf.chessgame.chessGame.OptionSpecification
-   * @generated
-   */
-  EClass getOptionSpecification();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link uk.ac.kcl.inf.chessgame.chessGame.OptionSpecification#getStates <em>States</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>States</em>'.
-   * @see uk.ac.kcl.inf.chessgame.chessGame.OptionSpecification#getStates()
-   * @see #getOptionSpecification()
-   * @generated
-   */
-  EReference getOptionSpecification_States();
 
   /**
    * Returns the meta object for class '{@link uk.ac.kcl.inf.chessgame.chessGame.CellState <em>Cell State</em>}'.
@@ -816,6 +778,16 @@ public interface ChessGamePackage extends EPackage
   EAttribute getEndBehaviour_Message();
 
   /**
+   * Returns the meta object for enum '{@link uk.ac.kcl.inf.chessgame.chessGame.colorChoice <em>color Choice</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for enum '<em>color Choice</em>'.
+   * @see uk.ac.kcl.inf.chessgame.chessGame.colorChoice
+   * @generated
+   */
+  EEnum getcolorChoice();
+
+  /**
    * Returns the factory that creates the instances of the model.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -891,24 +863,6 @@ public interface ChessGamePackage extends EPackage
      * @generated
      */
     EAttribute FIELD_SPECIFICATION__HEIGHT = eINSTANCE.getFieldSpecification_Height();
-
-    /**
-     * The meta object literal for the '{@link uk.ac.kcl.inf.chessgame.chessGame.impl.OptionSpecificationImpl <em>Option Specification</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see uk.ac.kcl.inf.chessgame.chessGame.impl.OptionSpecificationImpl
-     * @see uk.ac.kcl.inf.chessgame.chessGame.impl.ChessGamePackageImpl#getOptionSpecification()
-     * @generated
-     */
-    EClass OPTION_SPECIFICATION = eINSTANCE.getOptionSpecification();
-
-    /**
-     * The meta object literal for the '<em><b>States</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference OPTION_SPECIFICATION__STATES = eINSTANCE.getOptionSpecification_States();
 
     /**
      * The meta object literal for the '{@link uk.ac.kcl.inf.chessgame.chessGame.impl.CellStateImpl <em>Cell State</em>}' class.
@@ -1119,6 +1073,16 @@ public interface ChessGamePackage extends EPackage
      * @generated
      */
     EAttribute END_BEHAVIOUR__MESSAGE = eINSTANCE.getEndBehaviour_Message();
+
+    /**
+     * The meta object literal for the '{@link uk.ac.kcl.inf.chessgame.chessGame.colorChoice <em>color Choice</em>}' enum.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see uk.ac.kcl.inf.chessgame.chessGame.colorChoice
+     * @see uk.ac.kcl.inf.chessgame.chessGame.impl.ChessGamePackageImpl#getcolorChoice()
+     * @generated
+     */
+    EEnum COLOR_CHOICE = eINSTANCE.getcolorChoice();
 
   }
 

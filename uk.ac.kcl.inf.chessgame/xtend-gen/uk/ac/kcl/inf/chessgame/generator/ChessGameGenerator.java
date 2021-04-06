@@ -20,7 +20,6 @@ import uk.ac.kcl.inf.chessgame.chessGame.CellDisplay;
 import uk.ac.kcl.inf.chessgame.chessGame.CellState;
 import uk.ac.kcl.inf.chessgame.chessGame.ChessProgram;
 import uk.ac.kcl.inf.chessgame.chessGame.FieldSpecification;
-import uk.ac.kcl.inf.chessgame.chessGame.OptionSpecification;
 import uk.ac.kcl.inf.chessgame.chessGame.Statements;
 import uk.ac.kcl.inf.chessgame.chessGame.Transition;
 
@@ -157,7 +156,7 @@ public class ChessGameGenerator extends AbstractGenerator {
   
   protected String _generateJavaStatement(final FieldSpecification stmt, final ChessGameGenerator.Environment env) {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("createField{");
+    _builder.append("public createField{");
     _builder.newLine();
     _builder.append("\t");
     _builder.append("width = ");
@@ -172,43 +171,40 @@ public class ChessGameGenerator extends AbstractGenerator {
     _builder.append(";");
     _builder.newLineIfNotEmpty();
     _builder.append("}");
-    return _builder.toString();
-  }
-  
-  protected String _generateJavaStatement(final OptionSpecification stmt, final ChessGameGenerator.Environment env) {
-    StringConcatenation _builder = new StringConcatenation();
-    return _builder.toString();
-  }
-  
-  protected String _generateJavaStatement(final Transition stmt, final ChessGameGenerator.Environment env) {
-    StringConcatenation _builder = new StringConcatenation();
+    _builder.newLine();
     return _builder.toString();
   }
   
   protected String _generateJavaStatement(final CellState stmt, final ChessGameGenerator.Environment env) {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("createCellState{");
+    _builder.append("public createCellState ");
+    String _name = stmt.getName();
+    _builder.append(_name);
+    _builder.append("{");
+    _builder.newLineIfNotEmpty();
+    _builder.append("\t");
+    _builder.append("display{");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("text = ");
     _builder.newLine();
     _builder.append("\t");
-    String _name = stmt.getName();
-    _builder.append(_name, "\t");
-    _builder.newLineIfNotEmpty();
+    _builder.append("}");
+    _builder.newLine();
     _builder.append("}");
     _builder.newLine();
     return _builder.toString();
   }
   
-  public String generateJavaStatement(final EObject stmt, final ChessGameGenerator.Environment env) {
-    if (stmt instanceof FieldSpecification) {
-      return _generateJavaStatement((FieldSpecification)stmt, env);
-    } else if (stmt instanceof OptionSpecification) {
-      return _generateJavaStatement((OptionSpecification)stmt, env);
-    } else if (stmt instanceof CellState) {
+  public String generateJavaStatement(final Statements stmt, final ChessGameGenerator.Environment env) {
+    if (stmt instanceof CellState) {
       return _generateJavaStatement((CellState)stmt, env);
-    } else if (stmt instanceof Statements) {
-      return _generateJavaStatement((Statements)stmt, env);
-    } else if (stmt instanceof Transition) {
-      return _generateJavaStatement((Transition)stmt, env);
+    } else if (stmt instanceof FieldSpecification) {
+      return _generateJavaStatement((FieldSpecification)stmt, env);
+    } else if (stmt != null) {
+      return _generateJavaStatement(stmt, env);
     } else {
       throw new IllegalArgumentException("Unhandled parameter types: " +
         Arrays.<Object>asList(stmt, env).toString());

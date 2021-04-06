@@ -24,7 +24,6 @@ import uk.ac.kcl.inf.chessgame.chessGame.EndBehaviour;
 import uk.ac.kcl.inf.chessgame.chessGame.FieldSpecification;
 import uk.ac.kcl.inf.chessgame.chessGame.GameEnd;
 import uk.ac.kcl.inf.chessgame.chessGame.MouseTrigger;
-import uk.ac.kcl.inf.chessgame.chessGame.OptionSpecification;
 import uk.ac.kcl.inf.chessgame.chessGame.StateCheck;
 import uk.ac.kcl.inf.chessgame.chessGame.Transition;
 import uk.ac.kcl.inf.chessgame.services.ChessGameGrammarAccess;
@@ -70,9 +69,6 @@ public class ChessGameSemanticSequencer extends AbstractDelegatingSemanticSequen
 			case ChessGamePackage.MOUSE_TRIGGER:
 				sequence_MouseTrigger(context, (MouseTrigger) semanticObject); 
 				return; 
-			case ChessGamePackage.OPTION_SPECIFICATION:
-				sequence_OptionSpecification(context, (OptionSpecification) semanticObject); 
-				return; 
 			case ChessGamePackage.STATE_CHECK:
 				sequence_StateCheck(context, (StateCheck) semanticObject); 
 				return; 
@@ -89,7 +85,7 @@ public class ChessGameSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 *     CellDisplay returns CellDisplay
 	 *
 	 * Constraint:
-	 *     (text=STRING | color='black' | color='white')
+	 *     (text=STRING | color=colorChoice)
 	 */
 	protected void sequence_CellDisplay(ISerializationContext context, CellDisplay semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -119,6 +115,7 @@ public class ChessGameSemanticSequencer extends AbstractDelegatingSemanticSequen
 	
 	/**
 	 * Contexts:
+	 *     Statements returns CellState
 	 *     CellState returns CellState
 	 *
 	 * Constraint:
@@ -226,19 +223,6 @@ public class ChessGameSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 *     mouse?='mouse-left'?
 	 */
 	protected void sequence_MouseTrigger(ISerializationContext context, MouseTrigger semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     Statements returns OptionSpecification
-	 *     OptionSpecification returns OptionSpecification
-	 *
-	 * Constraint:
-	 *     states+=CellState+
-	 */
-	protected void sequence_OptionSpecification(ISerializationContext context, OptionSpecification semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

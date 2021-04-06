@@ -6,6 +6,10 @@
     complianceLevel="8.0" copyrightFields="false" runtimeVersion="2.20">
   <genPackages prefix="ChessGame" basePackage="uk.ac.kcl.inf.chessgame" disposableProviderFactory="true"
       fileExtensions="cgame" ecorePackage="ChessGame.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ChessGame.ecore#//colorChoice">
+      <genEnumLiterals ecoreEnumLiteral="ChessGame.ecore#//colorChoice/black"/>
+      <genEnumLiterals ecoreEnumLiteral="ChessGame.ecore#//colorChoice/white"/>
+    </genEnums>
     <genClasses ecoreClass="ChessGame.ecore#//ChessProgram">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ChessGame.ecore#//ChessProgram/states"/>
     </genClasses>
@@ -13,9 +17,6 @@
     <genClasses ecoreClass="ChessGame.ecore#//FieldSpecification">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ChessGame.ecore#//FieldSpecification/width"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ChessGame.ecore#//FieldSpecification/height"/>
-    </genClasses>
-    <genClasses ecoreClass="ChessGame.ecore#//OptionSpecification">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ChessGame.ecore#//OptionSpecification/states"/>
     </genClasses>
     <genClasses ecoreClass="ChessGame.ecore#//CellState">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ChessGame.ecore#//CellState/name"/>

@@ -48,24 +48,27 @@ public interface CellDisplay extends EObject
 
   /**
    * Returns the value of the '<em><b>Color</b></em>' attribute.
+   * The literals are from the enumeration {@link uk.ac.kcl.inf.chessgame.chessGame.colorChoice}.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the value of the '<em>Color</em>' attribute.
-   * @see #setColor(String)
+   * @see uk.ac.kcl.inf.chessgame.chessGame.colorChoice
+   * @see #setColor(colorChoice)
    * @see uk.ac.kcl.inf.chessgame.chessGame.ChessGamePackage#getCellDisplay_Color()
    * @model
    * @generated
    */
-  String getColor();
+  colorChoice getColor();
 
   /**
    * Sets the value of the '{@link uk.ac.kcl.inf.chessgame.chessGame.CellDisplay#getColor <em>Color</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Color</em>' attribute.
+   * @see uk.ac.kcl.inf.chessgame.chessGame.colorChoice
    * @see #getColor()
    * @generated
    */
-  void setColor(String value);
+  void setColor(colorChoice value);
 
 } // CellDisplay

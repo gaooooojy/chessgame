@@ -91,11 +91,6 @@ public class ChessGameAdapterFactory extends AdapterFactoryImpl
         return createFieldSpecificationAdapter();
       }
       @Override
-      public Adapter caseOptionSpecification(OptionSpecification object)
-      {
-        return createOptionSpecificationAdapter();
-      }
-      @Override
       public Adapter caseCellState(CellState object)
       {
         return createCellStateAdapter();
@@ -203,21 +198,6 @@ public class ChessGameAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createFieldSpecificationAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link uk.ac.kcl.inf.chessgame.chessGame.OptionSpecification <em>Option Specification</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see uk.ac.kcl.inf.chessgame.chessGame.OptionSpecification
-   * @generated
-   */
-  public Adapter createOptionSpecificationAdapter()
   {
     return null;
   }
