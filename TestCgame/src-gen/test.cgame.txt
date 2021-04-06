@@ -1,0 +1,6 @@
+Program contains:
+    
+- 3 cell states
+- 3 cell displays
+- 4 transitions
+    

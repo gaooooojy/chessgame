@@ -1,0 +1,36 @@
+field{
+	width = 10
+	height = 10
+}
+
+begin{
+	display {
+		text  = ""
+	}
+	transitions{
+		click mouse-left and goto black_cell
+		click mouse-right and goto white_cell
+	}
+}
+
+black_cell{
+	display {
+		color = black
+	}
+	transitions{
+		click mouse-left and goto begin
+	}
+}
+
+white_cell{
+	display {
+		color = white
+	}
+	transitions{
+		click mouse-left and goto begin
+	}
+}
+action endGame{
+	when allCellState(begin).empty()
+	do end-game("The game is over")
+}

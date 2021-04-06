@@ -80,10 +80,18 @@ public class ChessGameSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case ChessGamePackage.STATEMENTS:
+      {
+        Statements statements = (Statements)theEObject;
+        T result = caseStatements(statements);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case ChessGamePackage.FIELD_SPECIFICATION:
       {
         FieldSpecification fieldSpecification = (FieldSpecification)theEObject;
         T result = caseFieldSpecification(fieldSpecification);
+        if (result == null) result = caseStatements(fieldSpecification);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -91,6 +99,7 @@ public class ChessGameSwitch<T> extends Switch<T>
       {
         OptionSpecification optionSpecification = (OptionSpecification)theEObject;
         T result = caseOptionSpecification(optionSpecification);
+        if (result == null) result = caseStatements(optionSpecification);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -126,6 +135,7 @@ public class ChessGameSwitch<T> extends Switch<T>
       {
         GameEnd gameEnd = (GameEnd)theEObject;
         T result = caseGameEnd(gameEnd);
+        if (result == null) result = caseStatements(gameEnd);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -173,6 +183,22 @@ public class ChessGameSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseChessProgram(ChessProgram object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Statements</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Statements</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseStatements(Statements object)
   {
     return null;
   }

@@ -12,8 +12,6 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -34,7 +32,7 @@ import uk.ac.kcl.inf.chessgame.chessGame.OptionSpecification;
  *
  * @generated
  */
-public class OptionSpecificationImpl extends MinimalEObjectImpl.Container implements OptionSpecification
+public class OptionSpecificationImpl extends StatementsImpl implements OptionSpecification
 {
   /**
    * The cached value of the '{@link #getStates() <em>States</em>}' containment reference list.

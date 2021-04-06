@@ -81,6 +81,11 @@ public class ChessGameAdapterFactory extends AdapterFactoryImpl
         return createChessProgramAdapter();
       }
       @Override
+      public Adapter caseStatements(Statements object)
+      {
+        return createStatementsAdapter();
+      }
+      @Override
       public Adapter caseFieldSpecification(FieldSpecification object)
       {
         return createFieldSpecificationAdapter();
@@ -168,6 +173,21 @@ public class ChessGameAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createChessProgramAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link uk.ac.kcl.inf.chessgame.chessGame.Statements <em>Statements</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see uk.ac.kcl.inf.chessgame.chessGame.Statements
+   * @generated
+   */
+  public Adapter createStatementsAdapter()
   {
     return null;
   }

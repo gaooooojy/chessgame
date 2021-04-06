@@ -5,7 +5,6 @@ package uk.ac.kcl.inf.chessgame.chessGame.impl;
 
 import java.util.Collection;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -13,7 +12,6 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
@@ -21,9 +19,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import uk.ac.kcl.inf.chessgame.chessGame.ChessGamePackage;
 import uk.ac.kcl.inf.chessgame.chessGame.ChessProgram;
-import uk.ac.kcl.inf.chessgame.chessGame.FieldSpecification;
-import uk.ac.kcl.inf.chessgame.chessGame.GameEnd;
-import uk.ac.kcl.inf.chessgame.chessGame.OptionSpecification;
+import uk.ac.kcl.inf.chessgame.chessGame.Statements;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,9 +29,7 @@ import uk.ac.kcl.inf.chessgame.chessGame.OptionSpecification;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link uk.ac.kcl.inf.chessgame.chessGame.impl.ChessProgramImpl#getSize <em>Size</em>}</li>
- *   <li>{@link uk.ac.kcl.inf.chessgame.chessGame.impl.ChessProgramImpl#getOptions <em>Options</em>}</li>
- *   <li>{@link uk.ac.kcl.inf.chessgame.chessGame.impl.ChessProgramImpl#getEndGame <em>End Game</em>}</li>
+ *   <li>{@link uk.ac.kcl.inf.chessgame.chessGame.impl.ChessProgramImpl#getStates <em>States</em>}</li>
  * </ul>
  *
  * @generated
@@ -43,34 +37,14 @@ import uk.ac.kcl.inf.chessgame.chessGame.OptionSpecification;
 public class ChessProgramImpl extends MinimalEObjectImpl.Container implements ChessProgram
 {
   /**
-   * The cached value of the '{@link #getSize() <em>Size</em>}' containment reference.
+   * The cached value of the '{@link #getStates() <em>States</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getSize()
+   * @see #getStates()
    * @generated
    * @ordered
    */
-  protected FieldSpecification size;
-
-  /**
-   * The cached value of the '{@link #getOptions() <em>Options</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getOptions()
-   * @generated
-   * @ordered
-   */
-  protected EList<OptionSpecification> options;
-
-  /**
-   * The cached value of the '{@link #getEndGame() <em>End Game</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getEndGame()
-   * @generated
-   * @ordered
-   */
-  protected GameEnd endGame;
+  protected EList<Statements> states;
 
   /**
    * <!-- begin-user-doc -->
@@ -99,113 +73,13 @@ public class ChessProgramImpl extends MinimalEObjectImpl.Container implements Ch
    * @generated
    */
   @Override
-  public FieldSpecification getSize()
+  public EList<Statements> getStates()
   {
-    return size;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetSize(FieldSpecification newSize, NotificationChain msgs)
-  {
-    FieldSpecification oldSize = size;
-    size = newSize;
-    if (eNotificationRequired())
+    if (states == null)
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ChessGamePackage.CHESS_PROGRAM__SIZE, oldSize, newSize);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
+      states = new EObjectContainmentEList<Statements>(Statements.class, this, ChessGamePackage.CHESS_PROGRAM__STATES);
     }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setSize(FieldSpecification newSize)
-  {
-    if (newSize != size)
-    {
-      NotificationChain msgs = null;
-      if (size != null)
-        msgs = ((InternalEObject)size).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ChessGamePackage.CHESS_PROGRAM__SIZE, null, msgs);
-      if (newSize != null)
-        msgs = ((InternalEObject)newSize).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ChessGamePackage.CHESS_PROGRAM__SIZE, null, msgs);
-      msgs = basicSetSize(newSize, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ChessGamePackage.CHESS_PROGRAM__SIZE, newSize, newSize));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EList<OptionSpecification> getOptions()
-  {
-    if (options == null)
-    {
-      options = new EObjectContainmentEList<OptionSpecification>(OptionSpecification.class, this, ChessGamePackage.CHESS_PROGRAM__OPTIONS);
-    }
-    return options;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public GameEnd getEndGame()
-  {
-    return endGame;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetEndGame(GameEnd newEndGame, NotificationChain msgs)
-  {
-    GameEnd oldEndGame = endGame;
-    endGame = newEndGame;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ChessGamePackage.CHESS_PROGRAM__END_GAME, oldEndGame, newEndGame);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setEndGame(GameEnd newEndGame)
-  {
-    if (newEndGame != endGame)
-    {
-      NotificationChain msgs = null;
-      if (endGame != null)
-        msgs = ((InternalEObject)endGame).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ChessGamePackage.CHESS_PROGRAM__END_GAME, null, msgs);
-      if (newEndGame != null)
-        msgs = ((InternalEObject)newEndGame).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ChessGamePackage.CHESS_PROGRAM__END_GAME, null, msgs);
-      msgs = basicSetEndGame(newEndGame, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ChessGamePackage.CHESS_PROGRAM__END_GAME, newEndGame, newEndGame));
+    return states;
   }
 
   /**
@@ -218,12 +92,8 @@ public class ChessProgramImpl extends MinimalEObjectImpl.Container implements Ch
   {
     switch (featureID)
     {
-      case ChessGamePackage.CHESS_PROGRAM__SIZE:
-        return basicSetSize(null, msgs);
-      case ChessGamePackage.CHESS_PROGRAM__OPTIONS:
-        return ((InternalEList<?>)getOptions()).basicRemove(otherEnd, msgs);
-      case ChessGamePackage.CHESS_PROGRAM__END_GAME:
-        return basicSetEndGame(null, msgs);
+      case ChessGamePackage.CHESS_PROGRAM__STATES:
+        return ((InternalEList<?>)getStates()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -238,12 +108,8 @@ public class ChessProgramImpl extends MinimalEObjectImpl.Container implements Ch
   {
     switch (featureID)
     {
-      case ChessGamePackage.CHESS_PROGRAM__SIZE:
-        return getSize();
-      case ChessGamePackage.CHESS_PROGRAM__OPTIONS:
-        return getOptions();
-      case ChessGamePackage.CHESS_PROGRAM__END_GAME:
-        return getEndGame();
+      case ChessGamePackage.CHESS_PROGRAM__STATES:
+        return getStates();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -259,15 +125,9 @@ public class ChessProgramImpl extends MinimalEObjectImpl.Container implements Ch
   {
     switch (featureID)
     {
-      case ChessGamePackage.CHESS_PROGRAM__SIZE:
-        setSize((FieldSpecification)newValue);
-        return;
-      case ChessGamePackage.CHESS_PROGRAM__OPTIONS:
-        getOptions().clear();
-        getOptions().addAll((Collection<? extends OptionSpecification>)newValue);
-        return;
-      case ChessGamePackage.CHESS_PROGRAM__END_GAME:
-        setEndGame((GameEnd)newValue);
+      case ChessGamePackage.CHESS_PROGRAM__STATES:
+        getStates().clear();
+        getStates().addAll((Collection<? extends Statements>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -283,14 +143,8 @@ public class ChessProgramImpl extends MinimalEObjectImpl.Container implements Ch
   {
     switch (featureID)
     {
-      case ChessGamePackage.CHESS_PROGRAM__SIZE:
-        setSize((FieldSpecification)null);
-        return;
-      case ChessGamePackage.CHESS_PROGRAM__OPTIONS:
-        getOptions().clear();
-        return;
-      case ChessGamePackage.CHESS_PROGRAM__END_GAME:
-        setEndGame((GameEnd)null);
+      case ChessGamePackage.CHESS_PROGRAM__STATES:
+        getStates().clear();
         return;
     }
     super.eUnset(featureID);
@@ -306,12 +160,8 @@ public class ChessProgramImpl extends MinimalEObjectImpl.Container implements Ch
   {
     switch (featureID)
     {
-      case ChessGamePackage.CHESS_PROGRAM__SIZE:
-        return size != null;
-      case ChessGamePackage.CHESS_PROGRAM__OPTIONS:
-        return options != null && !options.isEmpty();
-      case ChessGamePackage.CHESS_PROGRAM__END_GAME:
-        return endGame != null;
+      case ChessGamePackage.CHESS_PROGRAM__STATES:
+        return states != null && !states.isEmpty();
     }
     return super.eIsSet(featureID);
   }

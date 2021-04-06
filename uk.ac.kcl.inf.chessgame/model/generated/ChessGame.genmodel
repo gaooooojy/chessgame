@@ -7,14 +7,12 @@
   <genPackages prefix="ChessGame" basePackage="uk.ac.kcl.inf.chessgame" disposableProviderFactory="true"
       fileExtensions="cgame" ecorePackage="ChessGame.ecore#/">
     <genClasses ecoreClass="ChessGame.ecore#//ChessProgram">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ChessGame.ecore#//ChessProgram/size"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ChessGame.ecore#//ChessProgram/options"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ChessGame.ecore#//ChessProgram/endGame"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ChessGame.ecore#//ChessProgram/states"/>
     </genClasses>
+    <genClasses ecoreClass="ChessGame.ecore#//Statements"/>
     <genClasses ecoreClass="ChessGame.ecore#//FieldSpecification">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ChessGame.ecore#//FieldSpecification/width"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ChessGame.ecore#//FieldSpecification/height"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ChessGame.ecore#//FieldSpecification/name"/>
     </genClasses>
     <genClasses ecoreClass="ChessGame.ecore#//OptionSpecification">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ChessGame.ecore#//OptionSpecification/states"/>

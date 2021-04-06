@@ -134,7 +134,7 @@ public class ChessGameSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 *     ChessProgram returns ChessProgram
 	 *
 	 * Constraint:
-	 *     (size=FieldSpecification options+=OptionSpecification endGame=GameEnd)
+	 *     states+=Statements+
 	 */
 	protected void sequence_ChessProgram(ISerializationContext context, ChessProgram semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -173,18 +173,29 @@ public class ChessGameSemanticSequencer extends AbstractDelegatingSemanticSequen
 	
 	/**
 	 * Contexts:
+	 *     Statements returns FieldSpecification
 	 *     FieldSpecification returns FieldSpecification
 	 *
 	 * Constraint:
-	 *     (width=INT height=INT (name='BlackFirst' | name='WhiteFirst'))
+	 *     (width=INT height=INT)
 	 */
 	protected void sequence_FieldSpecification(ISerializationContext context, FieldSpecification semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, ChessGamePackage.Literals.FIELD_SPECIFICATION__WIDTH) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ChessGamePackage.Literals.FIELD_SPECIFICATION__WIDTH));
+			if (transientValues.isValueTransient(semanticObject, ChessGamePackage.Literals.FIELD_SPECIFICATION__HEIGHT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ChessGamePackage.Literals.FIELD_SPECIFICATION__HEIGHT));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getFieldSpecificationAccess().getWidthINTTerminalRuleCall_4_0(), semanticObject.getWidth());
+		feeder.accept(grammarAccess.getFieldSpecificationAccess().getHeightINTTerminalRuleCall_7_0(), semanticObject.getHeight());
+		feeder.finish();
 	}
 	
 	
 	/**
 	 * Contexts:
+	 *     Statements returns GameEnd
 	 *     GameEnd returns GameEnd
 	 *
 	 * Constraint:
@@ -221,6 +232,7 @@ public class ChessGameSemanticSequencer extends AbstractDelegatingSemanticSequen
 	
 	/**
 	 * Contexts:
+	 *     Statements returns OptionSpecification
 	 *     OptionSpecification returns OptionSpecification
 	 *
 	 * Constraint:

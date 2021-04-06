@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Xpect
+Bundle-SymbolicName: uk.ac.kcl.inf.chessgame.xpect
+Bundle-Version: 1.0.0.qualifier
+Automatic-Module-Name: uk.ac.kcl.inf.chessgame.xpect
+Bundle-RequiredExecutionEnvironment: JavaSE-15
+Require-Bundle: uk.ac.kcl.inf.chessgame;bundle-version="1.0.0",
+ uk.ac.kcl.inf.chessgame.ui;bundle-version="1.0.0",
+ org.eclipse.xpect.xtext.lib;bundle-version="0.2.0",
+ org.eclipse.xtext.xbase.lib;bundle-version="2.24.0"

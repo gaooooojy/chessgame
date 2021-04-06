@@ -3,17 +3,19 @@ grammar uk.ac.kcl.inf.chessgame.ChessGame with org.eclipse.xtext.common.Terminal
 generate chessGame "http://www.ac.uk/kcl/inf/chessgame/ChessGame"
 
 ChessProgram:
-	size = FieldSpecification
-	options += OptionSpecification
-	endGame = GameEnd
+	states += Statements*
+;
+
+Statements:
+	FieldSpecification |
+	OptionSpecification |
+	GameEnd
 ;
 
 FieldSpecification:
 	'field' '{'
 		"width" "=" width=INT  
 		"height" "=" height=INT 
-		"FirstPlayer" "=" name=("BlackFirst" | "WhiteFirst")
-//		"Counter" "=" counter=INT
 	'}'
 ;
 
@@ -32,8 +34,12 @@ CellState :
 
 CellDisplay :
 	"display" "{"
-		(("text" "=" text=STRING) |  ("color" "=" color=("black" | "white")))
+		(("text" "=" text=STRING) |  ("color" "=" color=colorChoice))
 	"}"
+;
+
+enum colorChoice:
+	black | white
 ;
 
 Transition :

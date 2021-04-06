@@ -3,7 +3,6 @@
  */
 package uk.ac.kcl.inf.chessgame.chessGame;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,14 +15,13 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link uk.ac.kcl.inf.chessgame.chessGame.FieldSpecification#getWidth <em>Width</em>}</li>
  *   <li>{@link uk.ac.kcl.inf.chessgame.chessGame.FieldSpecification#getHeight <em>Height</em>}</li>
- *   <li>{@link uk.ac.kcl.inf.chessgame.chessGame.FieldSpecification#getName <em>Name</em>}</li>
  * </ul>
  *
  * @see uk.ac.kcl.inf.chessgame.chessGame.ChessGamePackage#getFieldSpecification()
  * @model
  * @generated
  */
-public interface FieldSpecification extends EObject
+public interface FieldSpecification extends Statements
 {
   /**
    * Returns the value of the '<em><b>Width</b></em>' attribute.
@@ -68,27 +66,5 @@ public interface FieldSpecification extends EObject
    * @generated
    */
   void setHeight(int value);
-
-  /**
-   * Returns the value of the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Name</em>' attribute.
-   * @see #setName(String)
-   * @see uk.ac.kcl.inf.chessgame.chessGame.ChessGamePackage#getFieldSpecification_Name()
-   * @model
-   * @generated
-   */
-  String getName();
-
-  /**
-   * Sets the value of the '{@link uk.ac.kcl.inf.chessgame.chessGame.FieldSpecification#getName <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Name</em>' attribute.
-   * @see #getName()
-   * @generated
-   */
-  void setName(String value);
 
 } // FieldSpecification

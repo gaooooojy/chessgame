@@ -8,7 +8,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import uk.ac.kcl.inf.chessgame.chessGame.ChessGamePackage;
 import uk.ac.kcl.inf.chessgame.chessGame.FieldSpecification;
@@ -23,12 +22,11 @@ import uk.ac.kcl.inf.chessgame.chessGame.FieldSpecification;
  * <ul>
  *   <li>{@link uk.ac.kcl.inf.chessgame.chessGame.impl.FieldSpecificationImpl#getWidth <em>Width</em>}</li>
  *   <li>{@link uk.ac.kcl.inf.chessgame.chessGame.impl.FieldSpecificationImpl#getHeight <em>Height</em>}</li>
- *   <li>{@link uk.ac.kcl.inf.chessgame.chessGame.impl.FieldSpecificationImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class FieldSpecificationImpl extends MinimalEObjectImpl.Container implements FieldSpecification
+public class FieldSpecificationImpl extends StatementsImpl implements FieldSpecification
 {
   /**
    * The default value of the '{@link #getWidth() <em>Width</em>}' attribute.
@@ -69,26 +67,6 @@ public class FieldSpecificationImpl extends MinimalEObjectImpl.Container impleme
    * @ordered
    */
   protected int height = HEIGHT_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected static final String NAME_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected String name = NAME_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -167,31 +145,6 @@ public class FieldSpecificationImpl extends MinimalEObjectImpl.Container impleme
    * @generated
    */
   @Override
-  public String getName()
-  {
-    return name;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setName(String newName)
-  {
-    String oldName = name;
-    name = newName;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ChessGamePackage.FIELD_SPECIFICATION__NAME, oldName, name));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
     switch (featureID)
@@ -200,8 +153,6 @@ public class FieldSpecificationImpl extends MinimalEObjectImpl.Container impleme
         return getWidth();
       case ChessGamePackage.FIELD_SPECIFICATION__HEIGHT:
         return getHeight();
-      case ChessGamePackage.FIELD_SPECIFICATION__NAME:
-        return getName();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -221,9 +172,6 @@ public class FieldSpecificationImpl extends MinimalEObjectImpl.Container impleme
         return;
       case ChessGamePackage.FIELD_SPECIFICATION__HEIGHT:
         setHeight((Integer)newValue);
-        return;
-      case ChessGamePackage.FIELD_SPECIFICATION__NAME:
-        setName((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -245,9 +193,6 @@ public class FieldSpecificationImpl extends MinimalEObjectImpl.Container impleme
       case ChessGamePackage.FIELD_SPECIFICATION__HEIGHT:
         setHeight(HEIGHT_EDEFAULT);
         return;
-      case ChessGamePackage.FIELD_SPECIFICATION__NAME:
-        setName(NAME_EDEFAULT);
-        return;
     }
     super.eUnset(featureID);
   }
@@ -266,8 +211,6 @@ public class FieldSpecificationImpl extends MinimalEObjectImpl.Container impleme
         return width != WIDTH_EDEFAULT;
       case ChessGamePackage.FIELD_SPECIFICATION__HEIGHT:
         return height != HEIGHT_EDEFAULT;
-      case ChessGamePackage.FIELD_SPECIFICATION__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
     }
     return super.eIsSet(featureID);
   }
@@ -287,8 +230,6 @@ public class FieldSpecificationImpl extends MinimalEObjectImpl.Container impleme
     result.append(width);
     result.append(", height: ");
     result.append(height);
-    result.append(", name: ");
-    result.append(name);
     result.append(')');
     return result.toString();
   }

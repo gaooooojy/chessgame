@@ -66,6 +66,7 @@ public class ChessGameFactoryImpl extends EFactoryImpl implements ChessGameFacto
     switch (eClass.getClassifierID())
     {
       case ChessGamePackage.CHESS_PROGRAM: return createChessProgram();
+      case ChessGamePackage.STATEMENTS: return createStatements();
       case ChessGamePackage.FIELD_SPECIFICATION: return createFieldSpecification();
       case ChessGamePackage.OPTION_SPECIFICATION: return createOptionSpecification();
       case ChessGamePackage.CELL_STATE: return createCellState();
@@ -92,6 +93,18 @@ public class ChessGameFactoryImpl extends EFactoryImpl implements ChessGameFacto
   {
     ChessProgramImpl chessProgram = new ChessProgramImpl();
     return chessProgram;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Statements createStatements()
+  {
+    StatementsImpl statements = new StatementsImpl();
+    return statements;
   }
 
   /**

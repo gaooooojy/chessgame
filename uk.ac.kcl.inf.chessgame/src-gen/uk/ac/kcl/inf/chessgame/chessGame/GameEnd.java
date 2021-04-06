@@ -3,7 +3,6 @@
  */
 package uk.ac.kcl.inf.chessgame.chessGame;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,7 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface GameEnd extends EObject
+public interface GameEnd extends Statements
 {
   /**
    * Returns the value of the '<em><b>Name</b></em>' attribute.

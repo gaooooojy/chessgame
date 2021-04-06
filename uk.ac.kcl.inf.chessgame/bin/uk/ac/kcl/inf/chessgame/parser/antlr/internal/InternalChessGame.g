@@ -77,62 +77,67 @@ ruleChessProgram returns [EObject current=null]
 }:
 	(
 		(
-			(
-				{
-					newCompositeNode(grammarAccess.getChessProgramAccess().getSizeFieldSpecificationParserRuleCall_0_0());
+			{
+				newCompositeNode(grammarAccess.getChessProgramAccess().getStatesStatementsParserRuleCall_0());
+			}
+			lv_states_0_0=ruleStatements
+			{
+				if ($current==null) {
+					$current = createModelElementForParent(grammarAccess.getChessProgramRule());
 				}
-				lv_size_0_0=ruleFieldSpecification
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getChessProgramRule());
-					}
-					set(
-						$current,
-						"size",
-						lv_size_0_0,
-						"uk.ac.kcl.inf.chessgame.ChessGame.FieldSpecification");
-					afterParserOrEnumRuleCall();
-				}
-			)
+				add(
+					$current,
+					"states",
+					lv_states_0_0,
+					"uk.ac.kcl.inf.chessgame.ChessGame.Statements");
+				afterParserOrEnumRuleCall();
+			}
 		)
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getChessProgramAccess().getOptionsOptionSpecificationParserRuleCall_1_0());
-				}
-				lv_options_1_0=ruleOptionSpecification
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getChessProgramRule());
-					}
-					add(
-						$current,
-						"options",
-						lv_options_1_0,
-						"uk.ac.kcl.inf.chessgame.ChessGame.OptionSpecification");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getChessProgramAccess().getEndGameGameEndParserRuleCall_2_0());
-				}
-				lv_endGame_2_0=ruleGameEnd
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getChessProgramRule());
-					}
-					set(
-						$current,
-						"endGame",
-						lv_endGame_2_0,
-						"uk.ac.kcl.inf.chessgame.ChessGame.GameEnd");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
+	)*
+;
+
+// Entry rule entryRuleStatements
+entryRuleStatements returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getStatementsRule()); }
+	iv_ruleStatements=ruleStatements
+	{ $current=$iv_ruleStatements.current; }
+	EOF;
+
+// Rule Statements
+ruleStatements returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		{
+			newCompositeNode(grammarAccess.getStatementsAccess().getFieldSpecificationParserRuleCall_0());
+		}
+		this_FieldSpecification_0=ruleFieldSpecification
+		{
+			$current = $this_FieldSpecification_0.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getStatementsAccess().getOptionSpecificationParserRuleCall_1());
+		}
+		this_OptionSpecification_1=ruleOptionSpecification
+		{
+			$current = $this_OptionSpecification_1.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getStatementsAccess().getGameEndParserRuleCall_2());
+		}
+		this_GameEnd_2=ruleGameEnd
+		{
+			$current = $this_GameEnd_2.current;
+			afterParserOrEnumRuleCall();
+		}
 	)
 ;
 
@@ -212,44 +217,9 @@ ruleFieldSpecification returns [EObject current=null]
 				}
 			)
 		)
-		otherlv_8='FirstPlayer'
+		otherlv_8='}'
 		{
-			newLeafNode(otherlv_8, grammarAccess.getFieldSpecificationAccess().getFirstPlayerKeyword_8());
-		}
-		otherlv_9='='
-		{
-			newLeafNode(otherlv_9, grammarAccess.getFieldSpecificationAccess().getEqualsSignKeyword_9());
-		}
-		(
-			(
-				(
-					lv_name_10_1='BlackFirst'
-					{
-						newLeafNode(lv_name_10_1, grammarAccess.getFieldSpecificationAccess().getNameBlackFirstKeyword_10_0_0());
-					}
-					{
-						if ($current==null) {
-							$current = createModelElement(grammarAccess.getFieldSpecificationRule());
-						}
-						setWithLastConsumed($current, "name", lv_name_10_1, null);
-					}
-					    |
-					lv_name_10_2='WhiteFirst'
-					{
-						newLeafNode(lv_name_10_2, grammarAccess.getFieldSpecificationAccess().getNameWhiteFirstKeyword_10_0_1());
-					}
-					{
-						if ($current==null) {
-							$current = createModelElement(grammarAccess.getFieldSpecificationRule());
-						}
-						setWithLastConsumed($current, "name", lv_name_10_2, null);
-					}
-				)
-			)
-		)
-		otherlv_11='}'
-		{
-			newLeafNode(otherlv_11, grammarAccess.getFieldSpecificationAccess().getRightCurlyBracketKeyword_11());
+			newLeafNode(otherlv_8, grammarAccess.getFieldSpecificationAccess().getRightCurlyBracketKeyword_8());
 		}
 	)
 ;

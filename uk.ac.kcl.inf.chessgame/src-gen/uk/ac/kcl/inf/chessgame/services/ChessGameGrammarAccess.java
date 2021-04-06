@@ -26,42 +26,41 @@ public class ChessGameGrammarAccess extends AbstractElementFinder.AbstractGramma
 	
 	public class ChessProgramElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "uk.ac.kcl.inf.chessgame.ChessGame.ChessProgram");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cSizeAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cSizeFieldSpecificationParserRuleCall_0_0 = (RuleCall)cSizeAssignment_0.eContents().get(0);
-		private final Assignment cOptionsAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cOptionsOptionSpecificationParserRuleCall_1_0 = (RuleCall)cOptionsAssignment_1.eContents().get(0);
-		private final Assignment cEndGameAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cEndGameGameEndParserRuleCall_2_0 = (RuleCall)cEndGameAssignment_2.eContents().get(0);
+		private final Assignment cStatesAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cStatesStatementsParserRuleCall_0 = (RuleCall)cStatesAssignment.eContents().get(0);
 		
 		//ChessProgram:
-		//	size=FieldSpecification
-		//	options+=OptionSpecification
-		//	endGame=GameEnd;
+		//	states+=Statements*;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//size=FieldSpecification
-		//options+=OptionSpecification
-		//endGame=GameEnd
-		public Group getGroup() { return cGroup; }
+		//states+=Statements*
+		public Assignment getStatesAssignment() { return cStatesAssignment; }
 		
-		//size=FieldSpecification
-		public Assignment getSizeAssignment_0() { return cSizeAssignment_0; }
+		//Statements
+		public RuleCall getStatesStatementsParserRuleCall_0() { return cStatesStatementsParserRuleCall_0; }
+	}
+	public class StatementsElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "uk.ac.kcl.inf.chessgame.ChessGame.Statements");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cFieldSpecificationParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cOptionSpecificationParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cGameEndParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		
+		//Statements:
+		//	FieldSpecification | OptionSpecification | GameEnd;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//FieldSpecification | OptionSpecification | GameEnd
+		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//FieldSpecification
-		public RuleCall getSizeFieldSpecificationParserRuleCall_0_0() { return cSizeFieldSpecificationParserRuleCall_0_0; }
-		
-		//options+=OptionSpecification
-		public Assignment getOptionsAssignment_1() { return cOptionsAssignment_1; }
+		public RuleCall getFieldSpecificationParserRuleCall_0() { return cFieldSpecificationParserRuleCall_0; }
 		
 		//OptionSpecification
-		public RuleCall getOptionsOptionSpecificationParserRuleCall_1_0() { return cOptionsOptionSpecificationParserRuleCall_1_0; }
-		
-		//endGame=GameEnd
-		public Assignment getEndGameAssignment_2() { return cEndGameAssignment_2; }
+		public RuleCall getOptionSpecificationParserRuleCall_1() { return cOptionSpecificationParserRuleCall_1; }
 		
 		//GameEnd
-		public RuleCall getEndGameGameEndParserRuleCall_2_0() { return cEndGameGameEndParserRuleCall_2_0; }
+		public RuleCall getGameEndParserRuleCall_2() { return cGameEndParserRuleCall_2; }
 	}
 	public class FieldSpecificationElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "uk.ac.kcl.inf.chessgame.ChessGame.FieldSpecification");
@@ -76,19 +75,12 @@ public class ChessGameGrammarAccess extends AbstractElementFinder.AbstractGramma
 		private final Keyword cEqualsSignKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		private final Assignment cHeightAssignment_7 = (Assignment)cGroup.eContents().get(7);
 		private final RuleCall cHeightINTTerminalRuleCall_7_0 = (RuleCall)cHeightAssignment_7.eContents().get(0);
-		private final Keyword cFirstPlayerKeyword_8 = (Keyword)cGroup.eContents().get(8);
-		private final Keyword cEqualsSignKeyword_9 = (Keyword)cGroup.eContents().get(9);
-		private final Assignment cNameAssignment_10 = (Assignment)cGroup.eContents().get(10);
-		private final Alternatives cNameAlternatives_10_0 = (Alternatives)cNameAssignment_10.eContents().get(0);
-		private final Keyword cNameBlackFirstKeyword_10_0_0 = (Keyword)cNameAlternatives_10_0.eContents().get(0);
-		private final Keyword cNameWhiteFirstKeyword_10_0_1 = (Keyword)cNameAlternatives_10_0.eContents().get(1);
-		private final Keyword cRightCurlyBracketKeyword_11 = (Keyword)cGroup.eContents().get(11);
+		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
 		//FieldSpecification:
 		//	'field' '{'
 		//	"width" "=" width=INT
 		//	"height" "=" height=INT
-		//	"FirstPlayer" "=" name=("BlackFirst" | "WhiteFirst")
 		////		"Counter" "=" counter=INT
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
@@ -96,7 +88,6 @@ public class ChessGameGrammarAccess extends AbstractElementFinder.AbstractGramma
 		//'field' '{'
 		//"width" "=" width=INT
 		//"height" "=" height=INT
-		//"FirstPlayer" "=" name=("BlackFirst" | "WhiteFirst")
 		////		"Counter" "=" counter=INT
 		//'}'
 		public Group getGroup() { return cGroup; }
@@ -131,27 +122,9 @@ public class ChessGameGrammarAccess extends AbstractElementFinder.AbstractGramma
 		//INT
 		public RuleCall getHeightINTTerminalRuleCall_7_0() { return cHeightINTTerminalRuleCall_7_0; }
 		
-		//"FirstPlayer"
-		public Keyword getFirstPlayerKeyword_8() { return cFirstPlayerKeyword_8; }
-		
-		//"="
-		public Keyword getEqualsSignKeyword_9() { return cEqualsSignKeyword_9; }
-		
-		//name=("BlackFirst" | "WhiteFirst")
-		public Assignment getNameAssignment_10() { return cNameAssignment_10; }
-		
-		//("BlackFirst" | "WhiteFirst")
-		public Alternatives getNameAlternatives_10_0() { return cNameAlternatives_10_0; }
-		
-		//"BlackFirst"
-		public Keyword getNameBlackFirstKeyword_10_0_0() { return cNameBlackFirstKeyword_10_0_0; }
-		
-		//"WhiteFirst"
-		public Keyword getNameWhiteFirstKeyword_10_0_1() { return cNameWhiteFirstKeyword_10_0_1; }
-		
 		////		"Counter" "=" counter=INT
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_11() { return cRightCurlyBracketKeyword_11; }
+		public Keyword getRightCurlyBracketKeyword_8() { return cRightCurlyBracketKeyword_8; }
 	}
 	public class OptionSpecificationElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "uk.ac.kcl.inf.chessgame.ChessGame.OptionSpecification");
@@ -576,6 +549,7 @@ public class ChessGameGrammarAccess extends AbstractElementFinder.AbstractGramma
 	
 	
 	private final ChessProgramElements pChessProgram;
+	private final StatementsElements pStatements;
 	private final FieldSpecificationElements pFieldSpecification;
 	private final OptionSpecificationElements pOptionSpecification;
 	private final CellStateElements pCellState;
@@ -598,6 +572,7 @@ public class ChessGameGrammarAccess extends AbstractElementFinder.AbstractGramma
 		this.grammar = internalFindGrammar(grammarProvider);
 		this.gaTerminals = gaTerminals;
 		this.pChessProgram = new ChessProgramElements();
+		this.pStatements = new StatementsElements();
 		this.pFieldSpecification = new FieldSpecificationElements();
 		this.pOptionSpecification = new OptionSpecificationElements();
 		this.pCellState = new CellStateElements();
@@ -639,9 +614,7 @@ public class ChessGameGrammarAccess extends AbstractElementFinder.AbstractGramma
 
 	
 	//ChessProgram:
-	//	size=FieldSpecification
-	//	options+=OptionSpecification
-	//	endGame=GameEnd;
+	//	states+=Statements*;
 	public ChessProgramElements getChessProgramAccess() {
 		return pChessProgram;
 	}
@@ -650,11 +623,20 @@ public class ChessGameGrammarAccess extends AbstractElementFinder.AbstractGramma
 		return getChessProgramAccess().getRule();
 	}
 	
+	//Statements:
+	//	FieldSpecification | OptionSpecification | GameEnd;
+	public StatementsElements getStatementsAccess() {
+		return pStatements;
+	}
+	
+	public ParserRule getStatementsRule() {
+		return getStatementsAccess().getRule();
+	}
+	
 	//FieldSpecification:
 	//	'field' '{'
 	//	"width" "=" width=INT
 	//	"height" "=" height=INT
-	//	"FirstPlayer" "=" name=("BlackFirst" | "WhiteFirst")
 	////		"Counter" "=" counter=INT
 	//	'}';
 	public FieldSpecificationElements getFieldSpecificationAccess() {

@@ -33,6 +33,15 @@ public interface ChessGameFactory extends EFactory
   ChessProgram createChessProgram();
 
   /**
+   * Returns a new object of class '<em>Statements</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Statements</em>'.
+   * @generated
+   */
+  Statements createStatements();
+
+  /**
    * Returns a new object of class '<em>Field Specification</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

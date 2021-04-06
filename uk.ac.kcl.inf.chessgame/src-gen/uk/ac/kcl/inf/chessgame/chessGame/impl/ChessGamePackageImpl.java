@@ -23,6 +23,7 @@ import uk.ac.kcl.inf.chessgame.chessGame.GameEnd;
 import uk.ac.kcl.inf.chessgame.chessGame.MouseTrigger;
 import uk.ac.kcl.inf.chessgame.chessGame.OptionSpecification;
 import uk.ac.kcl.inf.chessgame.chessGame.StateCheck;
+import uk.ac.kcl.inf.chessgame.chessGame.Statements;
 import uk.ac.kcl.inf.chessgame.chessGame.Transition;
 
 /**
@@ -39,6 +40,13 @@ public class ChessGamePackageImpl extends EPackageImpl implements ChessGamePacka
    * @generated
    */
   private EClass chessProgramEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass statementsEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -197,7 +205,7 @@ public class ChessGamePackageImpl extends EPackageImpl implements ChessGamePacka
    * @generated
    */
   @Override
-  public EReference getChessProgram_Size()
+  public EReference getChessProgram_States()
   {
     return (EReference)chessProgramEClass.getEStructuralFeatures().get(0);
   }
@@ -208,20 +216,9 @@ public class ChessGamePackageImpl extends EPackageImpl implements ChessGamePacka
    * @generated
    */
   @Override
-  public EReference getChessProgram_Options()
+  public EClass getStatements()
   {
-    return (EReference)chessProgramEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EReference getChessProgram_EndGame()
-  {
-    return (EReference)chessProgramEClass.getEStructuralFeatures().get(2);
+    return statementsEClass;
   }
 
   /**
@@ -255,17 +252,6 @@ public class ChessGamePackageImpl extends EPackageImpl implements ChessGamePacka
   public EAttribute getFieldSpecification_Height()
   {
     return (EAttribute)fieldSpecificationEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getFieldSpecification_Name()
-  {
-    return (EAttribute)fieldSpecificationEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -586,14 +572,13 @@ public class ChessGamePackageImpl extends EPackageImpl implements ChessGamePacka
 
     // Create classes and their features
     chessProgramEClass = createEClass(CHESS_PROGRAM);
-    createEReference(chessProgramEClass, CHESS_PROGRAM__SIZE);
-    createEReference(chessProgramEClass, CHESS_PROGRAM__OPTIONS);
-    createEReference(chessProgramEClass, CHESS_PROGRAM__END_GAME);
+    createEReference(chessProgramEClass, CHESS_PROGRAM__STATES);
+
+    statementsEClass = createEClass(STATEMENTS);
 
     fieldSpecificationEClass = createEClass(FIELD_SPECIFICATION);
     createEAttribute(fieldSpecificationEClass, FIELD_SPECIFICATION__WIDTH);
     createEAttribute(fieldSpecificationEClass, FIELD_SPECIFICATION__HEIGHT);
-    createEAttribute(fieldSpecificationEClass, FIELD_SPECIFICATION__NAME);
 
     optionSpecificationEClass = createEClass(OPTION_SPECIFICATION);
     createEReference(optionSpecificationEClass, OPTION_SPECIFICATION__STATES);
@@ -661,17 +646,19 @@ public class ChessGamePackageImpl extends EPackageImpl implements ChessGamePacka
     // Set bounds for type parameters
 
     // Add supertypes to classes
+    fieldSpecificationEClass.getESuperTypes().add(this.getStatements());
+    optionSpecificationEClass.getESuperTypes().add(this.getStatements());
+    gameEndEClass.getESuperTypes().add(this.getStatements());
 
     // Initialize classes and features; add operations and parameters
     initEClass(chessProgramEClass, ChessProgram.class, "ChessProgram", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getChessProgram_Size(), this.getFieldSpecification(), null, "size", null, 0, 1, ChessProgram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getChessProgram_Options(), this.getOptionSpecification(), null, "options", null, 0, -1, ChessProgram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getChessProgram_EndGame(), this.getGameEnd(), null, "endGame", null, 0, 1, ChessProgram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getChessProgram_States(), this.getStatements(), null, "states", null, 0, -1, ChessProgram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(statementsEClass, Statements.class, "Statements", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(fieldSpecificationEClass, FieldSpecification.class, "FieldSpecification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getFieldSpecification_Width(), ecorePackage.getEInt(), "width", null, 0, 1, FieldSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getFieldSpecification_Height(), ecorePackage.getEInt(), "height", null, 0, 1, FieldSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getFieldSpecification_Name(), ecorePackage.getEString(), "name", null, 0, 1, FieldSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(optionSpecificationEClass, OptionSpecification.class, "OptionSpecification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getOptionSpecification_States(), this.getCellState(), null, "states", null, 0, -1, OptionSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

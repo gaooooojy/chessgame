@@ -1,0 +1,58 @@
+/* XPECT_SETUP uk.ac.kcl.inf.chessgame.xpect.XPectTests END_SETUP*/
+
+
+/*
+XPECT generated file test.cgame.xt.txt---
+
+Program contains:
+
+- 1 cell states
+- 1 cell displays
+- 1 transitions
+
+---
+
+XPECT generated file TestChessGame.java---
+
+public class TestChessGame {
+	public static void main (){
+			ChessGameFrame cg = new ChessGameFrame();
+				
+			ChessGame c = new ChessGame(cg) {
+				@Override
+				public void run() {
+					createField{
+					width = 20;
+					height = 20;
+					}
+					
+					createCellState{
+					begin
+				}
+			};
+				
+			c.run();
+				
+	}
+}
+
+---
+
+ */
+
+
+field{
+	width = 20
+	height = 20
+}
+
+begin{
+	display {
+		text  = ""
+	}
+	transitions{
+		click mouse-left and goto begin
+		//click mouse-right and goto begin
+	}
+}
+

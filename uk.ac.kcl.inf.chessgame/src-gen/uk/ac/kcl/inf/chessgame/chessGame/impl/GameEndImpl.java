@@ -10,7 +10,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import uk.ac.kcl.inf.chessgame.chessGame.CellExpression;
 import uk.ac.kcl.inf.chessgame.chessGame.ChessGamePackage;
@@ -32,7 +31,7 @@ import uk.ac.kcl.inf.chessgame.chessGame.GameEnd;
  *
  * @generated
  */
-public class GameEndImpl extends MinimalEObjectImpl.Container implements GameEnd
+public class GameEndImpl extends StatementsImpl implements GameEnd
 {
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.

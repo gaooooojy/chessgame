@@ -3,19 +3,15 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="chessGame" nsURI="http://www.ac.uk/kcl/inf/chessgame/ChessGame"
     nsPrefix="chessGame">
   <eClassifiers xsi:type="ecore:EClass" name="ChessProgram">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="size" eType="#//FieldSpecification"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="options" upperBound="-1"
-        eType="#//OptionSpecification" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="endGame" eType="#//GameEnd"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="states" upperBound="-1"
+        eType="#//Statements" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FieldSpecification">
+  <eClassifiers xsi:type="ecore:EClass" name="Statements"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FieldSpecification" eSuperTypes="#//Statements">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="width" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="height" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="OptionSpecification">
+  <eClassifiers xsi:type="ecore:EClass" name="OptionSpecification" eSuperTypes="#//Statements">
     <eStructuralFeatures xsi:type="ecore:EReference" name="states" upperBound="-1"
         eType="#//CellState" containment="true"/>
   </eClassifiers>
@@ -38,7 +34,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="MouseTrigger">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="mouse" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GameEnd">
+  <eClassifiers xsi:type="ecore:EClass" name="GameEnd" eSuperTypes="#//Statements">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="action" eType="#//CellExpression"
         containment="true"/>

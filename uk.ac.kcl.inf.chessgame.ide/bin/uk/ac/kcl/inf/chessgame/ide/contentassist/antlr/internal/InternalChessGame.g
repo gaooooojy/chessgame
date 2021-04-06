@@ -65,9 +65,34 @@ ruleChessProgram
 	}
 	:
 	(
-		{ before(grammarAccess.getChessProgramAccess().getGroup()); }
-		(rule__ChessProgram__Group__0)
-		{ after(grammarAccess.getChessProgramAccess().getGroup()); }
+		{ before(grammarAccess.getChessProgramAccess().getStatesAssignment()); }
+		(rule__ChessProgram__StatesAssignment)*
+		{ after(grammarAccess.getChessProgramAccess().getStatesAssignment()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+// Entry rule entryRuleStatements
+entryRuleStatements
+:
+{ before(grammarAccess.getStatementsRule()); }
+	 ruleStatements
+{ after(grammarAccess.getStatementsRule()); } 
+	 EOF 
+;
+
+// Rule Statements
+ruleStatements 
+	@init {
+		int stackSize = keepStackSize();
+	}
+	:
+	(
+		{ before(grammarAccess.getStatementsAccess().getAlternatives()); }
+		(rule__Statements__Alternatives)
+		{ after(grammarAccess.getStatementsAccess().getAlternatives()); }
 	)
 ;
 finally {
@@ -356,21 +381,27 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__FieldSpecification__NameAlternatives_10_0
+rule__Statements__Alternatives
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getFieldSpecificationAccess().getNameBlackFirstKeyword_10_0_0()); }
-		'BlackFirst'
-		{ after(grammarAccess.getFieldSpecificationAccess().getNameBlackFirstKeyword_10_0_0()); }
+		{ before(grammarAccess.getStatementsAccess().getFieldSpecificationParserRuleCall_0()); }
+		ruleFieldSpecification
+		{ after(grammarAccess.getStatementsAccess().getFieldSpecificationParserRuleCall_0()); }
 	)
 	|
 	(
-		{ before(grammarAccess.getFieldSpecificationAccess().getNameWhiteFirstKeyword_10_0_1()); }
-		'WhiteFirst'
-		{ after(grammarAccess.getFieldSpecificationAccess().getNameWhiteFirstKeyword_10_0_1()); }
+		{ before(grammarAccess.getStatementsAccess().getOptionSpecificationParserRuleCall_1()); }
+		ruleOptionSpecification
+		{ after(grammarAccess.getStatementsAccess().getOptionSpecificationParserRuleCall_1()); }
+	)
+	|
+	(
+		{ before(grammarAccess.getStatementsAccess().getGameEndParserRuleCall_2()); }
+		ruleGameEnd
+		{ after(grammarAccess.getStatementsAccess().getGameEndParserRuleCall_2()); }
 	)
 ;
 finally {
@@ -439,87 +470,6 @@ rule__MouseTrigger__Alternatives
 finally {
 	restoreStackSize(stackSize);
 }
-
-rule__ChessProgram__Group__0
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__ChessProgram__Group__0__Impl
-	rule__ChessProgram__Group__1
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__ChessProgram__Group__0__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getChessProgramAccess().getSizeAssignment_0()); }
-	(rule__ChessProgram__SizeAssignment_0)
-	{ after(grammarAccess.getChessProgramAccess().getSizeAssignment_0()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__ChessProgram__Group__1
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__ChessProgram__Group__1__Impl
-	rule__ChessProgram__Group__2
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__ChessProgram__Group__1__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getChessProgramAccess().getOptionsAssignment_1()); }
-	(rule__ChessProgram__OptionsAssignment_1)
-	{ after(grammarAccess.getChessProgramAccess().getOptionsAssignment_1()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__ChessProgram__Group__2
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__ChessProgram__Group__2__Impl
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__ChessProgram__Group__2__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getChessProgramAccess().getEndGameAssignment_2()); }
-	(rule__ChessProgram__EndGameAssignment_2)
-	{ after(grammarAccess.getChessProgramAccess().getEndGameAssignment_2()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
 
 rule__FieldSpecification__Group__0
 	@init {
@@ -743,7 +693,6 @@ rule__FieldSpecification__Group__8
 	}
 :
 	rule__FieldSpecification__Group__8__Impl
-	rule__FieldSpecification__Group__9
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -755,89 +704,9 @@ rule__FieldSpecification__Group__8__Impl
 	}
 :
 (
-	{ before(grammarAccess.getFieldSpecificationAccess().getFirstPlayerKeyword_8()); }
-	'FirstPlayer'
-	{ after(grammarAccess.getFieldSpecificationAccess().getFirstPlayerKeyword_8()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__FieldSpecification__Group__9
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__FieldSpecification__Group__9__Impl
-	rule__FieldSpecification__Group__10
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__FieldSpecification__Group__9__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getFieldSpecificationAccess().getEqualsSignKeyword_9()); }
-	'='
-	{ after(grammarAccess.getFieldSpecificationAccess().getEqualsSignKeyword_9()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__FieldSpecification__Group__10
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__FieldSpecification__Group__10__Impl
-	rule__FieldSpecification__Group__11
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__FieldSpecification__Group__10__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getFieldSpecificationAccess().getNameAssignment_10()); }
-	(rule__FieldSpecification__NameAssignment_10)
-	{ after(grammarAccess.getFieldSpecificationAccess().getNameAssignment_10()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__FieldSpecification__Group__11
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__FieldSpecification__Group__11__Impl
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__FieldSpecification__Group__11__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getFieldSpecificationAccess().getRightCurlyBracketKeyword_11()); }
+	{ before(grammarAccess.getFieldSpecificationAccess().getRightCurlyBracketKeyword_8()); }
 	'}'
-	{ after(grammarAccess.getFieldSpecificationAccess().getRightCurlyBracketKeyword_11()); }
+	{ after(grammarAccess.getFieldSpecificationAccess().getRightCurlyBracketKeyword_8()); }
 )
 ;
 finally {
@@ -2175,45 +2044,15 @@ finally {
 }
 
 
-rule__ChessProgram__SizeAssignment_0
+rule__ChessProgram__StatesAssignment
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getChessProgramAccess().getSizeFieldSpecificationParserRuleCall_0_0()); }
-		ruleFieldSpecification
-		{ after(grammarAccess.getChessProgramAccess().getSizeFieldSpecificationParserRuleCall_0_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__ChessProgram__OptionsAssignment_1
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getChessProgramAccess().getOptionsOptionSpecificationParserRuleCall_1_0()); }
-		ruleOptionSpecification
-		{ after(grammarAccess.getChessProgramAccess().getOptionsOptionSpecificationParserRuleCall_1_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__ChessProgram__EndGameAssignment_2
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getChessProgramAccess().getEndGameGameEndParserRuleCall_2_0()); }
-		ruleGameEnd
-		{ after(grammarAccess.getChessProgramAccess().getEndGameGameEndParserRuleCall_2_0()); }
+		{ before(grammarAccess.getChessProgramAccess().getStatesStatementsParserRuleCall_0()); }
+		ruleStatements
+		{ after(grammarAccess.getChessProgramAccess().getStatesStatementsParserRuleCall_0()); }
 	)
 ;
 finally {
@@ -2244,21 +2083,6 @@ rule__FieldSpecification__HeightAssignment_7
 		{ before(grammarAccess.getFieldSpecificationAccess().getHeightINTTerminalRuleCall_7_0()); }
 		RULE_INT
 		{ after(grammarAccess.getFieldSpecificationAccess().getHeightINTTerminalRuleCall_7_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__FieldSpecification__NameAssignment_10
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getFieldSpecificationAccess().getNameAlternatives_10_0()); }
-		(rule__FieldSpecification__NameAlternatives_10_0)
-		{ after(grammarAccess.getFieldSpecificationAccess().getNameAlternatives_10_0()); }
 	)
 ;
 finally {
